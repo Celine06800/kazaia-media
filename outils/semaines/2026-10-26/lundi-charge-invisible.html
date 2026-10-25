@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../base.css">
+<script src="../../base.js"></script>
+<style>
+  .ico { font-family: "Noto Color Emoji"; }
+  /* Scène A : l'heure */
+  .a-heure { position: absolute; left: 0; right: 60px; top: 470px; text-align: center; }
+  .a-l1 { position: absolute; left: 60px; right: 120px; top: 860px; text-align: center; font-family: "Fraunces"; font-weight: 400; font-size: 80px; line-height: 1.1; }
+  .a-l2 { position: absolute; left: 90px; right: 150px; top: 990px; text-align: center; font-family: "Fraunces"; font-style: italic; font-size: 120px; line-height: 1.1; }
+  /* Scène B : les pensées qui s'empilent */
+  .b-titre { position: absolute; left: 90px; right: 150px; top: 250px; }
+  .pile { position: absolute; left: 90px; right: 150px; top: 330px; display: flex; flex-direction: column; gap: 24px; }
+  .notif > div:last-child { flex: 1; min-width: 0; }
+  .pile .notif { padding: 30px 34px; }
+  .pile .notif .msg { font-size: 42px; }
+  .pile .notif .det { font-size: 33px; }
+  .pile .notif .ico { flex-basis: 80px; height: 80px; font-size: 42px; }
+  .compteur { position: absolute; left: 90px; right: 150px; top: 1405px; display: flex; justify-content: center; }
+  /* Scène C : la question */
+  .c-q { position: absolute; left: 100px; right: 160px; top: 800px; text-align: center; font-family: "Fraunces"; font-size: 104px; line-height: 1.1; }
+  /* Scène D : le rappel Kazaia */
+  .d-carte { position: absolute; left: 90px; right: 150px; top: 640px; }
+  .d-carte .notif { padding: 34px 38px; }
+  .d-carte .notif .msg { font-size: 42px; }
+  .d-carte .notif .det { font-size: 34px; }
+  .d-titre { position: absolute; left: 90px; right: 150px; top: 1020px; text-align: center; }
+  /* Scène E : appel à l'action */
+  .e { position: absolute; left: 90px; right: 150px; top: 560px; height: 1070px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 44px; }
+  .e .logo { width: 400px; margin-top: 20px; }
+  .site { font: 600 38px "Inter"; letter-spacing: .14em; color: var(--gold-light); }
+</style></head>
+<body>
+<div class="reel">
+  <div class="halo" style="left:-40px; top:80px"></div>
+  <div class="rayon" style="top:420px"></div>
+  <canvas class="poussiere"></canvas>
+
+  <!-- A · 0 à 3,4 s -->
+  <div class="scene" data-in="0" data-dur="0.01" data-out="3.2" data-anim="fade" data-zoom="1,1.06">
+    <div class="a-heure"><span class="chrono" data-in="0" data-dur="0.01" data-anim="fade" data-shine="0.4">23:47</span></div>
+    <div class="a-l1" data-in="0.1" data-dur="0.7" data-anim="words">Tout le monde dort.</div>
+    <div class="a-l2 or" data-in="1.2" data-dur="0.8" data-anim="blur">Sauf ta tête.</div>
+  </div>
+
+  <!-- B · 3,4 à 9,6 s -->
+  <div class="scene" data-in="3.3" data-dur="0.3" data-out="9.4" data-anim="fade" data-zoom="1,1.05">
+    <div class="b-titre kicker" data-in="3.4" data-anim="wipe">Dans ta tête, en ce moment</div>
+    <div class="pile" data-in="3.4" data-dur="0.01" data-anim="fade" data-shake="7.6,9.4">
+      <div class="notif" data-in="3.7" data-dur="0.55" data-anim="drop"><div class="ico">✏️</div><div><div class="app"><span>Sortie scolaire</span><span>maintenant</span></div><div class="msg">Autorisation à signer</div><div class="det">Avant demain matin.</div></div></div>
+      <div class="notif" data-in="4.45" data-dur="0.55" data-anim="drop"><div class="ico">💉</div><div><div class="app"><span>Vaccin du petit</span><span>maintenant</span></div><div class="msg">Le rappel, c'était quand ?</div><div class="det">Le carnet est… quelque part.</div></div></div>
+      <div class="notif" data-in="5.2" data-dur="0.55" data-anim="drop"><div class="ico">🏠</div><div><div class="app"><span>Assurance habitation</span><span>maintenant</span></div><div class="msg">Se renouvelle toute seule</div><div class="det">Tu voulais comparer.</div></div></div>
+      <div class="notif" data-in="5.95" data-dur="0.55" data-anim="drop"><div class="ico">🪪</div><div><div class="app"><span>Carte d'identité</span><span>maintenant</span></div><div class="msg">Elle expire bientôt</div><div class="det">Les vacances aussi.</div></div></div>
+      <div class="notif" data-in="6.7" data-dur="0.55" data-anim="drop"><div class="ico">🚗</div><div><div class="app"><span>Contrôle technique</span><span>maintenant</span></div><div class="msg">À caler ce mois-ci</div><div class="det">Ou le mois dernier ?</div></div></div>
+    </div>
+    <div class="compteur" data-in="7.9" data-anim="scale"><span class="pastille">+ 23 autres choses</span></div>
+  </div>
+
+  <!-- C · 9,6 à 11,6 s -->
+  <div class="scene" data-in="9.5" data-dur="0.3" data-out="11.4" data-anim="fade">
+    <div class="c-q" data-in="9.7" data-dur="1.1" data-anim="words">Et si quelqu'un d'autre <em class="accent">s'en souvenait&nbsp;?</em></div>
+  </div>
+
+  <!-- D · 11,5 à 14,6 s -->
+  <div class="scene" data-in="11.4" data-dur="0.3" data-out="14.4" data-anim="fade" data-zoom="1.02,1">
+    <div class="d-carte" data-in="11.6" data-dur="0.7" data-anim="drop">
+      <div class="notif or" data-in="11.6" data-dur="0.01" data-anim="fade" data-shine="12.4"><div class="ico"><img src="../../kazaia-icone.png" alt=""></div><div><div class="app"><span>KAZAIA · RAPPEL</span><span>J-30</span></div><div class="msg">Carte d'identité de Léa</div><div class="det">Elle expire dans 30 jours. Tu as le temps.</div></div></div>
+    </div>
+    <div class="d-titre titre" data-in="12.5" data-dur="1.0" data-anim="words">Ta tête n'est pas <em>un agenda.</em></div>
+  </div>
+
+  <!-- E · 14,5 à 17 s -->
+  <div class="scene" data-in="14.4" data-dur="0.4" data-anim="fade">
+    <div class="e">
+      <div class="kicker" data-in="14.5" data-anim="wipe">Ta charge mentale, sur 100 ?</div>
+      <div class="titre" data-in="14.7" data-dur="0.8" data-anim="words">Fais le <em>test.</em></div>
+      <div class="pastille" data-in="15.3" data-anim="scale" data-shine="15.8">Lien en bio · kazaia.fr/verifier</div>
+      <img class="logo" src="../../kazaia-logo.png" alt="Kazaia" data-in="15.7" data-anim="blur">
+    </div>
+  </div>
+
+  <div class="vignette"></div>
+  <div class="grain"></div>
+</div>
+</body></html>

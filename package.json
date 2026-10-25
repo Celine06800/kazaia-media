@@ -1,0 +1,9 @@
+{
+  "name": "kazaia-media",
+  "private": true,
+  "type": "module",
+  "description": "Outils de rendu des visuels réseaux sociaux de Kazaia",
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../base.css">
+<style>
+  body { display: flex; flex-direction: column; gap: 40px; padding: 40px; background: #555; width: max-content; }
+  .num-or { font-family: "Fraunces"; font-weight: 400; font-style: italic; font-size: 300px; line-height: .8; }
+  .signe { font-family: "Fraunces"; font-weight: 600; font-size: 82px; line-height: 1.1; letter-spacing: -.01em; margin-top: 56px; }
+  .signe em { font-style: italic; font-weight: 400; color: var(--gold-deep); }
+  .vecu { margin-top: 40px; font: 400 38px/1.45 "Inter"; color: var(--muted); max-width: 800px; }
+  .points { position: absolute; left: 110px; top: 120px; display: flex; gap: 14px; }
+  .points i { width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--gold-deep); }
+  .points i.on { background: var(--gold-deep); }
+  .question { position: absolute; right: 110px; top: 112px; font: 600 24px "Inter"; letter-spacing: .28em; color: var(--gold-deep); }
+  .filigrane { position: absolute; right: 70px; top: 40px; font-family: "Fraunces"; font-style: italic; font-weight: 400; font-size: 760px; line-height: 1; opacity: .16; }
+  .slide .grain { position: absolute; inset: 0; }
+  .jauge { position: relative; width: 560px; height: 300px; margin: 40px 0 0; }
+  .jauge svg { width: 100%; height: 100%; overflow: visible; }
+  .jauge .val { position: absolute; left: 0; right: 0; bottom: 0; text-align: center; font-family: "Fraunces"; font-size: 150px; line-height: 1; }
+  .jauge .sur { font: 500 40px "Inter"; color: rgba(250,247,240,.6); }
+</style></head>
+<body>
+
+<!-- 1 · Accroche -->
+<section class="slide sombre">
+  <div class="filigrane or">5</div>
+  <div class="kicker">Test · charge mentale</div>
+  <div class="titre" style="margin-top:44px; font-size:118px">5 signes que ta tête <em>porte trop.</em></div>
+  <div class="filet" style="margin-top:56px"></div>
+  <div class="petit" style="margin-top:40px; font-size:40px">Le n°4, tout le monde l'a vécu.<br>Compte combien te ressemblent.</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 2 à 6 · Les signes -->
+<section class="slide">
+  <div class="points"><i class="on"></i><i></i><i></i><i></i><i></i></div><div class="question">Signe 1 / 5</div>
+  <div class="num-or or">1</div>
+  <div class="signe">Tu refais la liste de demain… <em>dans ton lit.</em></div>
+  <div class="vecu">Ta journée est finie. Ta tête, elle, continue de trier.</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<section class="slide">
+  <div class="points"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div><div class="question">Signe 2 / 5</div>
+  <div class="num-or or">2</div>
+  <div class="signe">Tu es la seule personne à savoir où est <em>le carnet de santé.</em></div>
+  <div class="vecu">Et le livret de famille. Et la facture de la box.</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<section class="slide">
+  <div class="points"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div><div class="question">Signe 3 / 5</div>
+  <div class="num-or or">3</div>
+  <div class="signe">Tu paies encore un abonnement que tu voulais <em>résilier en juin.</em></div>
+  <div class="vecu">Tu l'as noté quelque part. Mais où ?</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<section class="slide">
+  <div class="points"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div><div class="question">Signe 4 / 5</div>
+  <div class="num-or or">4</div>
+  <div class="signe">Tu découvres qu'un papier a expiré… <em>la veille du départ.</em></div>
+  <div class="vecu">Carte d'identité, passeport, assurance : toujours au pire moment.</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<section class="slide">
+  <div class="points"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div><div class="question">Signe 5 / 5</div>
+  <div class="num-or or">5</div>
+  <div class="signe">On te demande « tu sais où est… ? » <em>dix fois par jour.</em></div>
+  <div class="vecu">Tu es la mémoire de toute la maison.</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 7 · Appel à l'action -->
+<section class="slide sombre" style="align-items:center; text-align:center">
+    <div class="kicker">3 signes ou plus ?</div>
+  <div class="titre" style="margin-top:28px; font-size:80px">Ton score de charge mentale, <em>combien sur&nbsp;100&nbsp;?</em></div>
+  <div class="jauge">
+    <svg viewBox="0 0 640 340"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#9C7A30"/><stop offset=".5" stop-color="#F6E8BE"/><stop offset="1" stop-color="#B08D3E"/></linearGradient></defs>
+      <path d="M40 320 A280 280 0 0 1 600 320" fill="none" stroke="rgba(250,247,240,.14)" stroke-width="34" stroke-linecap="round"/>
+      <path d="M40 320 A280 280 0 0 1 470 92" fill="none" stroke="url(#g)" stroke-width="34" stroke-linecap="round" stroke-dasharray="6 14"/>
+    </svg>
+    <div class="val or">?<span class="sur"> /100</span></div>
+  </div>
+  <div class="bouton" style="margin-top:36px">Fais le test · lien en bio</div>
+  <div class="petit" style="margin-top:24px; font-size:32px">kazaia.fr/verifier · résultat immédiat</div>
+  <div class="grain"></div><div class="pied"><img src="../../kazaia-logo.png" alt="Kazaia" style="width:170px"><span>Ne rien oublier.</span></div>
+</section>
+
+</body></html>
