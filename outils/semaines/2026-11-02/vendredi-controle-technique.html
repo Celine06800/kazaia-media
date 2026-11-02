@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../base.css">
+<script src="../../base.js"></script>
+<style>
+  :root { --alerte: #E58B7A; }
+  .gyro { position: absolute; width: 1200px; height: 1200px; left: -60px; top: -260px; border-radius: 50%; pointer-events: none;
+    background: radial-gradient(circle, rgba(90,140,255,.30) 0%, rgba(90,140,255,.06) 45%, transparent 70%); }
+  .a { position: absolute; left: 90px; right: 150px; top: 430px; }
+  .a .heure { font-family: "Fraunces"; font-weight: 400; font-size: 170px; line-height: 1; }
+  .a .cit { margin-top: 70px; font-family: "Fraunces"; font-style: italic; font-size: 92px; line-height: 1.1; }
+  .a .det { margin-top: 40px; font: 500 40px/1.4 "Inter"; color: rgba(250,247,240,.7); }
+  .doc { position: absolute; left: 90px; right: 150px; top: 380px; padding: 56px 60px; border-radius: 36px; background: #F6F1E6; color: var(--ink);
+    box-shadow: 0 40px 90px rgba(0,0,0,.5); transform: rotate(-2deg); }
+  .doc .k { font: 600 26px "Inter"; letter-spacing: .26em; text-transform: uppercase; color: var(--muted); }
+  .doc .t { margin-top: 20px; font: 600 64px "Fraunces"; }
+  .doc .l { margin-top: 30px; display: flex; justify-content: space-between; font: 500 38px "Inter"; border-top: 1.5px solid rgba(15,30,58,.12); padding-top: 26px; }
+  .tampon { position: absolute; right: -20px; top: -46px; padding: 18px 34px; border: 6px solid var(--alerte); color: var(--alerte); border-radius: 18px;
+    font: 800 52px "Inter"; letter-spacing: .08em; transform: rotate(-12deg); background: rgba(246,241,230,.85); }
+  .b-sous { position: absolute; left: 90px; right: 150px; top: 1080px; text-align: center; font-family: "Fraunces"; font-style: italic; font-size: 76px; line-height: 1.15; }
+  .liste { position: absolute; left: 90px; right: 150px; top: 330px; display: flex; flex-direction: column; gap: 34px; }
+  .ligne { display: flex; align-items: baseline; gap: 34px; padding: 36px 44px; border-radius: 32px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); }
+  .ligne { align-items: center; } .ligne .n { font-family: "Fraunces"; font-size: 92px; line-height: 1; min-width: 290px; white-space: nowrap; } .ligne .n.emo { font-family: "Noto Color Emoji"; font-size: 80px; -webkit-text-fill-color: initial; background: none; }
+  .ligne .x { font: 500 42px/1.3 "Inter"; }
+  .src { position: absolute; left: 90px; right: 150px; top: 1330px; font: 400 28px "Inter"; color: rgba(250,247,240,.5); }
+  .d { position: absolute; left: 100px; right: 160px; top: 700px; text-align: center; font-family: "Fraunces"; font-size: 100px; line-height: 1.1; }
+  .e-carte { position: absolute; left: 90px; right: 150px; top: 600px; }
+  .e-carte .notif .msg { font-size: 42px; } .e-carte .notif .det { font-size: 34px; }
+  .e-titre { position: absolute; left: 90px; right: 150px; top: 990px; text-align: center; }
+  .f { position: absolute; left: 90px; right: 150px; top: 520px; height: 1070px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 44px; }
+  .f .logo { width: 400px; margin-top: 20px; }
+</style></head>
+<body>
+<div class="reel">
+  <div class="halo" style="left:200px; top:900px"></div>
+  <canvas class="poussiere"></canvas>
+
+  <!-- A · 0 à 3,2 s : le contrôle -->
+  <div class="scene" data-in="0" data-dur="0.01" data-out="3.0" data-anim="fade" data-zoom="1,1.06">
+    <div class="gyro" data-in="0" data-dur="0.01" data-anim="fade" data-shake="0,3"></div>
+    <div class="a">
+      <div class="kicker" data-in="0" data-dur="0.01" data-anim="fade">Vendredi soir · route du retour</div>
+      <div class="heure or" data-in="0" data-dur="0.01" data-anim="fade" data-shine="0.5">18:40</div>
+      <div class="cit" data-in="0.6" data-dur="0.9" data-anim="words">« Contrôle de routine. Vos papiers, s'il vous plaît. »</div>
+    </div>
+  </div>
+
+  <!-- B · 3,1 à 7,2 s : le papier -->
+  <div class="scene" data-in="3.0" data-dur="0.3" data-out="7.0" data-anim="fade" data-zoom="1,1.04">
+    <div class="doc" data-in="3.2" data-dur="0.6" data-anim="drop">
+      <div class="k">Contrôle technique</div>
+      <div class="t">Véhicule de Sophie</div>
+      <div class="l"><span>Résultat</span><span>Favorable</span></div>
+      <div class="l"><span>Valable jusqu'au</span><span><b>12 octobre</b></span></div>
+      <div class="tampon" data-in="4.6" data-dur="0.3" data-anim="scale" data-shake="4.6,5.2">EXPIRÉ</div>
+    </div>
+    <div class="b-sous" data-in="5.2" data-dur="0.8" data-anim="words">Depuis <em class="accent">trois semaines.</em></div>
+  </div>
+
+  <!-- C · 7,1 à 11 s : ce que ça coûte -->
+  <div class="scene" data-in="7.0" data-dur="0.3" data-out="10.8" data-anim="fade">
+    <div class="liste">
+      <div class="kicker" data-in="7.1" data-anim="wipe">Ce que ça coûte</div>
+      <div class="ligne" data-in="7.4" data-dur="0.45" data-anim="left"><span class="n or">135 €</span><span class="x">d'amende forfaitaire, en règle générale</span></div>
+      <div class="ligne" data-in="8.2" data-dur="0.45" data-anim="left"><span class="n emo">🪪</span><span class="x">la carte grise peut être retenue</span></div>
+      <div class="ligne" data-in="9.0" data-dur="0.45" data-anim="left"><span class="n or">7 jours</span><span class="x">pour passer le contrôle avec une fiche de circulation</span></div>
+    </div>
+    <div class="src" data-in="9.6" data-anim="fade">Source : service-public.fr · situation fictive</div>
+  </div>
+
+  <!-- D · 10,9 à 13 s -->
+  <div class="scene" data-in="10.8" data-dur="0.3" data-out="12.8" data-anim="fade">
+    <div class="d" data-in="11.0" data-dur="1.1" data-anim="words">Le papier qui coûte cher, c'est celui <em class="accent">qu'on oublie.</em></div>
+  </div>
+
+  <!-- E · 12,9 à 15,8 s : Kazaia -->
+  <div class="scene" data-in="12.8" data-dur="0.3" data-out="15.6" data-anim="fade" data-zoom="1.02,1">
+    <div class="e-carte" data-in="13.0" data-dur="0.7" data-anim="drop">
+      <div class="notif or" data-in="13.0" data-dur="0.01" data-anim="fade" data-shine="13.8"><div class="ico"><img src="../../kazaia-icone.png" alt=""></div><div style="flex:1"><div class="app"><span>KAZAIA · RAPPEL</span><span>J-30</span></div><div class="msg">Contrôle technique de la voiture</div><div class="det">À faire avant le 12 octobre. Prends rendez-vous.</div></div></div>
+    </div>
+    <div class="e-titre titre" data-in="13.8" data-dur="1.0" data-anim="words" style="font-size:90px">Prévenue <em>un mois avant.</em></div>
+  </div>
+
+  <!-- F · 15,7 à 18 s -->
+  <div class="scene" data-in="15.6" data-dur="0.4" data-anim="fade">
+    <div class="f">
+      <div class="kicker" data-in="15.7" data-anim="wipe">Kazaia · ne rien oublier</div>
+      <div class="titre" data-in="15.9" data-dur="0.8" data-anim="words" style="font-size:90px">30 jours d'essai <em>sans carte bancaire.</em></div>
+      <div class="pastille" data-in="16.5" data-anim="scale" data-shine="16.9">Lien en bio · kazaia.fr</div>
+      <img class="logo" src="../../kazaia-logo.png" alt="Kazaia" data-in="16.8" data-anim="blur">
+    </div>
+  </div>
+
+  <div class="vignette"></div>
+  <div class="grain"></div>
+</div>
+</body></html>

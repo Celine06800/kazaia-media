@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../base.css">
+<script src="../../base.js"></script>
+<style>
+  .a { position: absolute; left: 90px; right: 150px; top: 420px; text-align: center; }
+  .a .grand { font-size: 150px; margin-top: 40px; white-space: nowrap; }
+  .a .sous { margin-top: 50px; font-family: "Fraunces"; font-style: italic; font-size: 76px; line-height: 1.15; }
+  .segs { position: absolute; left: 90px; right: 150px; top: 250px; display: flex; gap: 18px; }
+  .segs i { flex: 1; height: 10px; border-radius: 6px; background: rgba(250,247,240,.16); }
+  .segs i.on { background: var(--or-feuille); box-shadow: 0 0 18px rgba(201,169,96,.5); }
+  .q { position: absolute; left: 90px; right: 150px; top: 330px; }
+  .q .num { font-family: "Fraunces"; font-style: italic; font-size: 380px; line-height: .9; }
+  .q .txt { margin-top: 30px; font-family: "Fraunces"; font-weight: 600; font-size: 86px; line-height: 1.08; letter-spacing: -.01em; }
+  .q .txt em { font-style: italic; font-weight: 400; color: var(--gold); }
+  .rep { position: absolute; left: 90px; right: 150px; top: 1240px; display: flex; gap: 24px; }
+  .rep .pastille { font-size: 36px; padding: 20px 32px; }
+  .chrono-mini { position: absolute; right: 150px; top: 380px; width: 150px; height: 150px; border-radius: 50%; border: 3px solid rgba(201,169,96,.6);
+    display: grid; place-items: center; font: 400 80px "Fraunces"; color: var(--gold-pale); }
+  .e { position: absolute; left: 100px; right: 160px; top: 640px; text-align: center; }
+  .e .t1 { font-family: "Fraunces"; font-size: 100px; line-height: 1.08; }
+  .e .t2 { margin-top: 60px; font: 500 46px/1.4 "Inter"; color: rgba(250,247,240,.78); }
+  .f { position: absolute; left: 90px; right: 150px; top: 520px; height: 1070px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 44px; }
+  .f .logo { width: 400px; margin-top: 20px; }
+</style></head>
+<body>
+<div class="reel">
+  <div class="halo" style="left:300px; top:-200px"></div>
+  <div class="rayon" style="top:980px"></div>
+  <canvas class="poussiere"></canvas>
+
+  <!-- A · 0 à 2,8 s -->
+  <div class="scene" data-in="0" data-dur="0.01" data-out="2.6" data-anim="fade" data-zoom="1,1.06">
+    <div class="a">
+      <div class="kicker" data-in="0" data-dur="0.01" data-anim="fade">Test express · 10 secondes</div>
+      <div class="grand or" data-in="0" data-dur="0.01" data-anim="fade" data-shine="0.4">3 questions.</div>
+      <div class="sous" data-in="0.9" data-dur="0.8" data-anim="blur">Réponds dans ta tête.<br>Sans chercher.</div>
+    </div>
+  </div>
+
+  <!-- Q1 · 2,7 à 5,9 s -->
+  <div class="scene" data-in="2.6" data-dur="0.25" data-out="5.7" data-anim="fade" data-zoom="1,1.04">
+    <div class="segs"><i class="on"></i><i></i><i></i></div>
+    <div class="q">
+      <div class="num or" data-in="2.7" data-anim="scale">1</div>
+      <div class="txt" data-in="2.9" data-dur="0.9" data-anim="words">Où est le carnet de santé <em>de ton&nbsp;enfant&nbsp;?</em></div>
+    </div>
+        <div class="rep" data-in="4.2" data-anim="up"><span class="pastille">Je sais</span><span class="pastille">Euh…</span></div>
+  </div>
+
+  <!-- Q2 · 5,8 à 9 s -->
+  <div class="scene" data-in="5.7" data-dur="0.25" data-out="8.8" data-anim="fade" data-zoom="1,1.04">
+    <div class="segs"><i class="on"></i><i class="on"></i><i></i></div>
+    <div class="q">
+      <div class="num or" data-in="5.8" data-anim="scale">2</div>
+      <div class="txt" data-in="6.0" data-dur="0.9" data-anim="words">Ta carte d'identité expire <em>quand&nbsp;?</em></div>
+    </div>
+    <div class="rep" data-in="7.3" data-anim="up"><span class="pastille">Je sais</span><span class="pastille">Aucune idée</span></div>
+  </div>
+
+  <!-- Q3 · 8,9 à 12,2 s -->
+  <div class="scene" data-in="8.8" data-dur="0.25" data-out="12.0" data-anim="fade" data-zoom="1,1.04">
+    <div class="segs"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+    <div class="q">
+      <div class="num or" data-in="8.9" data-anim="scale">3</div>
+      <div class="txt" data-in="9.1" data-dur="1.0" data-anim="words">Ton assurance habitation se renouvelle <em>quand&nbsp;?</em></div>
+    </div>
+    <div class="rep" data-in="10.5" data-anim="up" data-shake="11.0,11.9"><span class="pastille">Je sais</span><span class="pastille">…</span></div>
+  </div>
+
+  <!-- E · 12,1 à 14,7 s -->
+  <div class="scene" data-in="12.0" data-dur="0.3" data-out="14.5" data-anim="fade">
+    <div class="e">
+      <div class="t1" data-in="12.2" data-dur="0.9" data-anim="words">Tu as hésité <em class="accent">une seule&nbsp;fois&nbsp;?</em></div>
+      <div class="t2" data-in="13.2" data-dur="0.6" data-anim="up">C'est normal. Ta tête porte tout.<br>Le vrai test va plus loin.</div>
+    </div>
+  </div>
+
+  <!-- F · 14,6 à 17 s -->
+  <div class="scene" data-in="14.5" data-dur="0.4" data-anim="fade">
+    <div class="f">
+      <div class="kicker" data-in="14.6" data-anim="wipe">Ton score de charge mentale</div>
+      <div class="titre" data-in="14.8" data-dur="0.8" data-anim="words" style="font-size:96px">Combien<br><em>sur&nbsp;100&nbsp;?</em></div>
+      <div class="bouton" data-in="15.3" data-anim="scale" data-shine="15.8">Fais le test</div>
+      <div class="pastille" data-in="15.6" data-anim="up">Lien en bio · kazaia.fr/verifier</div>
+      <img class="logo" src="../../kazaia-logo.png" alt="Kazaia" data-in="15.9" data-anim="blur">
+    </div>
+  </div>
+
+  <div class="vignette"></div>
+  <div class="grain"></div>
+</div>
+</body></html>
