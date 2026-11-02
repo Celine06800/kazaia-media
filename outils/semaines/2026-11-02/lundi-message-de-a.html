@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../base.css">
+<script src="../../base.js"></script>
+<style>
+  /* Scène A : l'écran verrouillé */
+  .a-date { position: absolute; left: 0; right: 60px; top: 300px; text-align: center; font: 500 38px "Inter"; letter-spacing: .06em; color: rgba(250,247,240,.7); }
+  .a-heure { position: absolute; left: 0; right: 60px; top: 360px; text-align: center; }
+  .a-notif { position: absolute; left: 90px; right: 150px; top: 760px; }
+  .a-notif .notif .msg { font-size: 46px; }
+  .a-l1 { position: absolute; left: 90px; right: 150px; top: 1100px; text-align: center; font-family: "Fraunces"; font-style: italic; font-size: 92px; line-height: 1.1; }
+  /* Scène B : la conversation */
+  .b-tete { position: absolute; left: 90px; right: 150px; top: 230px; display: flex; align-items: center; gap: 28px; }
+  .avatar { width: 110px; height: 110px; border-radius: 50%; display: grid; place-items: center; font: 400 64px "Fraunces"; font-style: italic; color: var(--navy);
+    background: var(--or-feuille); box-shadow: 0 0 40px rgba(201,169,96,.35); }
+  .b-nom { font: 600 46px "Inter"; } .b-statut { font: 400 30px "Inter"; color: rgba(250,247,240,.6); margin-top: 4px; }
+  .fil { position: absolute; left: 90px; right: 150px; top: 420px; display: flex; flex-direction: column; gap: 22px; align-items: flex-start; }
+  .bulle { max-width: 760px; padding: 28px 38px; border-radius: 40px 40px 40px 12px; background: rgba(255,255,255,.11); border: 1px solid rgba(255,255,255,.16);
+    backdrop-filter: blur(20px); font: 500 40px/1.3 "Inter"; box-shadow: 0 18px 50px rgba(0,0,0,.3); }
+  .bulle small { display: block; margin-top: 8px; font: 400 26px "Inter"; color: rgba(250,247,240,.5); }
+  .ecrit { padding: 26px 34px; border-radius: 40px 40px 40px 12px; background: rgba(255,255,255,.08); display: flex; gap: 14px; }
+  .ecrit i { width: 18px; height: 18px; border-radius: 50%; background: rgba(250,247,240,.7); animation: none; }
+  .b-pied { position: absolute; left: 90px; right: 150px; top: 1390px; text-align: center; font: 500 34px "Inter"; color: rgba(250,247,240,.6); }
+  /* Scène C : la révélation */
+  .c-a { position: absolute; left: 100px; right: 160px; top: 640px; text-align: center; font-family: "Fraunces"; font-size: 110px; line-height: 1.08; }
+  .c-b { position: absolute; left: 100px; right: 160px; top: 1010px; text-align: center; font: 500 44px/1.4 "Inter"; color: rgba(250,247,240,.75); }
+  /* Scène D : Kazaia */
+  .d-carte { position: absolute; left: 90px; right: 150px; top: 600px; }
+  .d-carte .notif .msg { font-size: 42px; } .d-carte .notif .det { font-size: 34px; }
+  .d-titre { position: absolute; left: 90px; right: 150px; top: 980px; text-align: center; }
+  /* Scène E : appel à l'action */
+  .e { position: absolute; left: 90px; right: 150px; top: 560px; height: 1070px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 44px; }
+  .e .logo { width: 400px; margin-top: 20px; }
+</style></head>
+<body>
+<div class="reel">
+  <div class="halo" style="left:80px; top:-120px"></div>
+  <div class="rayon" style="top:1180px"></div>
+  <canvas class="poussiere"></canvas>
+
+  <!-- A · 0 à 3,4 s : écran verrouillé, 00:12, « Message de A. » -->
+  <div class="scene" data-in="0" data-dur="0.01" data-out="3.2" data-anim="fade" data-zoom="1,1.07">
+    <div class="a-date" data-in="0" data-dur="0.01" data-anim="fade">Tout le monde dort.</div>
+    <div class="a-heure"><span class="chrono" data-in="0" data-dur="0.01" data-anim="fade" data-shine="0.5">00:12</span></div>
+    <div class="a-notif" data-in="0" data-dur="0.01" data-anim="fade">
+      <div class="notif"><div class="ico" style="background:var(--or-feuille); color:var(--navy); font:italic 400 44px 'Fraunces'">A</div><div style="flex:1"><div class="app"><span>A.</span><span>maintenant</span></div><div class="msg">Tu dors ?</div></div></div>
+    </div>
+    <div class="a-l1 or" data-in="1.1" data-dur="0.8" data-anim="blur">Message de A.</div>
+  </div>
+
+  <!-- B · 3,3 à 9,6 s : A envoie des messages en rafale -->
+  <div class="scene" data-in="3.2" data-dur="0.3" data-out="9.4" data-anim="fade" data-zoom="1,1.04">
+    <div class="b-tete" data-in="3.3" data-anim="left">
+      <div class="avatar">A</div>
+      <div><div class="b-nom">A.</div><div class="b-statut">en ligne · toute la nuit</div></div>
+    </div>
+    <div class="fil" data-in="3.3" data-dur="0.01" data-anim="fade" data-shake="7.9,9.4">
+      <div class="bulle" data-in="3.7" data-dur="0.45" data-anim="drop">Le rappel du vaccin de Tom, c'était pas ce mois-ci ?<small>00:12</small></div>
+      <div class="bulle" data-in="4.5" data-dur="0.45" data-anim="drop">La box se réengage le 15. Ou le 5 ?<small>00:13</small></div>
+      <div class="bulle" data-in="5.3" data-dur="0.45" data-anim="drop">Et la carte grise, elle est où, déjà ?<small>00:13</small></div>
+      <div class="bulle" data-in="6.1" data-dur="0.45" data-anim="drop">Demain : penser au formulaire de la cantine.<small>00:14</small></div>
+      <div class="bulle" data-in="6.9" data-dur="0.45" data-anim="drop">Tu dors ? 🙂<small>00:14</small></div>
+      <div class="ecrit" data-in="7.6" data-dur="0.3" data-anim="scale"><i></i><i></i><i></i></div>
+    </div>
+    <div class="b-pied" data-in="7.9" data-anim="up">A. est en train d'écrire…</div>
+  </div>
+
+  <!-- C · 9,5 à 11,8 s : qui est A ? -->
+  <div class="scene" data-in="9.4" data-dur="0.3" data-out="11.6" data-anim="fade">
+    <div class="c-a" data-in="9.6" data-dur="1.0" data-anim="words">A, c'est <em class="accent">ta tête.</em></div>
+    <div class="c-b" data-in="10.6" data-dur="0.6" data-anim="up">Elle ne dort jamais.<br>Elle n'oublie rien. Toi, si.</div>
+  </div>
+
+  <!-- D · 11,6 à 14,6 s : Kazaia prend le relais -->
+  <div class="scene" data-in="11.6" data-dur="0.3" data-out="14.4" data-anim="fade" data-zoom="1.02,1">
+    <div class="d-carte" data-in="11.8" data-dur="0.7" data-anim="drop">
+      <div class="notif or" data-in="11.8" data-dur="0.01" data-anim="fade" data-shine="12.6"><div class="ico"><img src="../../kazaia-icone.png" alt=""></div><div style="flex:1"><div class="app"><span>KAZAIA · RAPPEL</span><span>J-30</span></div><div class="msg">Vaccin de Tom</div><div class="det">Rendez-vous à prendre ce mois-ci. On te le redira.</div></div></div>
+    </div>
+    <div class="d-titre titre" data-in="12.6" data-dur="1.0" data-anim="words">Kazaia retient. <em>Toi, dors.</em></div>
+  </div>
+
+  <!-- E · 14,5 à 17 s : le test -->
+  <div class="scene" data-in="14.4" data-dur="0.4" data-anim="fade">
+    <div class="e">
+      <div class="kicker" data-in="14.5" data-anim="wipe">Ta charge mentale, sur 100 ?</div>
+      <div class="titre" data-in="14.7" data-dur="0.8" data-anim="words">Fais le <em>test.</em></div>
+      <div class="pastille" data-in="15.3" data-anim="scale" data-shine="15.8">Lien en bio · kazaia.fr/verifier</div>
+      <img class="logo" src="../../kazaia-logo.png" alt="Kazaia" data-in="15.7" data-anim="blur">
+    </div>
+  </div>
+
+  <div class="vignette"></div>
+  <div class="grain"></div>
+</div>
+</body></html>
