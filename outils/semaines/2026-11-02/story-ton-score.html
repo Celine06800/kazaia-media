@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../base.css">
+<script src="../../base.js"></script>
+<style>
+  .s { position: absolute; left: 90px; right: 90px; top: 330px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .s .t { font-family: "Fraunces"; font-weight: 600; font-size: 104px; line-height: 1.06; margin-top: 40px; }
+  .s .t em { font-style: italic; font-weight: 400; color: var(--gold); }
+  .s .p { margin-top: 50px; font: 500 44px/1.4 "Inter"; color: rgba(250,247,240,.8); }
+  .zone { position: absolute; left: 140px; right: 140px; top: 1180px; height: 220px; border: 3px dashed rgba(201,169,96,.5); border-radius: 40px;
+    display: grid; place-items: center; font: 500 34px "Inter"; color: rgba(250,247,240,.45); }
+  .logo { position: absolute; left: 50%; transform: translateX(-50%); top: 1560px; width: 300px; }
+</style></head>
+<body>
+<div class="reel">
+  <div class="halo" style="left:40px; top:60px"></div>
+  <canvas class="poussiere"></canvas>
+  <div class="s">
+    <div class="kicker">Ton score ?</div>
+    <div class="t">Ta tête t'a écrit combien de messages <em>cette nuit&nbsp;?</em></div>
+    <div class="p">Ton score de charge mentale sur 100,<br>résultat immédiat 🌙</div>
+  </div>
+  <img class="logo" src="../../kazaia-logo.png" alt="Kazaia">
+  <div class="vignette"></div><div class="grain"></div>
+</div>
+</body></html>
