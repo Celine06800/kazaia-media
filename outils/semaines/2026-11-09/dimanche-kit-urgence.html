@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../base.css">
+<style>
+  body { display: flex; flex-direction: column; gap: 40px; padding: 40px; background: #555; width: max-content; }
+  .slide .grain { position: absolute; inset: 0; }
+  .chrono-bg { position: absolute; right: 70px; top: 40px; font-family: "Fraunces"; font-size: 300px; line-height: 1; opacity: .13; }
+  .num { font-family: "Fraunces"; font-style: italic; font-size: 150px; line-height: .9; }
+  .etiq { display: inline-flex; align-self: flex-start; padding: 14px 28px; border-radius: 999px; font: 600 26px "Inter"; letter-spacing: .2em; text-transform: uppercase;
+    background: rgba(176,141,62,.12); color: var(--gold-deep); border: 1.5px solid rgba(176,141,62,.45); }
+  .doc { margin-top: 40px; font-family: "Fraunces"; font-weight: 600; font-size: 84px; line-height: 1.08; letter-spacing: -.01em; }
+  .quand { margin-top: 44px; display: flex; flex-direction: column; gap: 18px; }
+  .quand div { display: flex; gap: 22px; align-items: baseline; font: 400 38px/1.4 "Inter"; color: var(--muted); }
+  .quand div b { color: var(--ink); font-weight: 600; }
+  .quand div::before { content: ""; flex: 0 0 14px; height: 14px; border-radius: 50%; background: var(--gold); transform: translateY(-4px); }
+  .points { position: absolute; left: 110px; top: 116px; display: flex; gap: 12px; }
+  .points i { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--gold-deep); }
+  .points i.on { background: var(--gold-deep); }
+  .tete { display: flex; align-items: flex-end; justify-content: space-between; }
+</style></head>
+<body>
+
+<!-- 1 · Accroche -->
+<section class="slide sombre">
+  <div class="chrono-bg or">22:40</div>
+  <div class="kicker">À garder · kit d'urgence</div>
+  <div class="titre" style="margin-top:44px; font-size:104px">Les 6 papiers à retrouver <em>en 2&nbsp;minutes.</em></div>
+  <div class="filet" style="margin-top:56px"></div>
+  <div class="petit" style="margin-top:40px; font-size:40px">Fièvre qui monte, dégât des eaux, pharmacie de garde…<br>Ce soir-là, tu ne cherches pas : tu prends.</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <div class="points"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="tete"><span class="etiq">Santé</span><span class="num or">01</span></div>
+  <div class="doc">La carte Vitale <em style="font-style:italic; font-weight:400; color:var(--gold-deep)">et l'attestation de droits</em></div>
+  <div class="quand"><div><span>Aux urgences, chez le médecin de garde, à la pharmacie.</span></div><div><span>Celle de <b>chaque membre</b> de la famille qui en a une.</span></div></div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <div class="points"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></div>
+  <div class="tete"><span class="etiq">Santé</span><span class="num or">02</span></div>
+  <div class="doc">Le carnet de santé <em style="font-style:italic; font-weight:400; color:var(--gold-deep)">de chaque enfant</em></div>
+  <div class="quand"><div><span>Vaccins, allergies, antécédents : le médecin te le demandera.</span></div><div><span>Le grand classique : il est <b>chez l'autre parent</b>, ou au fond d'un sac.</span></div></div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="points"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
+  <div class="tete"><span class="etiq">Santé</span><span class="num or">03</span></div>
+  <div class="doc">La carte de mutuelle</div>
+  <div class="quand"><div><span>Pour ne pas avancer les frais quand c'est possible.</span></div><div><span>Vérifie qu'elle est <b>à jour</b> : elle change souvent au 1er janvier.</span></div></div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <div class="points"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div>
+  <div class="tete"><span class="etiq">Identité</span><span class="num or">04</span></div>
+  <div class="doc">Les pièces d'identité <em style="font-style:italic; font-weight:400; color:var(--gold-deep)">de toute la famille</em></div>
+  <div class="quand"><div><span>Et surtout leur <b>date d'expiration</b>.</span></div><div><span>Celle qu'on découvre la veille d'un départ, jamais avant.</span></div></div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <div class="points"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+  <div class="tete"><span class="etiq">Maison</span><span class="num or">05</span></div>
+  <div class="doc">Le contrat d'assurance habitation <em style="font-style:italic; font-weight:400; color:var(--gold-deep)">et son numéro</em></div>
+  <div class="quand"><div><span>Dégât des eaux, cambriolage : l'assureur demande ton <b>numéro de contrat</b>.</span></div><div><span>Et un sinistre se déclare vite : pas le temps de fouiller.</span></div></div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <div class="points"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+  <div class="tete"><span class="etiq">Santé</span><span class="num or">06</span></div>
+  <div class="doc">Les ordonnances <em style="font-style:italic; font-weight:400; color:var(--gold-deep)">en cours</em></div>
+  <div class="quand"><div><span>Un traitement à poursuivre, un week-end loin de chez toi.</span></div><div><span>Avec <b>la date</b> où il faudra la renouveler.</span></div></div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 8 · Appel à l'action -->
+<section class="slide sombre" style="align-items:center; text-align:center">
+  <div class="kicker">Enregistre ce post</div>
+  <div class="titre" style="margin-top:30px; font-size:84px">Les 6, au même endroit. <em>Dans ta poche.</em></div>
+  <div class="petit" style="margin-top:36px; font-size:36px">Kazaia range les papiers de chaque membre<br>et te prévient avant chaque échéance.</div>
+  <div class="bouton" style="margin-top:50px">Fais le test · lien en bio</div>
+  <div class="petit" style="margin-top:24px; font-size:30px">kazaia.fr/verifier · ton score de charge mentale sur 100</div>
+  <div class="grain"></div><div class="pied"><img src="../../kazaia-logo.png" alt="Kazaia" style="width:170px"><span>Ne rien oublier.</span></div>
+</section>
+
+</body></html>

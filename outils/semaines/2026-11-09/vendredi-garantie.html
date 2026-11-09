@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../base.css">
+<script src="../../base.js"></script>
+<style>
+  :root { --alerte: #E58B7A; }
+  /* A : la panne */
+  .ecran { position: absolute; left: 230px; width: 560px; top: 300px; height: 300px; border-radius: 40px; background: #0a0f1c; border: 3px solid rgba(255,255,255,.12);
+    box-shadow: inset 0 0 60px rgba(0,0,0,.8), 0 30px 80px rgba(0,0,0,.5); display: grid; place-items: center; }
+  .ecran span { font: 700 150px "Inter"; letter-spacing: .08em; color: #ff5a4a; text-shadow: 0 0 30px rgba(255,90,74,.7); font-variant-numeric: tabular-nums; }
+  .a { position: absolute; left: 90px; right: 150px; top: 700px; text-align: center; }
+  .a .cit { margin-top: 40px; font-family: "Fraunces"; font-style: italic; font-size: 96px; line-height: 1.1; }
+  .a .det { margin-top: 40px; font: 500 42px/1.4 "Inter"; color: rgba(250,247,240,.72); }
+  /* B : la facture */
+  .doc { position: absolute; left: 90px; right: 150px; top: 380px; padding: 56px 60px; border-radius: 36px; background: #F6F1E6; color: var(--ink);
+    box-shadow: 0 40px 90px rgba(0,0,0,.5); transform: rotate(-2deg); }
+  .doc .k { font: 600 26px "Inter"; letter-spacing: .26em; text-transform: uppercase; color: var(--muted); }
+  .doc .t { margin-top: 20px; font: 600 64px "Fraunces"; }
+  .doc .l { margin-top: 30px; display: flex; justify-content: space-between; font: 500 38px "Inter"; border-top: 1.5px solid rgba(15,30,58,.12); padding-top: 26px; }
+  .tampon { position: absolute; right: -20px; top: -54px; padding: 18px 30px; border: 6px solid var(--alerte); color: var(--alerte); border-radius: 18px;
+    font: 800 44px "Inter"; letter-spacing: .06em; transform: rotate(-10deg); background: rgba(246,241,230,.9); }
+  .b-sous { position: absolute; left: 90px; right: 150px; top: 1080px; text-align: center; font-family: "Fraunces"; font-style: italic; font-size: 80px; line-height: 1.15; }
+  /* C : la règle */
+  .liste { position: absolute; left: 90px; right: 150px; top: 330px; display: flex; flex-direction: column; gap: 34px; }
+  .ligne { display: flex; align-items: center; gap: 34px; padding: 36px 44px; border-radius: 32px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); }
+  .ligne .n { font-family: "Fraunces"; font-size: 92px; line-height: 1; min-width: 270px; white-space: nowrap; }
+  .ligne .x { font: 500 40px/1.3 "Inter"; }
+  .src { position: absolute; left: 90px; right: 150px; top: 1330px; font: 400 28px "Inter"; color: rgba(250,247,240,.5); }
+  .d2 { top: 920px !important; font-style: italic; }
+  .d { position: absolute; left: 90px; right: 150px; top: 680px; text-align: center; font-family: "Fraunces"; font-size: 100px; line-height: 1.1; }
+  .e-carte { position: absolute; left: 90px; right: 150px; top: 600px; }
+  .e-carte .notif .msg { font-size: 42px; } .e-carte .notif .det { font-size: 34px; }
+  .e-titre { position: absolute; left: 90px; right: 150px; top: 1000px; text-align: center; }
+  .f { position: absolute; left: 90px; right: 150px; top: 520px; height: 1070px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 44px; }
+  .f .logo { width: 400px; margin-top: 20px; }
+</style></head>
+<body>
+<div class="reel">
+  <div class="halo" style="left:160px; top:-120px"></div>
+  <canvas class="poussiere"></canvas>
+
+  <!-- A · 0 à 3,2 s : la panne -->
+  <div class="scene" data-in="0" data-dur="0.01" data-out="3.1" data-anim="fade" data-zoom="1,1.06">
+    <div class="ecran" data-in="0" data-dur="0.01" data-anim="fade" data-shake="0.2,1.0"><span>E21</span></div>
+    <div class="a">
+      <div class="kicker" data-in="0" data-dur="0.01" data-anim="fade">Samedi · 9 h</div>
+      <div class="cit or" data-in="0" data-dur="0.01" data-anim="fade">Le lave-linge s'arrête. Net.</div>
+      <div class="det" data-in="1.3" data-anim="up">« Pas grave, il est encore sous garantie. »</div>
+    </div>
+  </div>
+
+  <!-- B · 3,1 à 7,2 s : la facture -->
+  <div class="scene" data-in="3.1" data-dur="0.3" data-out="7.1" data-anim="fade" data-zoom="1,1.04">
+    <div class="doc" data-in="3.3" data-dur="0.6" data-anim="drop">
+      <div class="k">Facture d'achat</div>
+      <div class="t">Lave-linge de Julie</div>
+      <div class="l"><span>Acheté le</span><span><b>14 octobre 2024</b></span></div>
+      <div class="l"><span>Garantie</span><span>2 ans</span></div>
+      <div class="tampon" data-in="4.7" data-dur="0.3" data-anim="scale" data-shake="4.7,5.3">GARANTIE FINIE</div>
+    </div>
+    <div class="b-sous" data-in="5.3" data-dur="0.8" data-anim="words">Depuis <em class="accent">un mois.</em></div>
+  </div>
+
+  <!-- C · 7,1 à 11 s : la règle -->
+  <div class="scene" data-in="7.1" data-dur="0.3" data-out="11.0" data-anim="fade">
+    <div class="liste">
+      <div class="kicker" data-in="7.2" data-anim="wipe">Ce qu'elle a raté</div>
+      <div class="ligne" data-in="7.5" data-dur="0.45" data-anim="left"><span class="n or">2 ans</span><span class="x">de garantie légale de conformité sur un produit neuf</span></div>
+      <div class="ligne" data-in="8.3" data-dur="0.45" data-anim="left"><span class="n or">0 €</span><span class="x">la réparation ou le remplacement, pendant ces 2 ans</span></div>
+      <div class="ligne" data-in="9.1" data-dur="0.45" data-anim="left"><span class="n or">Après</span><span class="x">souvent à ses frais, sauf garantie commerciale</span></div>
+    </div>
+    <div class="src" data-in="9.7" data-anim="fade">Source : service-public.fr · situation fictive</div>
+  </div>
+
+  <!-- D · 11 à 13 s -->
+  <div class="scene" data-in="11.0" data-dur="0.3" data-out="13.0" data-anim="fade">
+    <div class="d" data-in="11.2" data-dur="0.9" data-anim="words">Elle avait la facture.</div>
+    <div class="d d2 accent" data-in="12.0" data-dur="0.5" data-anim="blur">Pas la date.</div>
+  </div>
+
+  <!-- E · 13 à 15,8 s : Kazaia -->
+  <div class="scene" data-in="13.0" data-dur="0.3" data-out="15.8" data-anim="fade" data-zoom="1.02,1">
+    <div class="e-carte" data-in="13.2" data-dur="0.7" data-anim="drop">
+      <div class="notif or" data-in="13.2" data-dur="0.01" data-anim="fade" data-shine="14.0"><div class="ico"><img src="../../kazaia-icone.png" alt=""></div><div style="flex:1"><div class="app"><span>KAZAIA · RAPPEL</span><span>J-30</span></div><div class="msg">Fin de garantie · Lave-linge</div><div class="det">Un bruit, un souci ? C'est le moment de le signaler.</div></div></div>
+    </div>
+    <div class="e-titre titre" data-in="14.0" data-dur="1.0" data-anim="words" style="font-size:90px">Prévenue <em>à temps.</em></div>
+  </div>
+
+  <!-- F · 15,8 à 18 s -->
+  <div class="scene" data-in="15.8" data-dur="0.4" data-anim="fade">
+    <div class="f">
+      <div class="kicker" data-in="15.9" data-anim="wipe">Kazaia · ne rien oublier</div>
+      <div class="titre" data-in="16.1" data-dur="0.8" data-anim="words" style="font-size:90px">30 jours d'essai <em>sans carte bancaire.</em></div>
+      <div class="pastille" data-in="16.7" data-anim="scale" data-shine="17.1">Lien en bio · kazaia.fr</div>
+      <img class="logo" src="../../kazaia-logo.png" alt="Kazaia" data-in="17.0" data-anim="blur">
+    </div>
+  </div>
+
+  <div class="vignette"></div>
+  <div class="grain"></div>
+</div>
+</body></html>

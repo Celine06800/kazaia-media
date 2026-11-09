@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../base.css">
+<script src="../../base.js"></script>
+<style>
+  .a-k { position: absolute; left: 0; right: 60px; top: 330px; text-align: center; }
+  .a-t { position: absolute; left: 90px; right: 150px; top: 520px; text-align: center; font-family: "Fraunces"; font-weight: 600; font-size: 120px; line-height: 1.04; }
+  .a-s { position: absolute; left: 90px; right: 150px; top: 1010px; text-align: center; font: 500 44px/1.4 "Inter"; color: rgba(250,247,240,.72); }
+  /* Jauge */
+  .jauge { position: absolute; left: 140px; width: 740px; top: 250px; height: 470px; }
+  .jauge svg { width: 740px; height: 420px; overflow: visible; }
+  .jauge .val { position: absolute; left: 0; right: 0; top: 190px; text-align: center; font-family: "Fraunces"; font-size: 200px; line-height: 1; }
+  .jauge .sur { position: absolute; left: 0; right: 0; top: 400px; text-align: center; font: 600 28px "Inter"; letter-spacing: .3em; text-transform: uppercase; color: rgba(250,247,240,.55); }
+  .items { position: absolute; left: 90px; right: 150px; top: 820px; display: flex; flex-direction: column; gap: 22px; }
+  .item { display: flex; gap: 24px; align-items: center; padding: 24px 32px; border-radius: 30px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14);
+    font: 500 38px/1.3 "Inter"; }
+  .item b { flex: 0 0 74px; font: 600 34px "Inter"; color: var(--gold); }
+  .item span { flex: 1; }
+  /* C */
+  .c-a { position: absolute; left: 90px; right: 150px; top: 640px; text-align: center; font-family: "Fraunces"; font-size: 100px; line-height: 1.08; }
+  .c-b { position: absolute; left: 90px; right: 150px; top: 1040px; text-align: center; font: 500 44px/1.4 "Inter"; color: rgba(250,247,240,.75); }
+  .e { position: absolute; left: 90px; right: 150px; top: 520px; height: 1070px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 40px; }
+  .e .logo { width: 400px; margin-top: 20px; }
+  .e .petit { font-size: 38px; }
+</style></head>
+<body>
+<div class="reel">
+  <div class="halo" style="left:200px; top:-160px"></div>
+  <div class="rayon" style="top:1150px"></div>
+  <canvas class="poussiere"></canvas>
+
+  <!-- A · 0 à 2,8 s -->
+  <div class="scene" data-in="0" data-dur="0.01" data-out="2.8" data-anim="fade" data-zoom="1,1.06">
+    <div class="a-k kicker" data-in="0" data-dur="0.01" data-anim="fade">Mercredi 11 novembre</div>
+    <div class="a-t" data-in="0" data-dur="0.01" data-anim="fade">Jour férié.<br><em class="accent" data-shine="0.6">Sauf pour ta&nbsp;tête.</em></div>
+    <div class="a-s" data-in="1.2" data-anim="up">On mesure ? Compte dans ta tête.</div>
+  </div>
+
+  <!-- B · 2,8 à 11,4 s : la jauge monte -->
+  <div class="scene" data-in="2.8" data-dur="0.3" data-out="11.4" data-anim="fade">
+    <div class="jauge" data-in="2.9" data-dur="0.5" data-anim="scale">
+      <svg viewBox="0 0 740 420">
+        <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#E6D3A3"/><stop offset=".6" stop-color="#C9A960"/><stop offset="1" stop-color="#B4362F"/></linearGradient></defs>
+        <path d="M 60 390 A 310 310 0 0 1 680 390" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="38" stroke-linecap="round"/>
+        <path id="arc" d="M 60 390 A 310 310 0 0 1 680 390" fill="none" stroke="url(#g)" stroke-width="38" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+      </svg>
+      <div class="val or" id="val">0</div>
+      <div class="sur">charge mentale · sur 100</div>
+    </div>
+    <div class="items">
+      <div class="item" data-in="3.6" data-dur="0.4" data-anim="left"><b>+14</b><span>8 h : le mot pour la cantine.</span></div>
+      <div class="item" data-in="5.2" data-dur="0.4" data-anim="left"><b>+17</b><span>12 h : tu vérifies un rendez-vous.</span></div>
+      <div class="item" data-in="6.8" data-dur="0.4" data-anim="left"><b>+19</b><span>16 h : le carnet de santé, où ?</span></div>
+      <div class="item" data-in="8.4" data-dur="0.4" data-anim="left" data-shake="9.6,10.4"><b>+?</b><span>21 h : tu prépares déjà jeudi.</span></div>
+    </div>
+  </div>
+
+  <!-- C · 11,4 à 13,8 s -->
+  <div class="scene" data-in="11.4" data-dur="0.3" data-out="13.8" data-anim="fade">
+    <div class="c-a" data-in="11.6" data-dur="1.0" data-anim="words">Un jour de repos. <em class="accent">Pas pour elle.</em></div>
+    <div class="c-b" data-in="12.6" data-dur="0.6" data-anim="up">Ta tête est de garde, même fériée.</div>
+  </div>
+
+  <!-- D · 13,8 à 17 s -->
+  <div class="scene" data-in="13.8" data-dur="0.4" data-anim="fade">
+    <div class="e">
+      <div class="kicker" data-in="13.9" data-anim="wipe">Le vrai chiffre ?</div>
+      <div class="titre" data-in="14.1" data-dur="0.8" data-anim="words">Fais le <em>test.</em></div>
+      <div class="petit" data-in="14.7" data-anim="up">Ton score sur 100, tout de suite.</div>
+      <div class="pastille" data-in="15.1" data-anim="scale" data-shine="15.6">Lien en bio · kazaia.fr/verifier</div>
+      <img class="logo" src="../../kazaia-logo.png" alt="Kazaia" data-in="15.4" data-anim="blur">
+    </div>
+  </div>
+
+  <div class="vignette"></div>
+  <div class="grain"></div>
+</div>
+<script>
+  // La jauge monte à chaque ligne (14, 31, 50), puis s'emballe vers le rouge et s'arrête sur « ? ».
+  const etapes = [[3.6, 0, 14], [5.2, 14, 31], [6.8, 31, 50], [8.4, 50, 92]];
+  window.onRender = function (t) {
+    let v = 0;
+    for (const [d, a, b] of etapes) {
+      if (t >= d) { const k = Math.min(1, (t - d) / (b === 92 ? 1.2 : 0.7)); const e = 1 - Math.pow(1 - k, 3); v = a + (b - a) * e; }
+    }
+    document.getElementById('arc').setAttribute('stroke-dashoffset', String(100 - v));
+    const el = document.getElementById('val');
+    el.textContent = t >= 9.6 ? '?' : String(Math.round(v));
+  };
+</script>
+</body></html>
