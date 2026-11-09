@@ -8,7 +8,7 @@ Styles :
   nuit      piano doux + nappe, tempo lent (72), mineur — récits du soir, émotion
   lumineux  piano + nappe claire + pulsation légère (84), majeur — solution, soulagement
   elan      arpège + pulsation sourde + charleston feutré (96), majeur — listes, astuces, rythme
-Accents : instants (en secondes) où une montée douce et une note cristalline soulignent
+Accents : instants (en secondes) où une montée douce souligne
 un changement de scène (révélation, carte de fin).
 Le morceau dure exactement --duree secondes, avec fondu de fin.
 """
@@ -154,12 +154,11 @@ def main():
             if tt < bar or tt > a.duree - 0.5: continue
             add(mix, int(tt * SR), h * st["hat"])
 
-    # Accents : montée + note cristalline
+    # Accents : une montée douce avant chaque changement de scène.
+    # Plus de note cristalline (le « ding ») : jugée stressante par Céline le 09/11/2026.
     for acc in [float(x) for x in a.accents.split(",") if x.strip()]:
         sw = swell(rng=rng) * 0.05
         add(mix, int(max(0, acc - 1.6) * SR), sw)
-        c = chime(hz("E", 6)) * 0.12 + chime(hz("B", 5)) * 0.07
-        add(mix, int(acc * SR), c)
 
     sos = butter(2, st["bright"], "lp", fs=SR, output="sos")
     mix = sosfilt(sos, mix)
