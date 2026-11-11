@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../base.css">
+<style>
+  body { display: flex; flex-wrap: wrap; gap: 20px; background: #000; }
+  /* Zone sûre story : texte entre y=250 et y=1500, 90 px de marge */
+  .story .c { position: absolute; left: 90px; right: 90px; top: 290px; display: flex; flex-direction: column; gap: 44px; }
+  .story .c.centre { align-items: center; text-align: center; }
+  .story .t { font-family: "Fraunces"; font-weight: 600; font-size: 96px; line-height: 1.06; letter-spacing: -.015em; }
+  .story .t em { font-style: italic; font-weight: 400; color: var(--gold); }
+  .story .p { font: 400 44px/1.42 "Inter"; color: rgba(250,247,240,.82); }
+  .story .p b { font-weight: 600; color: var(--cream); }
+  .story .num { font-family: "Fraunces"; font-style: italic; font-weight: 400; font-size: 220px; line-height: .9; }
+  .story .logo { position: absolute; left: 50%; transform: translateX(-50%); top: 1580px; width: 280px; }
+  .story .fictif { position: absolute; left: 90px; right: 90px; top: 1500px; text-align: center; font: 500 26px "Inter"; letter-spacing: .06em; color: rgba(250,247,240,.45); }
+  .story .zone { width: 100%; height: 200px; border: 3px dashed rgba(201,169,96,.5); border-radius: 40px; display: grid; place-items: center;
+    font: 500 34px "Inter"; color: rgba(250,247,240,.45); }
+  .story .pile { display: flex; flex-direction: column; gap: 26px; }
+  .story .liste { display: flex; flex-direction: column; gap: 26px; font: 500 40px/1.35 "Inter"; }
+  .story .liste div { display: flex; gap: 24px; align-items: baseline; }
+  .story .liste div::before { content: ""; flex: 0 0 14px; height: 14px; border-radius: 50%; background: var(--or-feuille); transform: translateY(-4px); }
+  .story .formule { display: flex; flex-direction: column; gap: 18px; }
+  .story .formule .haut { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; }
+  .story .formule .nom { font-family: "Fraunces"; font-weight: 600; font-size: 64px; }
+  .story .formule .prix { font-family: "Fraunces"; font-weight: 400; font-size: 60px; white-space: nowrap; }
+  .story .formule .prix small { font: 500 30px "Inter"; color: rgba(250,247,240,.6); }
+  .story .formule .det { font: 400 34px/1.4 "Inter"; color: rgba(250,247,240,.75); }
+  .story .formule .pastille { align-self: flex-start; font-size: 28px; padding: 12px 26px; }
+  .story .carte.vedette { border-color: rgba(230,211,163,.8); background: linear-gradient(135deg, rgba(201,169,96,.20), rgba(201,169,96,.06)); }
+  .story .apercu { width: 640px; border-radius: 24px; box-shadow: 0 30px 80px rgba(0,0,0,.5); border: 1.5px solid rgba(201,169,96,.4); }
+</style></head>
+<body>
+
+<!-- ============ LE TEST ============ -->
+<section class="story reel"><div class="halo" style="left:40px;top:80px"></div>
+  <div class="c centre">
+    <div class="kicker">Le test</div>
+    <div class="t">Ta charge mentale, tu la notes <em>combien&nbsp;?</em></div>
+    <div class="p">Les papiers, les rendez-vous, les dates à ne pas rater…<br>Tout ce que ta tête retient à ta place.</div>
+  </div>
+  <img class="logo" src="../kazaia-logo.png" alt="Kazaia"><div class="vignette"></div><div class="grain"></div></section>
+
+<section class="story reel"><div class="halo" style="left:80px;top:300px"></div>
+  <div class="c">
+    <div class="kicker">Le test</div>
+    <div class="t">Un test <em>gratuit</em>, en 2 minutes.</div>
+    <div class="liste">
+      <div>10 questions sur ton quotidien</div>
+      <div>Ton bilan immédiat</div>
+      <div>La formule Kazaia qui te correspond</div>
+      <div>Le résultat aussi par e-mail</div>
+    </div>
+  </div>
+  <img class="logo" src="../kazaia-logo.png" alt="Kazaia"><div class="vignette"></div><div class="grain"></div></section>
+
+<section class="story reel"><div class="halo" style="left:40px;top:120px"></div>
+  <div class="c centre">
+    <div class="kicker">Le test</div>
+    <div class="t">À toi de <em>jouer.</em></div>
+    <div class="p">Touche le lien juste en dessous 👇</div>
+    <div class="zone">ton lien ici</div>
+    <div class="pastille">kazaia.fr/verifier</div>
+  </div>
+  <img class="logo" src="../kazaia-logo.png" alt="Kazaia"><div class="vignette"></div><div class="grain"></div></section>
+
+<!-- ============ COMMENT ============ -->
+<section class="story reel"><div class="halo" style="left:60px;top:120px"></div>
+  <div class="c">
+    <div class="kicker">Comment ça marche</div>
+    <div class="num or">1</div>
+    <div class="t">Tu prends ton papier <em>en photo.</em></div>
+    <div class="p">Contrat, facture, carte d'identité, carnet de santé… Un PDF marche aussi.</div>
+  </div>
+  <img class="logo" src="../kazaia-logo.png" alt="Kazaia"><div class="vignette"></div><div class="grain"></div></section>
+
+<section class="story reel"><div class="halo" style="left:60px;top:120px"></div>
+  <div class="c">
+    <div class="kicker">Comment ça marche</div>
+    <div class="num or">2</div>
+    <div class="t">Kazaia lit les infos <em>en quelques secondes.</em></div>
+    <div class="p">Les dates, les montants, la fin d'engagement : rangés dans la fiche du bon membre de la famille.</div>
+  </div>
+  <img class="logo" src="../kazaia-logo.png" alt="Kazaia"><div class="vignette"></div><div class="grain"></div></section>
+
+<section class="story reel"><div class="halo" style="left:60px;top:120px"></div>
+  <div class="c">
+    <div class="kicker">Comment ça marche</div>
+    <div class="num or">3</div>
+    <div class="t">Kazaia te prévient <em>avant.</em></div>
+    <div class="notif or"><div class="ico"><img src="../kazaia-icone.png" alt=""></div>
+      <div style="flex:1"><div class="app"><span>KAZAIA</span><span>J-30</span></div>
+        <div class="msg">Ton assurance auto se renouvelle dans 30 jours</div>
+        <div class="det">C'est le moment de comparer.</div></div></div>
+  </div>
+  <div class="fictif">Exemple fictif</div>
+  <img class="logo" src="../kazaia-logo.png" alt="Kazaia"><div class="vignette"></div><div class="grain"></div></section>
+
+<!-- ============ RAPPELS ============ -->
+<section class="story reel"><div class="halo" style="left:40px;top:100px"></div>
+  <div class="c centre">
+    <div class="kicker">Les rappels</div>
+    <div class="t">Le seul membre du foyer qui <em>n'oublie jamais rien.</em></div>
+    <div class="p">Kazaia garde les dates en tête pour toi, et te prévient par e-mail un mois puis une semaine avant.</div>
+  </div>
+  <img class="logo" src="../kazaia-logo.png" alt="Kazaia"><div class="vignette"></div><div class="grain"></div></section>
+
+<section class="story reel"><div class="halo" style="left:60px;top:200px"></div>
+  <div class="c">
+    <div class="kicker">Les rappels</div>
+    <div class="pile">
+      <div class="notif"><div class="ico">🚗</div><div style="flex:1"><div class="app"><span>KAZAIA</span><span>J-30</span></div><div class="msg">Contrôle technique de la voiture</div><div class="det">À faire avant le 12 décembre.</div></div></div>
+      <div class="notif"><div class="ico">🪪</div><div style="flex:1"><div class="app"><span>KAZAIA</span><span>J-30</span></div><div class="msg">La carte d'identité de Léa expire</div><div class="det">Pense au rendez-vous en mairie.</div></div></div>
+      <div class="notif"><div class="ico">📶</div><div style="flex:1"><div class="app"><span>KAZAIA</span><span>J-7</span></div><div class="msg">Fin d'engagement de la box internet</div><div class="det">Tu peux résilier sans frais.</div></div></div>
+    </div>
+  </div>
+  <div class="fictif">Exemples fictifs</div>
+  <img class="logo" src="../kazaia-logo.png" alt="Kazaia"><div class="vignette"></div><div class="grain"></div></section>
+
+<section class="story reel"><div class="halo" style="left:60px;top:200px"></div>
+  <div class="c">
+    <div class="kicker">Les rappels</div>
+    <div class="pile">
+      <div class="notif"><div class="ico">💉</div><div style="flex:1"><div class="app"><span>KAZAIA</span><span>J-30</span></div><div class="msg">Rappel de vaccin pour Tom</div><div class="det">Prends rendez-vous chez le médecin.</div></div></div>
+      <div class="notif"><div class="ico">🧺</div><div style="flex:1"><div class="app"><span>KAZAIA</span><span>J-7</span></div><div class="msg">La garantie du lave-linge se termine</div><div class="det">La facture est déjà dans Kazaia.</div></div></div>
+      <div class="notif"><div class="ico">🐾</div><div style="flex:1"><div class="app"><span>KAZAIA</span><span>J-30</span></div><div class="msg">Vaccin annuel de Pistache</div><div class="det">Carnet de santé à jour dans l'appli.</div></div></div>
+    </div>
+  </div>
+  <div class="fictif">Exemples fictifs</div>
+  <img class="logo" src="../kazaia-logo.png" alt="Kazaia"><div class="vignette"></div><div class="grain"></div></section>
+
+<!-- ============ FORMULES ============ -->
+<section class="story reel"><div class="halo" style="left:60px;top:120px"></div>
+  <div class="c">
+    <div class="kicker">Les formules</div>
+    <div class="t">Pour <em>commencer.</em></div>
+    <div class="carte formule">
+      <div class="haut"><div class="nom">Découverte</div><div class="prix">0 €</div></div>
+      <div class="det">1 membre · 5 contrats · 3 lectures IA par mois · double authentification</div>
+    </div>
+    <div class="carte formule">
+      <div class="haut"><div class="nom">Essentiel</div><div class="prix">7,90 € <small>/mois</small></div></div>
+      <div class="det">Membres et contrats illimités · garanties et avoirs · animaux · rappels J-30 et J-7</div>
+    </div>
+  </div>
+  <img class="logo" src="../kazaia-logo.png" alt="Kazaia"><div class="vignette"></div><div class="grain"></div></section>
+
+<section class="story reel"><div class="halo" style="left:60px;top:120px"></div>
+  <div class="c">
+    <div class="kicker">Les formules</div>
+    <div class="t">Pour toute <em>la famille.</em></div>
+    <div class="carte formule vedette">
+      <div class="pastille">La plus choisie</div>
+      <div class="haut"><div class="nom">Pro</div><div class="prix">14,90 € <small>/mois</small></div></div>
+      <div class="det">Tout Essentiel + santé complète, travaux, voyages, activités</div>
+    </div>
+    <div class="carte formule">
+      <div class="haut"><div class="nom">Premium</div><div class="prix">24,90 € <small>/mois</small></div></div>
+      <div class="det">Tout Pro + coffre-fort chiffré, budget et impôts, plusieurs foyers</div>
+    </div>
+  </div>
+  <img class="logo" src="../kazaia-logo.png" alt="Kazaia"><div class="vignette"></div><div class="grain"></div></section>
+
+<section class="story reel"><div class="halo" style="left:40px;top:100px"></div>
+  <div class="c centre">
+    <div class="kicker">Les formules</div>
+    <div class="grand or">30 jours</div>
+    <div class="t">pour essayer, <em>sans carte bancaire.</em></div>
+    <div class="p">Sans engagement. À l'année, <b>2 mois offerts</b>.<br>Pas sûr de ta formule ? Le test te la conseille.</div>
+    <div class="pastille">kazaia.fr/verifier</div>
+  </div>
+  <img class="logo" src="../kazaia-logo.png" alt="Kazaia"><div class="vignette"></div><div class="grain"></div></section>
+
+<!-- ============ SÉCURITÉ ============ -->
+<section class="story reel"><div class="halo" style="left:40px;top:100px"></div>
+  <div class="c centre">
+    <div class="kicker">Sécurité</div>
+    <div class="t">Tes papiers, c'est <em>ta vie.</em></div>
+    <div class="p">Voici comment Kazaia les protège.</div>
+  </div>
+  <img class="logo" src="../kazaia-logo.png" alt="Kazaia"><div class="vignette"></div><div class="grain"></div></section>
+
+<section class="story reel"><div class="halo" style="left:60px;top:250px"></div>
+  <div class="c">
+    <div class="kicker">Sécurité</div>
+    <div class="carte"><div class="t" style="font-size:64px">Stockés <em>en France</em></div><div class="p" style="margin-top:16px">Sur un serveur dédié, conforme au RGPD.</div></div>
+    <div class="carte"><div class="t" style="font-size:64px">Jamais pour <em>entraîner une IA</em></div><div class="p" style="margin-top:16px">Tes documents ne servent qu'à toi.</div></div>
+  </div>
+  <img class="logo" src="../kazaia-logo.png" alt="Kazaia"><div class="vignette"></div><div class="grain"></div></section>
+
+<section class="story reel"><div class="halo" style="left:60px;top:250px"></div>
+  <div class="c">
+    <div class="kicker">Sécurité</div>
+    <div class="carte"><div class="t" style="font-size:64px">Double <em>authentification</em></div><div class="p" style="margin-top:16px">Un code en plus à la connexion, dès la formule gratuite.</div></div>
+    <div class="carte"><div class="t" style="font-size:64px">Coffre-fort <em>chiffré</em></div><div class="p" style="margin-top:16px">Pour tes documents les plus sensibles, avec la formule Premium.</div></div>
+  </div>
+  <img class="logo" src="../kazaia-logo.png" alt="Kazaia"><div class="vignette"></div><div class="grain"></div></section>
+
+<!-- ============ À GARDER ============ -->
+<section class="story reel"><div class="halo" style="left:40px;top:100px"></div>
+  <div class="c centre">
+    <div class="kicker">À garder</div>
+    <div class="t">Nos fiches <em>à enregistrer.</em></div>
+    <img class="apercu" src="../../media/2026-11-02-a-garder-1.png" alt="">
+    <div class="p">Chaque dimanche sur le compte.</div>
+  </div>
+  <img class="logo" src="../kazaia-logo.png" alt="Kazaia"><div class="vignette"></div><div class="grain"></div></section>
+
+<section class="story reel"><div class="halo" style="left:40px;top:100px"></div>
+  <div class="c centre">
+    <div class="kicker">À garder</div>
+    <div class="t">Les 6 papiers <em>à retrouver.</em></div>
+    <img class="apercu" src="../../media/2026-11-09-kit-urgence-1.png" alt="">
+    <div class="p">La fiche complète est dans nos publications.</div>
+  </div>
+  <img class="logo" src="../kazaia-logo.png" alt="Kazaia"><div class="vignette"></div><div class="grain"></div></section>
+
+</body></html>
