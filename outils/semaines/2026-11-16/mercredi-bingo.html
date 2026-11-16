@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../base.css">
+<script src="../../base.js"></script>
+<style>
+  .h-k { position: absolute; left: 90px; right: 150px; top: 215px; text-align: center; }
+  .h-t { position: absolute; left: 90px; right: 150px; top: 270px; text-align: center; font-family: "Fraunces"; font-weight: 600; font-size: 88px; line-height: 1.05; letter-spacing: -.015em; }
+  .h-s { position: absolute; left: 90px; right: 150px; top: 400px; text-align: center; font: 500 36px/1.3 "Inter"; color: rgba(250,247,240,.72); }
+  .grille { position: absolute; left: 90px; width: 840px; top: 490px; display: grid; grid-template-columns: repeat(3, 268px); grid-auto-rows: 300px; gap: 18px; }
+  .case { position: relative; border-radius: 28px; background: rgba(255,255,255,.035); border: 1.5px solid rgba(201,169,96,.22); }
+  .case .in { position: absolute; inset: 0; padding: 28px 24px; border-radius: 28px; background: linear-gradient(160deg, rgba(255,255,255,.10), rgba(255,255,255,.04)); border: 1.5px solid rgba(230,211,163,.45); }
+  .case .n { font: 600 24px "Inter"; letter-spacing: .2em; color: var(--gold); }
+  .case .tx { margin-top: 16px; font: 500 33px/1.26 "Inter"; color: var(--cream); }
+  .milieu { display: grid; place-items: center; text-align: center; border-color: rgba(201,169,96,.5); }
+  .milieu .q { position: absolute; inset: 0; display: grid; place-items: center; font-family: "Fraunces"; font-size: 150px; line-height: 1; }
+  .milieu .tampon { position: absolute; left: 24px; top: 36px; width: 220px; height: 220px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,169,96,.42) 0%, rgba(201,169,96,.22) 62%, rgba(201,169,96,0) 72%); border: 4px solid rgba(230,211,163,.85); }
+  .milieu .off { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0 18px; }
+  .milieu .off b { font-family: "Fraunces"; font-weight: 600; font-style: italic; font-size: 46px; line-height: 1.05; }
+  .milieu .off span { margin-top: 12px; font: 600 23px/1.25 "Inter"; color: var(--cream); max-width: 190px; }
+  /* C */
+  .c-k { position: absolute; left: 90px; right: 150px; top: 380px; text-align: center; }
+  .c-t { position: absolute; left: 90px; right: 150px; top: 450px; text-align: center; font-family: "Fraunces"; font-weight: 600; font-size: 104px; line-height: 1.05; }
+  .rangs { position: absolute; left: 90px; right: 150px; top: 700px; display: flex; flex-direction: column; gap: 24px; }
+  .rang { display: flex; align-items: center; gap: 28px; padding: 28px 34px; border-radius: 30px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); font: 500 40px/1.25 "Inter"; }
+  .rang b { flex: 0 0 170px; font-family: "Fraunces"; font-weight: 600; font-size: 46px; color: var(--gold); }
+  .c-s { position: absolute; left: 90px; right: 150px; top: 1170px; text-align: center; font: 500 38px/1.4 "Inter"; color: rgba(250,247,240,.72); }
+  .e { position: absolute; left: 90px; right: 150px; top: 470px; height: 1000px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 40px; }
+  .e .logo { width: 400px; margin-top: 20px; }
+  .e .petit { font-size: 38px; }
+</style></head>
+<body>
+<div class="reel">
+  <div class="halo" style="left:40px; top:-260px"></div>
+  <div class="rayon" style="top:1250px"></div>
+  <canvas class="poussiere"></canvas>
+
+  <!-- A · 0 à 11,4 s : la grille -->
+  <div class="scene" data-in="-1" data-dur="0.01" data-out="11.4" data-anim="fade" data-zoom="1,1.04">
+    <div class="h-k kicker" data-in="-1" data-dur="0.01" data-anim="fade">Bingo de la charge mentale</div>
+    <div class="h-t" data-in="-1" data-dur="0.01" data-anim="fade">Coche <em class="accent" data-shine="0.5">dans ta tête.</em></div>
+    <div class="h-s" data-in="0.7" data-anim="up">Une case, c'est toi ? Compte.</div>
+    <div class="grille">
+      <div class="case"><div class="in" data-in="1.3" data-dur="0.45" data-anim="drop"><div class="n">01</div><div class="tx">Tu sais où est le carnet de santé.</div></div></div>
+      <div class="case"><div class="in" data-in="2.3" data-dur="0.45" data-anim="drop"><div class="n">02</div><div class="tx">Tu as vidé un tiroir pour un seul papier.</div></div></div>
+      <div class="case"><div class="in" data-in="3.3" data-dur="0.45" data-anim="drop"><div class="n">03</div><div class="tx">Tu as oublié de résilier un abonnement.</div></div></div>
+      <div class="case"><div class="in" data-in="4.3" data-dur="0.45" data-anim="drop"><div class="n">04</div><div class="tx">Au lit, tu penses aux papiers.</div></div></div>
+      <div class="case milieu">
+        <div class="q or" data-out="9.6" data-in="-1" data-dur="0.01" data-anim="fade">?</div>
+        <div class="tampon" data-in="9.9" data-dur="0.4" data-anim="scale"></div>
+        <div class="off" data-in="9.6" data-dur="0.4" data-anim="blur" data-shake="10.1,10.6"><b class="or">Case offerte</b><span>Tu y penses en lisant ça.</span></div>
+      </div>
+      <div class="case"><div class="in" data-in="5.3" data-dur="0.45" data-anim="drop"><div class="n">05</div><div class="tx">Tu remplis chaque fiche de l'école.</div></div></div>
+      <div class="case"><div class="in" data-in="6.3" data-dur="0.45" data-anim="drop"><div class="n">06</div><div class="tx">Une date limite t'a échappé.</div></div></div>
+      <div class="case"><div class="in" data-in="7.3" data-dur="0.45" data-anim="drop"><div class="n">07</div><div class="tx">Tu fais des listes dans&nbsp;ta&nbsp;tête.</div></div></div>
+      <div class="case"><div class="in" data-in="8.3" data-dur="0.45" data-anim="drop"><div class="n">08</div><div class="tx">Tu sais quand expire chaque carte d'identité.</div></div></div>
+    </div>
+  </div>
+
+  <!-- B · 11,4 à 14,6 s : combien ? -->
+  <div class="scene" data-in="11.4" data-dur="0.3" data-out="14.6" data-anim="fade">
+    <div class="c-k kicker" data-in="11.5" data-anim="wipe">Bingo ?</div>
+    <div class="c-t" data-in="11.6" data-dur="0.7" data-anim="words">Alors, <em class="accent">combien&nbsp;?</em></div>
+    <div class="rangs">
+      <div class="rang" data-in="12.1" data-dur="0.4" data-anim="left"><b>0 à 2</b><span>Ta tête respire.</span></div>
+      <div class="rang" data-in="12.6" data-dur="0.4" data-anim="left"><b>3 à 5</b><span>Elle porte beaucoup.</span></div>
+      <div class="rang" data-in="13.1" data-dur="0.4" data-anim="left" data-shake="13.5,14.1"><b>6 et +</b><span>Elle porte tout.</span></div>
+    </div>
+    <div class="c-s" data-in="13.6" data-anim="up">Et la case offerte compte aussi.</div>
+  </div>
+
+  <!-- C · 14,6 à 18 s -->
+  <div class="scene" data-in="14.6" data-dur="0.4" data-anim="fade">
+    <div class="e">
+      <div class="kicker" data-in="14.7" data-anim="wipe">Ton vrai score sur 100 ?</div>
+      <div class="titre" data-in="14.9" data-dur="0.8" data-anim="words">Fais le <em>test.</em></div>
+      <div class="petit" data-in="15.5" data-anim="up">Ton score, et la formule qui allège.</div>
+      <div class="pastille" data-in="15.9" data-anim="scale" data-shine="16.4">Lien en bio · kazaia.fr/verifier</div>
+      <img class="logo" src="../../kazaia-logo.png" alt="Kazaia" data-in="16.2" data-anim="blur">
+    </div>
+  </div>
+
+  <div class="vignette"></div>
+  <div class="grain"></div>
+</div>
+</body></html>
