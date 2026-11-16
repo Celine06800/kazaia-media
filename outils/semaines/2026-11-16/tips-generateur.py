@@ -9,6 +9,7 @@ tips=[
  ("2026-11-20","contrats","Contrats","Ta box se réengage <span class=\"nw\">peut-être</span> <em>sans toi</em>.","La date qui compte, c'est l'échéance.","Note la date d'échéance de chaque contrat : box, assurance, énergie. C'est souvent elle qui décide quand tu peux changer."),
  ("2026-11-21","organisation","Organisation","Des papiers qui traînent <em>partout</em> ?","Un seul endroit, une fois par semaine.","Une boîte « à traiter » : chaque papier y entre. Le samedi matin, tu la vides en un quart d'heure."),
  ("2026-11-22","charge-mentale","Charge mentale","Ta tête tourne encore <em>à 23 h</em> ?","Elle a juste peur d'oublier.","Avant de dormir, écris sur une feuille tout ce qui t'occupe. Ta tête peut lâcher : c'est noté."),
+ ("2026-11-23","papiers","Papiers","Ta fiche de paie de 2012, <em>tu l'as jetée</em> ?","Elle te le dit elle-même : <span class=\"nw\">à garder</span> sans limite de durée.","Un dossier <span class=\"nw\">« Fiches de paie »</span>, et chaque mois la nouvelle y entre. Tu n'en jettes aucune, jamais."),
 ]
 tpl=open('semaines/2026-11-16/tip-gabarit.html').read()
 for d,slug,theme,hook,sub,geste in tips:

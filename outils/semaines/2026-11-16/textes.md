@@ -106,3 +106,17 @@ Préparé par les tâches du lundi (une par contenu). Brouillons Metricool marqu
 - Décision de Céline du 16/11/2026 : priorité à la communauté ; chaque matin un tip gratuit, un thème par jour (lun papiers · mar budget · mer enfants et école · jeu santé · ven maison et contrats · sam organisation · dim charge mentale), appel à l'action « Abonne-toi pour un conseil chaque matin. Ici, on soulage ta charge mentale. »
 - Gabarit `tip-gabarit.html`, générateur `tips-generateur.py` (lancé depuis outils/). Rendu : `node outils/render-reel.mjs outils/semaines/2026-11-16/tip-<date>-<thème>.html 10 media/tip-<date>-<thème>.mp4 --musique elan --accents 3.6,7.2`, plus une copie muette `-muet.mp4` pour TikTok.
 - Instagram : son tendance de la bibliothèque commerciale posé par Metricool (notre musique coupée). TikTok : publication manuelle (notification Metricool), Céline choisit le son tendance.
+
+### Tip du lundi 23/11 · 7:30 · Papiers
+- Fichier : `media/tip-2026-11-23-papiers.mp4` (muet : `media/tip-2026-11-23-papiers-muet.mp4`) · son Instagram : In A Neon Mood (Reels Sound) · Paul Goldo
+- Accroche : « Ta fiche de paie de 2012, tu l'as jetée ? » · « Elle te le dit elle-même : à garder sans limite de durée. »
+- Geste : « Un dossier « Fiches de paie », et chaque mois la nouvelle y entre. Tu n'en jettes aucune, jamais. »
+- Source : service-public.gouv.fr/particuliers/vosdroits/F33512 (le bulletin invite le salarié à le conserver sans limite de durée).
+
+> Ta fiche de paie de 2012, tu l'as jetée ? 📂
+>
+> Le tip du matin : garde toutes tes fiches de paie, sans limite de durée (c'est écrit dessus). Un dossier « Fiches de paie », la nouvelle y entre chaque mois.
+>
+> Abonne-toi pour un conseil chaque matin. Ici, on soulage ta charge mentale.
+>
+> #chargementale #papiersadministratifs #organisationfamiliale #astucemaison #kazaia
