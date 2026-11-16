@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../base.css">
+<script src="../../base.js"></script>
+<style>
+  :root { --alerte: #E58B7A; }
+  /* A : accroche */
+  .a { position: absolute; left: 90px; right: 150px; top: 420px; }
+  .a .titre { margin-top: 34px; font-size: 112px; }
+  .ligne-mail { display: flex; align-items: center; gap: 26px; padding: 30px 34px; border-radius: 28px; background: rgba(255,255,255,.07);
+    border: 1.5px solid rgba(255,255,255,.14); }
+  .ligne-mail .pt { flex: 0 0 18px; height: 18px; border-radius: 50%; background: #6FA8FF; box-shadow: 0 0 16px rgba(111,168,255,.8); }
+  .ligne-mail .av { flex: 0 0 72px; height: 72px; border-radius: 50%; background: #2A3D63; display: grid; place-items: center; font: 700 30px "Inter"; color: #CFD8EA; }
+  .ligne-mail .c { flex: 1; min-width: 0; }
+  .ligne-mail .de { display: flex; justify-content: space-between; font: 700 32px "Inter"; }
+  .ligne-mail .de span:last-child { font-weight: 500; font-size: 26px; color: rgba(250,247,240,.55); }
+  .ligne-mail .ob { margin-top: 6px; font: 500 30px/1.25 "Inter"; color: rgba(250,247,240,.82); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ligne-mail.cible { border: 3px solid #E6D3A3; background: linear-gradient(135deg, rgba(201,169,96,.38), rgba(201,169,96,.12)); box-shadow: 0 0 70px rgba(201,169,96,.35); }
+  .ligne-mail.cible .de span:first-child { color: #F3E7C8; }
+  .a .ligne-mail { margin-top: 90px; }
+  .a .sous { margin-top: 50px; font: 500 40px/1.4 "Inter"; color: rgba(250,247,240,.72); }
+  /* B : la boîte mail */
+  .boite { position: absolute; left: 90px; right: 150px; top: 250px; }
+  .onglets { display: flex; gap: 18px; margin-bottom: 30px; }
+  .onglets span { padding: 16px 28px; border-radius: 999px; font: 600 28px "Inter"; color: rgba(250,247,240,.55); border: 1.5px solid rgba(255,255,255,.12); }
+  .onglets span.on { color: var(--navy); background: var(--gold-light); border-color: var(--gold-light); }
+  .boite .ligne-mail { margin-bottom: 18px; }
+  .boite .ligne-mail.terne .c, .boite .ligne-mail.terne .av, .boite .ligne-mail.terne .pt { opacity: .45; }
+  .b-sous { position: absolute; left: 60px; right: 120px; top: 1150px; text-align: center; font-family: "Fraunces"; font-size: 64px; line-height: 1.15; }
+  /* C : le mail ouvert */
+  .doc { position: absolute; left: 90px; right: 150px; top: 300px; padding: 54px 56px; border-radius: 36px; background: #F6F1E6; color: var(--ink);
+    box-shadow: 0 40px 90px rgba(0,0,0,.5); }
+  .doc .k { font: 600 24px "Inter"; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); }
+  .doc .t { margin-top: 18px; font: 600 56px/1.1 "Fraunces"; }
+  .doc .p { margin-top: 24px; font: 400 32px/1.45 "Inter"; color: #3A4560; }
+  .encadre { margin-top: 34px; padding: 30px 34px; border: 3px solid var(--gold-deep); border-radius: 22px; background: #FFFBF0; }
+  .encadre .l1 { font: 600 26px "Inter"; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-deep); }
+  .encadre .l2 { margin-top: 8px; font: 600 50px "Fraunces"; }
+  .barre { position: absolute; left: 24px; top: 50%; height: 6px; width: 0; background: var(--alerte); border-radius: 3px; transform: rotate(-4deg); }
+  .compteur { position: absolute; left: 90px; right: 150px; top: 1050px; text-align: center; }
+  .compteur .k2 { font: 600 28px "Inter"; letter-spacing: .3em; text-transform: uppercase; color: var(--alerte); }
+  .compteur .n { margin-top: 10px; font: 600 190px/1 "Fraunces"; font-variant-numeric: tabular-nums; }
+  .compteur .q { margin-top: 18px; font: 500 38px "Inter"; color: rgba(250,247,240,.7); }
+  /* D : la règle, en frise */
+  .d-haut { position: absolute; left: 90px; right: 150px; top: 290px; }
+  .d-haut .titre { margin-top: 26px; font-size: 76px; line-height: 1.1; }
+  .frise { position: absolute; left: 90px; width: 840px; top: 760px; height: 300px; }
+  .axe { position: absolute; left: 0; right: 0; top: 120px; height: 3px; background: rgba(250,247,240,.25); }
+  .plage { position: absolute; left: 40px; width: 440px; top: 108px; height: 27px; border-radius: 14px; background: var(--or-feuille); box-shadow: 0 0 40px rgba(201,169,96,.5);
+    transform-origin: left center; }
+  .jalon { position: absolute; top: 96px; width: 0; }
+  .jalon i { position: absolute; left: -15px; top: 9px; width: 30px; height: 30px; border-radius: 50%; background: var(--navy); border: 4px solid var(--gold-light); }
+  .jalon b { position: absolute; top: 76px; transform: translateX(-50%); white-space: nowrap; font: 600 32px "Inter"; }
+  .jalon.limite i { background: var(--alerte); border-color: #F6C2B6; }
+  .jalon.limite b { color: #F6C2B6; }
+  .plage-lab { position: absolute; left: 40px; width: 440px; top: 20px; text-align: center; font: 600 30px "Inter"; color: var(--gold-light); }
+  .d-bas { position: absolute; left: 90px; right: 150px; top: 1110px; font: 500 40px/1.4 "Inter"; }
+  .src { position: absolute; left: 90px; right: 150px; top: 1360px; font: 400 28px "Inter"; color: rgba(250,247,240,.55); }
+  /* E : Kazaia */
+  .e-carte { position: absolute; left: 90px; right: 150px; top: 560px; }
+  .e-carte .notif .msg { font-size: 40px; } .e-carte .notif .det { font-size: 32px; }
+  .e-titre { position: absolute; left: 90px; right: 150px; top: 960px; text-align: center; }
+  .f { position: absolute; left: 90px; right: 150px; top: 520px; height: 1070px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 44px; }
+  .f .logo { width: 400px; margin-top: 20px; }
+</style></head>
+<body>
+<div class="reel">
+  <div class="halo" style="left:160px; top:-120px"></div>
+  <canvas class="poussiere"></canvas>
+
+  <!-- A · 0 à 3,4 s : accroche -->
+  <div class="scene" data-in="0" data-dur="0.01" data-out="3.4" data-anim="fade" data-zoom="1,1.05">
+    <div class="a">
+      <div class="kicker" data-in="0" data-dur="0.01" data-anim="fade">23:14 · tu tries tes mails</div>
+      <div class="titre" data-in="0" data-dur="0.01" data-anim="fade">Ce mail-là t'a coûté <em class="or">348 €.</em></div>
+      <div class="ligne-mail cible" data-in="0" data-dur="0.01" data-anim="fade" data-shine="1.0">
+        <span class="pt"></span><span class="av">VS</span>
+        <div class="c"><div class="de"><span>Veille Sécurité</span><span>3 oct.</span></div>
+        <div class="ob">Votre contrat arrive à échéance</div></div>
+      </div>
+      <div class="sous" data-in="1.6" data-anim="up">Et il n'a jamais été ouvert.</div>
+    </div>
+  </div>
+
+  <!-- B · 3,4 à 7,6 s : la boîte mail -->
+  <div class="scene" data-in="3.4" data-dur="0.3" data-out="7.6" data-anim="fade" data-zoom="1,1.04">
+    <div class="boite">
+      <div class="onglets" data-in="3.5" data-anim="fade"><span>Principale</span><span class="on">Promotions · 47</span><span>Réseaux</span></div>
+      <div class="ligne-mail terne" data-in="3.6" data-dur="0.4" data-anim="up"><span class="pt"></span><span class="av">M</span><div class="c"><div class="de"><span>Maison &amp; Déco</span><span>5 oct.</span></div><div class="ob">-30 % sur les plaids, ce week-end</div></div></div>
+      <div class="ligne-mail terne" data-in="3.8" data-dur="0.4" data-anim="up"><span class="pt"></span><span class="av">L</span><div class="c"><div class="de"><span>La Petite Épicerie</span><span>4 oct.</span></div><div class="ob">Ta box du mois est arrivée</div></div></div>
+      <div class="ligne-mail cible" data-in="4.0" data-dur="0.4" data-anim="up" data-shine="5.0" data-shake="5.0,5.5"><span class="pt"></span><span class="av">VS</span><div class="c"><div class="de"><span>Veille Sécurité</span><span>3 oct.</span></div><div class="ob">Votre contrat arrive à échéance</div></div></div>
+      <div class="ligne-mail terne" data-in="4.2" data-dur="0.4" data-anim="up"><span class="pt"></span><span class="av">V</span><div class="c"><div class="de"><span>Voyages Soleil</span><span>2 oct.</span></div><div class="ob">Tes vacances d'hiver à petit prix</div></div></div>
+      <div class="ligne-mail terne" data-in="4.4" data-dur="0.4" data-anim="up"><span class="pt"></span><span class="av">S</span><div class="c"><div class="de"><span>Sport Express</span><span>1 oct.</span></div><div class="ob">Livraison offerte jusqu'à dimanche</div></div></div>
+    </div>
+    <div class="b-sous" data-in="5.6" data-dur="1.0" data-anim="words">Rangé entre deux <em class="accent">promos.</em></div>
+  </div>
+
+  <!-- C · 7,6 à 11,6 s : le mail ouvert, trop tard -->
+  <div class="scene" data-in="7.6" data-dur="0.3" data-out="11.6" data-anim="fade" data-zoom="1,1.04">
+    <div class="doc" data-in="7.7" data-dur="0.6" data-anim="drop">
+      <div class="k">Veille Sécurité · télésurveillance</div>
+      <div class="t">Votre contrat arrive à échéance</div>
+      <div class="p">Sans demande de votre part, il sera reconduit pour un an.</div>
+      <div class="encadre" style="position:relative">
+        <div class="l1">Date limite pour refuser</div>
+        <div class="l2">15 octobre 2026</div>
+        <div class="barre" id="barre"></div>
+      </div>
+    </div>
+    <div class="compteur">
+      <div class="k2" data-in="9.0" data-anim="fade">Reconduit · 1 an de plus</div>
+      <div class="n or" data-in="9.1" data-anim="scale" data-shake="10.3,10.7"><span id="euros">0</span> €</div>
+      <div class="q" data-in="10.0" data-anim="up">pour une alarme que tu as changée en juin.</div>
+    </div>
+  </div>
+
+  <!-- D · 11,6 à 15,4 s : la règle -->
+  <div class="scene" data-in="11.6" data-dur="0.3" data-out="15.4" data-anim="fade">
+    <div class="d-haut">
+      <div class="kicker" data-in="11.7" data-anim="wipe">La règle, en général</div>
+      <div class="titre" data-in="11.9" data-dur="0.9" data-anim="words">Le prestataire doit te prévenir <em>par écrit.</em></div>
+    </div>
+    <div class="frise">
+      <div class="axe" data-in="12.6" data-anim="fade"></div>
+      <div class="plage" id="plage" data-in="12.8" data-anim="fade"></div>
+      <div class="plage-lab" data-in="13.2" data-anim="up">lettre ou mail</div>
+      <div class="jalon" style="left:40px" data-in="12.7" data-anim="scale"><i></i><b>3 mois avant</b></div>
+      <div class="jalon" style="left:480px" data-in="12.9" data-anim="scale"><i></i><b>1 mois avant</b></div>
+      <div class="jalon limite" style="left:770px" data-in="13.1" data-anim="scale"><i></i><b>Date limite</b></div>
+    </div>
+    <div class="d-bas" data-in="13.6" data-dur="0.9" data-anim="words">Il l'a fait. Sans réponse à temps, le contrat repart pour la même durée.</div>
+    <div class="src" data-in="13.9" data-anim="fade">Source : service-public.fr · situation fictive</div>
+  </div>
+
+  <!-- E · 15,4 à 17,8 s : Kazaia -->
+  <div class="scene" data-in="15.4" data-dur="0.3" data-out="17.8" data-anim="fade" data-zoom="1.02,1">
+    <div class="e-carte" data-in="15.5" data-dur="0.7" data-anim="drop">
+      <div class="notif or" data-in="15.5" data-dur="0.01" data-anim="fade" data-shine="16.3"><div class="ico"><img src="../../kazaia-icone.png" alt=""></div><div style="flex:1"><div class="app"><span>KAZAIA · RAPPEL</span><span>J-30</span></div><div class="msg">Reconduction tacite</div><div class="det">Télésurveillance · pense à résilier si tu changes (préavis 15 j).</div></div></div>
+    </div>
+    <div class="e-titre titre" data-in="16.2" data-dur="0.9" data-anim="words" style="font-size:96px">Un rappel, <em style="display:block">pas une promo.</em></div>
+  </div>
+
+  <!-- F · 17,8 à 20 s -->
+  <div class="scene" data-in="17.8" data-dur="0.4" data-anim="fade">
+    <div class="f">
+      <div class="kicker" data-in="17.9" data-anim="wipe">Kazaia · ne rien oublier</div>
+      <div class="titre" data-in="18.1" data-dur="0.8" data-anim="words" style="font-size:90px">30 jours d'essai <em>sans carte bancaire.</em></div>
+      <div class="pastille" data-in="18.7" data-anim="scale" data-shine="19.1">Lien en bio · kazaia.fr</div>
+      <img class="logo" src="../../kazaia-logo.png" alt="Kazaia" data-in="19.0" data-anim="blur">
+    </div>
+  </div>
+
+  <div class="vignette"></div>
+  <div class="grain"></div>
+</div>
+<script>
+  const ease = (x) => 1 - Math.pow(1 - Math.min(1, Math.max(0, x)), 3);
+  window.onRender = function (t) {
+    document.getElementById("euros").textContent = Math.round(348 * ease((t - 9.2) / 1.1));
+    document.getElementById("barre").style.width = (ease((t - 8.5) / 0.4) * 92) + "%";
+    document.getElementById("plage").style.transform = "scaleX(" + ease((t - 12.8) / 0.7) + ")";
+  };
+</script>
+</body></html>

@@ -44,3 +44,29 @@ Préparé par les tâches du lundi (une par contenu). Brouillons Metricool marqu
 > Ta charge mentale, elle est à combien sur 100 ? Fais le test, lien en bio.
 >
 > #chargementale #viedemaman #organisationfamiliale #mamandebordee #papiersadministratifs #kazaia
+
+## Vendredi 20/11 · 18:00 · Le papier qui coûte cher · reel 20 s · musique « nuit »
+- Préparé le 16/11/2026 par la tâche « vendredi ».
+- Fichier : `media/2026-11-16-reconduction.mp4` (source `vendredi-reconduction.html`).
+- Rendu : `node outils/render-reel.mjs outils/semaines/2026-11-16/vendredi-reconduction.html 20 media/2026-11-16-reconduction.mp4 --musique nuit --accents 3.4,7.6,11.6,15.4,17.8`
+- Analyse (Metricool, reels Instagram, 28 jours) : nos meilleurs reels sont les récits de nuit (« Message de A. » 489 de portée, « 23:47 » 400) et l'écran familier (« 3 questions » 419). Les vendredis « papier qui coûte cher » restent plus bas (contrôle technique 245, garantie 112) : on les passe en récit de nuit à la 2e personne, sur un écran familier (la boîte mail).
+- Sujets évités car déjà programmés cette semaine ou la suivante : papiers d'identité expirés (17/11), salle de sport non résiliée (21/11), avoir expiré (26/11).
+- Déroulé (situation fictive, tutoiement) :
+  - 0 s : « 23:14 · tu tries tes mails. Ce mail-là t'a coûté 348 €. » Le mail « Veille Sécurité · Votre contrat arrive à échéance », jamais ouvert.
+  - 3,4 s : la boîte mail, onglet Promotions · 47 ; le mail brille entre les promos. « Rangé entre deux promos. »
+  - 7,6 s : le mail ouvert, encadré « Date limite pour refuser : 15 octobre 2026 » barré ; compteur 0 → 348 € « Reconduit · 1 an de plus », « pour une alarme que tu as changée en juin ».
+  - 11,6 s : la règle en frise : le prestataire doit te prévenir par écrit (lettre ou mail) entre 3 mois et 1 mois avant la date limite. « Il l'a fait. Sans réponse à temps, le contrat repart pour la même durée. » Source : service-public.fr · situation fictive.
+  - 15,4 s : rappel Kazaia J-30 « Reconduction tacite · Télésurveillance · pense à résilier si tu changes (préavis 15 j) ». « Un rappel, pas une promo. »
+  - 17,8 s : « 30 jours d'essai sans carte bancaire. » Lien en bio · kazaia.fr + logo.
+- Marque « Veille Sécurité », montant et dates : fictifs. Télésurveillance choisie car l'assurance, la mutuelle, la téléphonie et internet ont des règles spécifiques (exclues de la page).
+- Source : service-public.fr, « Peut-on résilier un contrat de prestation de services à tacite reconduction ? » (F33991, https://www.service-public.gouv.fr/particuliers/vosdroits/F33991), page vérifiée le 20/03/2026, consultée le 16/11/2026. Code de la consommation, art. L215-1 et suivants.
+- Kazaia : événement `tacit_renewal` (« Reconduction tacite — … · pensez à résilier si vous changez (préavis N j) ») dans src/lib/events.ts ; e-mails J-30 et J-7 avant l'échéance (src/app/api/cron/reminders/route.ts, REMINDER_DELTAS = [30, 7]). Essai 30 jours sans carte bancaire (src/lib/plans.ts).
+- Texte publié :
+
+> 23:14. Tu tries tes mails… et celui-là t'a coûté 348 € 🌙
+>
+> Le mail « Votre contrat arrive à échéance » était bien arrivé. Rangé dans les promos, jamais ouvert. La date limite pour refuser la reconduction est passée : un an de plus. En règle générale, le prestataire doit te prévenir par écrit entre 3 mois et 1 mois avant cette date. Situation fictive, règles réelles (service-public.fr).
+>
+> Kazaia te prévient 30 jours avant l'échéance, préavis sous les yeux. 30 jours d'essai sans carte bancaire, lien en bio.
+>
+> #reconductiontacite #papiersadministratifs #chargementale #organisationfamiliale #astucemaison #kazaia
