@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../base.css">
+<script src="../../base.js"></script>
+<style>
+  /* A : l'accroche */
+  .a-k { position: absolute; left: 0; right: 60px; top: 330px; text-align: center; }
+  .a-h { position: absolute; left: 0; right: 60px; top: 400px; text-align: center; }
+  .a-t { position: absolute; left: 90px; right: 150px; top: 760px; text-align: center; font-family: "Fraunces"; font-size: 104px; line-height: 1.06; }
+  .a-t em { font-style: italic; }
+  .a-s { position: absolute; left: 100px; right: 160px; top: 1180px; text-align: center; font: 500 42px "Inter"; color: rgba(250,247,240,.68); }
+  /* B : l'écran des onglets */
+  .nav { position: absolute; left: 70px; right: 130px; top: 210px; height: 1240px; border-radius: 48px; overflow: hidden;
+    background: linear-gradient(180deg, #1a2742, #121c33); border: 1.5px solid rgba(201,169,96,.28); box-shadow: 0 40px 120px rgba(0,0,0,.5); }
+  .nav-tete { position: absolute; left: 0; right: 0; top: 0; height: 150px; padding: 46px 48px 0; display: flex; justify-content: space-between; align-items: center;
+    background: #18233d; z-index: 3; box-shadow: 0 30px 30px -6px #18233d; }
+  .nav-titre { font: 600 34px "Inter"; color: rgba(250,247,240,.9); letter-spacing: .02em; }
+  .nav-titre small { display: block; font: 600 22px "Inter"; letter-spacing: .14em; text-transform: uppercase; color: #c9a960; margin-bottom: 6px; }
+  .compteur { min-width: 92px; height: 92px; border-radius: 24px; border: 4px solid rgba(250,247,240,.9); display: grid; place-items: center;
+    font: 800 40px "Inter"; color: #faf7f0; padding: 0 12px; }
+  .grille { position: absolute; left: 36px; right: 36px; top: 168px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; will-change: transform; }
+  .onglet { height: 260px; border-radius: 28px; background: #faf7f0; color: #1b2236; overflow: hidden; position: relative; box-shadow: 0 16px 40px rgba(0,0,0,.35); }
+  .onglet .bar { height: 64px; background: #efe7d6; display: flex; align-items: center; gap: 14px; padding: 0 20px; font: 600 23px "Inter"; color: #6b6150; }
+  .onglet .bar i { flex: 0 0 26px; height: 26px; border-radius: 8px; background: #c9a960; }
+  .onglet .bar b { margin-left: auto; font: 500 30px "Inter"; color: #9a8f7a; }
+  .onglet .q { padding: 22px 22px 0; font: 600 33px/1.22 "Inter"; }
+  .onglet .q em { font-style: normal; color: #b4362f; }
+  .onglet .l { position: absolute; left: 22px; right: 60px; bottom: 26px; height: 12px; border-radius: 6px; background: rgba(27,34,54,.1); }
+  .nav::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 200px; background: linear-gradient(180deg, rgba(18,28,51,0), #121c33); z-index: 2; }
+  /* la boîte de dialogue */
+  .dlg { position: absolute; left: 150px; right: 210px; top: 640px; z-index: 5; border-radius: 40px; padding: 52px 48px 40px;
+    background: rgba(250,247,240,.97); color: #1b2236; text-align: center; box-shadow: 0 50px 140px rgba(0,0,0,.6); }
+  .dlg h3 { margin: 0; font: 600 50px/1.15 "Fraunces"; }
+  .dlg p { margin: 18px 0 34px; font: 500 30px/1.35 "Inter"; color: #5d6070; }
+  .dlg .btns { display: flex; gap: 20px; }
+  .dlg .btns span { flex: 1; padding: 24px 0; border-radius: 22px; font: 700 30px "Inter"; background: #ece4d3; color: #1b2236; }
+  .dlg .btns .ko { background: #b4362f; color: #fff; }
+  .tap { position: absolute; width: 120px; height: 120px; border-radius: 50%; background: rgba(250,247,240,.35); border: 3px solid rgba(250,247,240,.8); z-index: 6; left: 612px; top: 832px; }
+  .b-pied { position: absolute; left: 70px; right: 130px; top: 1490px; text-align: center; font: 500 38px "Inter"; color: rgba(250,247,240,.8); }
+  .b-pied em { font-style: italic; font-family: "Fraunces"; color: #c9a960; font-size: 44px; }
+  /* C */
+  .c-a { position: absolute; left: 90px; right: 150px; top: 600px; text-align: center; font-family: "Fraunces"; font-size: 92px; line-height: 1.08; }
+  .c-b { position: absolute; left: 100px; right: 160px; top: 1080px; text-align: center; font: 500 44px/1.4 "Inter"; color: rgba(250,247,240,.75); }
+  /* D */
+  .d-carte { position: absolute; left: 90px; right: 150px; top: 560px; }
+  .d-carte .notif .msg { font-size: 42px; } .d-carte .notif .det { font-size: 34px; }
+  .d-titre { position: absolute; left: 90px; right: 150px; top: 960px; text-align: center; }
+  /* E */
+  .e { position: absolute; left: 90px; right: 150px; top: 560px; height: 1070px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 44px; }
+  .e .logo { width: 400px; margin-top: 20px; }
+</style></head>
+<body>
+<div class="reel">
+  <div class="halo" style="left:120px; top:-140px"></div>
+  <div class="rayon" style="top:1200px"></div>
+  <canvas class="poussiere"></canvas>
+
+  <!-- A · 0 à 2,8 s -->
+  <div class="scene" data-in="0" data-dur="0.01" data-out="2.8" data-anim="fade" data-zoom="1,1.07">
+    <div class="a-k kicker" data-in="0" data-dur="0.01" data-anim="fade">Lumière éteinte</div>
+    <div class="a-h"><span class="chrono" data-in="0" data-dur="0.01" data-anim="fade" data-shine="0.4">23:40</span></div>
+    <div class="a-t or" data-in="0" data-dur="0.01" data-anim="fade">Ta tête a <em>47 onglets</em> ouverts.</div>
+    <div class="a-s" data-in="1.2" data-anim="up">Et aucun ne veut se fermer.</div>
+  </div>
+
+  <!-- B · 2,8 à 10,2 s : les onglets s'empilent, puis « Tout fermer » -->
+  <div class="scene" data-in="2.8" data-dur="0.3" data-out="10.2" data-anim="fade" data-zoom="1,1.03">
+    <div class="nav" data-in="2.8" data-dur="0.5" data-anim="up" data-shake="9.2,9.9">
+      <div class="nav-tete">
+        <div class="nav-titre"><small>Ta tête · 23:40</small>Onglets ouverts</div>
+        <div class="compteur" id="compteur">0</div>
+      </div>
+      <div class="grille" id="grille">
+        <div class="onglet" data-in="3.3" data-dur="0.3" data-anim="scale"><div class="bar"><i></i>Santé<b>×</b></div><div class="q">Vaccin d'Inès : le rappel, c'est quand ?</div><div class="l"></div></div>
+        <div class="onglet" data-in="3.8" data-dur="0.3" data-anim="scale"><div class="bar"><i></i>Assurance<b>×</b></div><div class="q">Assurance auto : <em>se renouvelle</em> quand ?</div><div class="l"></div></div>
+        <div class="onglet" data-in="4.3" data-dur="0.3" data-anim="scale"><div class="bar"><i></i>Papiers<b>×</b></div><div class="q">Carte d'identité de Tom : valide ?</div><div class="l"></div></div>
+        <div class="onglet" data-in="4.75" data-dur="0.25" data-anim="scale"><div class="bar"><i></i>École<b>×</b></div><div class="q">Cantine : payer avant le 15</div><div class="l"></div></div>
+        <div class="onglet" data-in="5.15" data-dur="0.25" data-anim="scale"><div class="bar"><i></i>Achats<b>×</b></div><div class="q">Le frigo : encore <em>sous garantie</em> ?</div><div class="l"></div></div>
+        <div class="onglet" data-in="5.5" data-dur="0.2" data-anim="scale"><div class="bar"><i></i>Contrats<b>×</b></div><div class="q">Box : fin d'engagement ?</div><div class="l"></div></div>
+        <div class="onglet" data-in="5.8" data-dur="0.2" data-anim="scale"><div class="bar"><i></i>Impôts<b>×</b></div><div class="q">Taxe foncière : payée ?</div><div class="l"></div></div>
+        <div class="onglet" data-in="6.05" data-dur="0.2" data-anim="scale"><div class="bar"><i></i>Sport<b>×</b></div><div class="q">Certificat pour le judo</div><div class="l"></div></div>
+        <div class="onglet" data-in="6.3" data-dur="0.15" data-anim="scale"><div class="bar"><i></i>Voyage<b>×</b></div><div class="q">Passeports pour février ?</div><div class="l"></div></div>
+        <div class="onglet" data-in="6.5" data-dur="0.15" data-anim="scale"><div class="bar"><i></i>Santé<b>×</b></div><div class="q">Ordonnance à renouveler</div><div class="l"></div></div>
+        <div class="onglet" data-in="6.7" data-dur="0.15" data-anim="scale"><div class="bar"><i></i>Maison<b>×</b></div><div class="q">Devis de la chaudière</div><div class="l"></div></div>
+        <div class="onglet" data-in="6.9" data-dur="0.15" data-anim="scale"><div class="bar"><i></i>Banque<b>×</b></div><div class="q">Rappeler la banque</div><div class="l"></div></div>
+        <div class="onglet" data-in="7.05" data-dur="0.15" data-anim="scale"><div class="bar"><i></i>Véto<b>×</b></div><div class="q">Vaccin du chat</div><div class="l"></div></div>
+        <div class="onglet" data-in="7.2" data-dur="0.15" data-anim="scale"><div class="bar"><i></i>Abonnements<b>×</b></div><div class="q">Résilier l'appli de sport</div><div class="l"></div></div>
+      </div>
+    </div>
+    <div class="dlg" data-in="8.1" data-dur="0.35" data-anim="scale" data-out="9.3">
+      <h3>Fermer les 47&nbsp;onglets ?</h3>
+      <p>Tu pourras enfin dormir.</p>
+      <div class="btns"><span>Annuler</span><span class="ko">Tout fermer</span></div>
+    </div>
+    <div class="tap" data-in="8.8" data-dur="0.2" data-anim="scale" data-out="9.3"></div>
+    <div class="b-pied" data-in="9.35" data-dur="0.4" data-anim="up"><em>Impossible :</em> ils sont dans ta tête.</div>
+  </div>
+
+  <!-- C · 10,2 à 12,6 s -->
+  <div class="scene" data-in="10.2" data-dur="0.3" data-out="12.6" data-anim="fade">
+    <div class="c-a" data-in="10.4" data-dur="1.0" data-anim="words">Ce ne sont pas des onglets. C'est <em class="accent">ta charge mentale.</em></div>
+    <div class="c-b" data-in="11.5" data-dur="0.6" data-anim="up">Et elle ne se met jamais en veille.</div>
+  </div>
+
+  <!-- D · 12,6 à 15,2 s -->
+  <div class="scene" data-in="12.6" data-dur="0.3" data-out="15.2" data-anim="fade" data-zoom="1.02,1">
+    <div class="d-carte" data-in="12.8" data-dur="0.7" data-anim="drop">
+      <div class="notif or" data-in="12.8" data-dur="0.01" data-anim="fade" data-shine="13.5"><div class="ico"><img src="../../kazaia-icone.png" alt=""></div><div style="flex:1"><div class="app"><span>KAZAIA · RAPPEL</span><span>J-30</span></div><div class="msg">Assurance auto : renouvellement</div><div class="det">Dans un mois. Rappel à J-7 aussi.</div></div></div>
+    </div>
+    <div class="d-titre titre" data-in="13.5" data-dur="1.0" data-anim="words" style="font-size:94px">Ferme l'onglet. <em>Kazaia s'en souvient.</em></div>
+  </div>
+
+  <!-- E · 15,2 à 17,8 s -->
+  <div class="scene" data-in="15.2" data-dur="0.4" data-anim="fade">
+    <div class="e">
+      <div class="kicker" data-in="15.3" data-anim="wipe">Ta charge mentale, sur 100 ?</div>
+      <div class="titre" data-in="15.5" data-dur="0.8" data-anim="words">Fais le <em>test.</em></div>
+      <div class="pastille" data-in="16.1" data-anim="scale" data-shine="16.6">Lien en bio · kazaia.fr/verifier</div>
+      <img class="logo" src="../../kazaia-logo.png" alt="Kazaia" data-in="16.4" data-anim="blur">
+    </div>
+  </div>
+
+  <div class="vignette"></div>
+  <div class="grain"></div>
+</div>
+<script>
+  // Les onglets s'empilent et poussent la grille vers le haut ; le compteur file jusqu'à 47.
+  window.onRender = function (t) {
+    const cartes = [...document.querySelectorAll('#grille .onglet')];
+    const n = cartes.filter((c) => t >= parseFloat(c.dataset.in)).length;
+    let total = n;
+    if (t > 7.2) total = Math.min(47, n + Math.floor((t - 7.2) / 0.035));
+    document.getElementById('compteur').textContent = total;
+    const der = cartes[Math.max(0, n - 1)];
+    const cible = n ? Math.max(0, der.offsetTop + der.offsetHeight - (1240 - 168 - 110)) : 0;
+    document.getElementById('grille').style.transform = `translateY(${-cible}px)`;
+  };
+</script>
+</body></html>

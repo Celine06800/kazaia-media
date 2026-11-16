@@ -23,3 +23,24 @@ Préparé par les tâches du lundi (une par contenu). Brouillons Metricool marqu
 > Ton vrai score de charge mentale sur 100, c'est le test qui te le donne. Fais le test, lien en bio.
 >
 > #chargementale #viedemaman #organisationfamiliale #parentsdebordes #papiersadministratifs #kazaia
+
+## Lundi 16/11 · 18:00 · La charge invisible · reel 17,8 s · musique « nuit »
+- Préparé le 16/11/2026 à la main (la tâche du lundi s'est arrêtée sans rien produire ce matin).
+- Fichier : `media/2026-11-16-onglets.mp4` (source `lundi-onglets.html`).
+- Rendu : `node outils/render-reel.mjs outils/semaines/2026-11-16/lundi-onglets.html 17.8 media/2026-11-16-onglets.mp4 --musique nuit --accents 2.8,10.2,12.6,15.2`
+- Mise en scène nouvelle (écran familier : les onglets ouverts d'un navigateur) :
+  - 0 s : « Lumière éteinte · 23:40 · Ta tête a 47 onglets ouverts. » / « Et aucun ne veut se fermer. »
+  - 2,8 à 10,2 s : « Ta tête · Onglets ouverts » : les onglets s'empilent (vaccin, assurance auto, carte d'identité, cantine, garantie du frigo, box, taxe foncière, judo, passeports, ordonnance, chaudière, banque, véto, appli de sport), le compteur file jusqu'à 47. « Fermer les 47 onglets ? » → « Tout fermer » → l'écran tremble : « Impossible : ils sont dans ta tête. »
+  - 10,2 s : « Ce ne sont pas des onglets. C'est ta charge mentale. » / « Et elle ne se met jamais en veille. »
+  - 12,6 s : rappel Kazaia J-30 « Assurance auto : renouvellement » (type tacit_renewal de src/lib/events.ts) · « Ferme l'onglet. Kazaia s'en souvient. »
+  - 15,2 s : « Ta charge mentale, sur 100 ? Fais le test. » kazaia.fr/verifier + logo.
+- Prénoms fictifs (Inès, Tom). Aucune règle administrative citée.
+- Texte publié :
+
+> 23:40. Ta tête a 47 onglets ouverts 🌙
+>
+> Le vaccin d'Inès, l'assurance auto qui se renouvelle, la carte d'identité de Tom, la cantine, la garantie du frigo… Tu voudrais tout fermer pour dormir. Impossible : ils sont dans ta tête.
+>
+> Ta charge mentale, elle est à combien sur 100 ? Fais le test, lien en bio.
+>
+> #chargementale #viedemaman #organisationfamiliale #mamandebordee #papiersadministratifs #kazaia
