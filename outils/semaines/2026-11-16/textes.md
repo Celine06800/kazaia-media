@@ -70,3 +70,35 @@ Préparé par les tâches du lundi (une par contenu). Brouillons Metricool marqu
 > Kazaia te prévient 30 jours avant l'échéance, préavis sous les yeux. 30 jours d'essai sans carte bancaire, lien en bio.
 >
 > #reconductiontacite #papiersadministratifs #chargementale #organisationfamiliale #astucemaison #kazaia
+
+## Dimanche 22/11 · 10:00 · À garder · carrousel 7 diapositives (Instagram + Facebook) + story bulle « À garder »
+- Préparé le 16/11/2026 par la tâche « dimanche ». Pas de decisions.md cette semaine : sujet choisi selon les temps forts (fin d'année, contrats renouvelés au 1er janvier).
+- Sujet : « 4 dates avant le 1er janvier » (nouveau, ne recoupe ni « 5 signes », ni « papiers gardés pour rien », ni « 6 papiers en 2 minutes »).
+- Fichiers : `media/2026-11-16-avant-le-1er-janvier-1.png` à `-7.png` (source `dimanche-avant-le-1er-janvier.html`) ; story `media/2026-11-16-story-a-garder-1.png` (source `story-a-garder.html`).
+- Rendu : `node outils/render-slides.mjs outils/semaines/2026-11-16/dimanche-avant-le-1er-janvier.html media 2026-11-16-avant-le-1er-janvier` · `node outils/render-stories.mjs outils/semaines/2026-11-16/story-a-garder.html media 2026-11-16-story-a-garder story`
+- Mise en page nouvelle : feuilles d'éphéméride (éventail en couverture, une feuille datée par diapositive, compteur 1/4 à 4/4).
+- Diapositives :
+  1. (sombre) « À garder · fin d'année » · « Il reste six semaines. Et 4 dates qui n'attendront pas. » · « Tes impôts de 2027 se jouent en partie maintenant. Et certains contrats repartent pour un an sans te demander ton avis. »
+  2. 15 décembre · Mensualiser ta taxe foncière, dès janvier : demande au plus tard le 15 décembre → prélèvements dès janvier. Source impots.gouv.fr.
+  3. 31 décembre · Tes dons de 2026 comptent sur ta déclaration de 2027 : 66 % (75 % jusqu'à 2 000 € pour l'aide aux personnes en difficulté), limite 20 % du revenu imposable ; range le reçu fiscal. Source F426.
+  4. 31 décembre · Ménage, garde, soutien scolaire : ce que tu paies en 2026 : crédit 50 %, dépenses retenues jusqu'à 12 000 € (majoré dans certains cas) ; attestations Urssaf ou factures à fournir sur demande. Source F12.
+  5. 1er janvier · Le contrat qui repart pour un an : le prestataire doit prévenir par écrit entre 3 mois et 1 mois avant la date limite pour refuser la reconduction, date dans un encadré. Assurances, mutuelles, téléphone, internet : règles à part. Source F33991.
+  6. « Tu les notes une fois. Kazaia s'en souvient. » Agenda fictif : 4 lignes avec pastilles J-30 / J-7. « Un e-mail 30 jours puis 7 jours avant chaque échéance. »
+  7. (sombre) « Enregistre ce post » · « Quatre dates. Zéro à retenir. » · Fais le test · lien en bio · kazaia.fr/verifier.
+- Sources (vérifiées le 16/11/2026) :
+  - impots.gouv.fr, « Quelle est la date limite pour adhérer à la mensualisation de la TF, THRS, CFE, l'IFI ? » (https://www.impots.gouv.fr/portail/particulier/questions/quelle-est-la-date-limite-pour-adherer-la-mensualisation-en-vue-du-paiement-de), mise à jour le 03/07/2026 : « jusqu'au 15 décembre, pour un début des prélèvements en janvier de l'année qui suit ».
+  - service-public.fr, « Impôt sur le revenu – Dons aux associations et organismes d'intérêt général » (F426, https://www.service-public.gouv.fr/particuliers/vosdroits/F426), vérifié le 15/04/2026.
+  - service-public.fr, « Impôt sur le revenu – Crédit d'impôt pour l'emploi d'un salarié à domicile » (F12, https://www.service-public.gouv.fr/particuliers/vosdroits/F12), vérifié le 15/04/2026.
+  - service-public.fr, « Peut-on résilier un contrat de prestation de services à tacite reconduction ? » (F33991, https://www.service-public.gouv.fr/particuliers/vosdroits/F33991), vérifié le 20/03/2026.
+- Kazaia (dépôt kazaia, main) : rappels personnalisés (`custom_event`) et pense-bête datés dans `getAgendaEvents` (src/lib/events.ts), reconduction tacite (`tacit_renewal`) ; e-mails J-30 et J-7 (REMINDER_DELTAS = [30, 7], src/app/api/cron/reminders/route.ts ; « Emails de rappel J-30 / J-7 » dès Essentiel, src/lib/plans.ts).
+- Texte publié :
+
+> 4 dates à cocher avant le 1er janvier 📅
+>
+> Mensualiser ta taxe foncière (demande au plus tard le 15 décembre), tes dons et ce que tu paies pour l'aide à domicile (ils comptent sur ta déclaration de 2027), et ce contrat qui repart pour un an si tu ne dis rien. Tout est vérifié sur impots.gouv.fr et service-public.fr.
+>
+> Enregistre ce post pour décembre. Et ton score de charge mentale sur 100 ? Le test est en bio.
+>
+> #chargementale #papiersadministratifs #organisationfamiliale #astucemaison #findannee #kazaia
+
+- Story (dimanche 22/11 · 10:05, Instagram, sans texte) : « À garder » · « 4 dates à cocher. » · aperçu de la 1re diapositive · « Avant le 1er janvier. Chaque dimanche sur le compte. » · logo.

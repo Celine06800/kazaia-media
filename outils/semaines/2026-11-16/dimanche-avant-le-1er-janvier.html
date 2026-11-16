@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../base.css">
+<style>
+  body { display: flex; flex-direction: column; gap: 40px; padding: 40px; background: #555; width: max-content; }
+  .slide .grain { position: absolute; inset: 0; }
+  .slide { justify-content: flex-start; padding-top: 150px; }
+  .slide.sombre { justify-content: center; padding-top: 120px; }
+
+  /* Couverture : quatre feuilles d'éphéméride en éventail */
+  .eventail { position: absolute; right: 70px; top: 70px; width: 520px; height: 460px; transform: scale(.74); transform-origin: top right; }
+  .eventail .f { position: absolute; width: 250px; height: 300px; border-radius: 22px; overflow: hidden;
+    background: linear-gradient(180deg, #FFFDF7, #EFE6D2); box-shadow: 0 30px 70px rgba(0,0,0,.45); }
+  .eventail .f .haut { height: 70px; background: var(--or-feuille); display: grid; place-items: center;
+    font: 700 22px "Inter"; letter-spacing: .3em; color: var(--navy); }
+  .eventail .f .j { text-align: center; font-family: "Fraunces"; font-weight: 600; font-size: 150px; line-height: 1.25; color: var(--ink); }
+  .eventail .f1 { left: 250px; top: 10px; transform: rotate(14deg); opacity: .55; }
+  .eventail .f2 { left: 170px; top: 40px; transform: rotate(6deg); opacity: .75; }
+  .eventail .f3 { left: 90px;  top: 70px; transform: rotate(-3deg); }
+  .eventail .f4 { left: 10px;  top: 110px; transform: rotate(-11deg); }
+  .eventail .f4 .barre { position: absolute; left: 28px; right: 28px; top: 175px; height: 8px; border-radius: 4px; background: var(--gold-deep); transform: rotate(-18deg); opacity: .9; }
+
+  /* Diapositives claires : la feuille d'éphéméride */
+  .tete { display: flex; align-items: flex-start; justify-content: space-between; }
+  .feuille { width: 230px; border-radius: 24px; overflow: hidden; background: #fff;
+    box-shadow: 0 24px 60px rgba(15,30,58,.14), 0 0 0 1.5px rgba(176,141,62,.25); }
+  .feuille .haut { height: 64px; background: var(--navy); display: grid; place-items: center;
+    font: 700 22px "Inter"; letter-spacing: .3em; color: var(--gold); position: relative; }
+  .feuille .haut::after { content: ""; position: absolute; left: 22px; right: 22px; bottom: -6px; height: 12px;
+    background: radial-gradient(circle, #fff 5px, transparent 6px) 0 0/26px 12px repeat-x; }
+  .feuille .j { text-align: center; font-family: "Fraunces"; font-weight: 600; font-size: 128px; line-height: 1.18; color: var(--ink); padding-top: 4px; }
+  .feuille .j.mot { font-size: 64px; line-height: 1.2; padding: 30px 0 34px; font-style: italic; font-weight: 400; color: var(--gold-deep); }
+  .droite { display: flex; flex-direction: column; align-items: flex-end; gap: 22px; }
+  .compte { font-family: "Fraunces"; font-style: italic; font-size: 54px; color: var(--gold-deep); }
+  .compte b { font-style: normal; font-weight: 600; color: var(--ink); }
+  .etiq { display: inline-flex; padding: 14px 28px; border-radius: 999px; font: 600 24px "Inter"; letter-spacing: .2em; text-transform: uppercase;
+    background: rgba(176,141,62,.12); color: var(--gold-deep); border: 1.5px solid rgba(176,141,62,.45); }
+  .doc { margin-top: 64px; font-family: "Fraunces"; font-weight: 600; font-size: 80px; line-height: 1.08; letter-spacing: -.01em; }
+  .doc em { font-style: italic; font-weight: 400; color: var(--gold-deep); }
+  .lignes { margin-top: 46px; display: flex; flex-direction: column; gap: 20px; }
+  .lignes div { display: flex; gap: 22px; align-items: baseline; font: 400 36px/1.42 "Inter"; color: var(--muted); }
+  .lignes div b { color: var(--ink); font-weight: 600; }
+  .lignes div::before { content: ""; flex: 0 0 14px; height: 14px; border-radius: 50%; background: var(--gold); transform: translateY(-4px); }
+  .source { position: absolute; left: 110px; right: 110px; bottom: 140px; padding-top: 22px; border-top: 1.5px solid rgba(176,141,62,.3);
+    font: 400 22px/1.45 "Inter"; color: #8a91a6; }
+  .source b { font-weight: 600; color: var(--muted); }
+
+  /* Kazaia : l'agenda des rappels */
+  .agenda { margin-top: 56px; display: flex; flex-direction: column; gap: 18px; }
+  .agenda .l { display: grid; grid-template-columns: 210px 1fr auto; align-items: center; gap: 26px; padding: 24px 32px;
+    background: #fff; border-radius: 26px; border: 1.5px solid rgba(176,141,62,.25); box-shadow: 0 14px 40px rgba(15,30,58,.07); }
+  .agenda .d { font-family: "Fraunces"; font-weight: 600; font-size: 40px; color: var(--ink); line-height: 1.05; }
+  .agenda .d small { display: block; font: 600 18px "Inter"; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-deep); margin-top: 4px; }
+  .agenda .t { font: 500 32px/1.3 "Inter"; color: var(--ink); }
+  .agenda .p { display: flex; gap: 10px; }
+  .agenda .p span { font: 700 22px "Inter"; padding: 10px 16px; border-radius: 999px; background: var(--navy); color: var(--gold-pale); letter-spacing: .04em; }
+  .agenda .p span.c { background: rgba(176,141,62,.14); color: var(--gold-deep); }
+</style></head>
+<body>
+
+<!-- 1 · Accroche (sombre) -->
+<section class="slide sombre" style="justify-content:flex-end; padding-bottom:180px">
+  <div class="eventail">
+    <div class="f f1"><div class="haut">JANV.</div><div class="j">1</div></div>
+    <div class="f f2"><div class="haut">DÉC.</div><div class="j">31</div></div>
+    <div class="f f3"><div class="haut">DÉC.</div><div class="j">31</div></div>
+    <div class="f f4"><div class="haut">DÉC.</div><div class="j">15</div><div class="barre"></div></div>
+  </div>
+  <div class="kicker">À garder · fin d'année</div>
+  <div class="titre" style="margin-top:40px; font-size:92px">Il reste six semaines.<br><em>Et 4&nbsp;dates qui n'attendront&nbsp;pas.</em></div>
+  <div class="filet" style="margin-top:50px"></div>
+  <div class="petit" style="margin-top:36px; font-size:38px">Tes impôts de 2027 se jouent en partie maintenant. Et certains contrats repartent pour un an sans te demander ton avis.</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 2 · 15 décembre : mensualisation -->
+<section class="slide">
+  <div class="tete">
+    <div class="feuille"><div class="haut">DÉCEMBRE</div><div class="j">15</div></div>
+    <div class="droite"><span class="compte"><b>1</b> / 4</span><span class="etiq">Impôts locaux</span></div>
+  </div>
+  <div class="doc">Mensualiser<br>ta taxe&nbsp;foncière, <em>dès&nbsp;janvier.</em></div>
+  <div class="lignes">
+    <div><span>Demande faite <b>au plus tard le 15 décembre</b> : les prélèvements commencent en janvier.</span></div>
+    <div><span>Une somme chaque mois, plutôt qu'une grosse facture d'un&nbsp;coup.</span></div>
+  </div>
+  <div class="source"><b>Source : impots.gouv.fr</b> · « Quelle est la date limite pour adhérer à la mensualisation de la TF, THRS, CFE, l'IFI ? » · mise à jour le 03/07/2026 · vérifié le 16/11/2026</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 3 · 31 décembre : dons -->
+<section class="slide">
+  <div class="tete">
+    <div class="feuille"><div class="haut">DÉCEMBRE</div><div class="j">31</div></div>
+    <div class="droite"><span class="compte"><b>2</b> / 4</span><span class="etiq">Dons</span></div>
+  </div>
+  <div class="doc">Tes dons de 2026 <em>comptent sur&nbsp;ta déclaration de&nbsp;2027.</em></div>
+  <div class="lignes">
+    <div><span>Réduction d'impôt de <b>66 %</b> (<b>75 %</b> jusqu'à 2&nbsp;000&nbsp;€ pour l'aide aux personnes en difficulté), dans la limite de 20&nbsp;% du revenu imposable.</span></div>
+    <div><span>Le reçu fiscal ? Range-le tout de suite avec tes papiers d'impôts.</span></div>
+  </div>
+  <div class="source"><b>Source : service-public.fr</b> · « Impôt sur le revenu – Dons aux associations et organismes d'intérêt général » (F426) · vérifié le 15/04/2026 · consulté le 16/11/2026</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 4 · 31 décembre : emploi à domicile -->
+<section class="slide">
+  <div class="tete">
+    <div class="feuille"><div class="haut">DÉCEMBRE</div><div class="j">31</div></div>
+    <div class="droite"><span class="compte"><b>3</b> / 4</span><span class="etiq">Aide à domicile</span></div>
+  </div>
+  <div class="doc">Ménage, garde, soutien scolaire&nbsp;:<br><em>ce que tu paies en 2026.</em></div>
+  <div class="lignes">
+    <div><span>Crédit d'impôt de <b>50 %</b> des dépenses payées dans l'année, retenues jusqu'à <b>12&nbsp;000&nbsp;€</b> (plafond majoré dans certains cas).</span></div>
+    <div><span>Attestations Urssaf ou factures : on peut te les <b>demander</b>. Garde-les.</span></div>
+  </div>
+  <div class="source"><b>Source : service-public.fr</b> · « Impôt sur le revenu – Crédit d'impôt pour l'emploi d'un salarié à domicile » (F12) · vérifié le 15/04/2026 · consulté le 16/11/2026</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 5 · Avant la reconduction -->
+<section class="slide">
+  <div class="tete">
+    <div class="feuille"><div class="haut">JANVIER</div><div class="j">1<sup style="font-size:.4em">er</sup></div></div>
+    <div class="droite"><span class="compte"><b>4</b> / 4</span><span class="etiq">Contrats</span></div>
+  </div>
+  <div class="doc" style="font-size:74px; margin-top:54px">Le contrat qui repart pour un an. <em>Le mail est peut-être déjà&nbsp;arrivé.</em></div>
+  <div class="lignes">
+    <div><span>Alarme, entretien de chaudière… le prestataire doit te prévenir <b>par écrit</b>, entre 3 mois et 1 mois avant la date limite pour refuser la reconduction.</span></div>
+    <div><span>La date est dans un encadré. Ne laisse pas ce mail dans les promos.</span></div>
+  </div>
+  <div class="source"><b>Source : service-public.fr</b> · « Peut-on résilier un contrat de prestation de services à tacite reconduction ? » (F33991) · vérifié le 20/03/2026 · consulté le 16/11/2026 · assurances, mutuelles, téléphone et internet : règles à part</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 6 · Kazaia -->
+<section class="slide">
+  <div class="kicker">Et l'an prochain ?</div>
+  <div class="titre" style="margin-top:34px; font-size:84px">Tu les notes une fois. <em>Kazaia s'en souvient.</em></div>
+  <div class="agenda">
+    <div class="l"><div class="d">15 déc.<small>Impôts</small></div><div class="t">Mensualisation taxe foncière</div><div class="p"><span>J-30</span><span>J-7</span></div></div>
+    <div class="l"><div class="d">31 déc.<small>Dons</small></div><div class="t">Reçus fiscaux à ranger</div><div class="p"><span>J-30</span><span>J-7</span></div></div>
+    <div class="l"><div class="d">31 déc.<small>Domicile</small></div><div class="t">Attestations Urssaf</div><div class="p"><span>J-30</span><span>J-7</span></div></div>
+    <div class="l"><div class="d">Échéance<small>Contrat</small></div><div class="t">Reconduction tacite · préavis</div><div class="p"><span>J-30</span><span>J-7</span></div></div>
+  </div>
+  <div class="petit" style="margin-top:44px; font-size:32px">Un e-mail 30 jours puis 7 jours avant chaque échéance.<br>Exemple fictif.</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 7 · Appel à l'action (sombre) -->
+<section class="slide sombre" style="align-items:center; text-align:center">
+  <div class="kicker">Enregistre ce post</div>
+  <div class="titre" style="margin-top:34px; font-size:92px">Quatre dates.<br><em>Zéro à retenir.</em></div>
+  <div class="petit" style="margin-top:36px; font-size:36px">Garde-le pour décembre, et envoie-le<br>à qui gère les papiers chez toi.</div>
+  <div class="bouton" style="margin-top:54px">Fais le test · lien en bio</div>
+  <div class="petit" style="margin-top:26px; font-size:30px">kazaia.fr/verifier · ton score de charge mentale sur 100</div>
+  <div class="grain"></div><div class="pied"><img src="../../kazaia-logo.png" alt="Kazaia" style="width:170px"><span>Ne rien oublier.</span></div>
+</section>
+
+</body></html>
