@@ -102,3 +102,7 @@ Préparé par les tâches du lundi (une par contenu). Brouillons Metricool marqu
 > #chargementale #papiersadministratifs #organisationfamiliale #astucemaison #findannee #kazaia
 
 - Story (dimanche 22/11 · 10:05, Instagram, sans texte) : « À garder » · « 4 dates à cocher. » · aperçu de la 1re diapositive · « Avant le 1er janvier. Chaque dimanche sur le compte. » · logo.
+## Tips du matin (à partir du mardi 17/11) · 7:30 · reels 10 s
+- Décision de Céline du 16/11/2026 : priorité à la communauté ; chaque matin un tip gratuit, un thème par jour (lun papiers · mar budget · mer enfants et école · jeu santé · ven maison et contrats · sam organisation · dim charge mentale), appel à l'action « Abonne-toi pour un conseil chaque matin. Ici, on soulage ta charge mentale. »
+- Gabarit `tip-gabarit.html`, générateur `tips-generateur.py` (lancé depuis outils/). Rendu : `node outils/render-reel.mjs outils/semaines/2026-11-16/tip-<date>-<thème>.html 10 media/tip-<date>-<thème>.mp4 --musique elan --accents 3.6,7.2`, plus une copie muette `-muet.mp4` pour TikTok.
+- Instagram : son tendance de la bibliothèque commerciale posé par Metricool (notre musique coupée). TikTok : publication manuelle (notification Metricool), Céline choisit le son tendance.
