@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../base.css">
+<style>
+body{background:#000}
+.photo{position:relative;width:1080px;height:1920px;overflow:hidden;color:var(--cream);
+  background:radial-gradient(110% 70% at 50% 28%,#1B2E55 0%,var(--navy) 45%,var(--navy-deep) 100%);margin-bottom:40px}
+.photo.creme{background:radial-gradient(120% 80% at 50% 20%,#FFFDF8 0%,var(--cream) 50%,var(--cream-2) 100%);color:var(--navy)}
+.halo{position:absolute;width:900px;height:900px;border-radius:50%;left:90px;top:300px;background:radial-gradient(circle,rgba(201,169,96,.22),transparent 65%)}
+.zone{position:absolute;left:90px;right:150px;top:220px}
+.kick{font:600 28px "Inter";letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.t1{font-family:"Fraunces";font-weight:600;font-size:104px;line-height:1.04;letter-spacing:-.02em;text-wrap:balance}
+.t1 i{font-style:italic;font-weight:400}
+.t2{font-family:"Fraunces";font-weight:600;font-size:76px;line-height:1.08;letter-spacing:-.01em;text-wrap:balance}
+.t2 i{font-style:italic;font-weight:400}
+.sous{font:400 40px/1.4 "Inter";color:rgba(250,247,240,.78);margin-top:34px;text-wrap:balance}
+.creme .sous{color:#4A5674}
+.chips{display:flex;flex-wrap:wrap;gap:22px;margin-top:60px}
+.chip{font:600 36px "Inter";padding:22px 34px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(230,211,163,.35);color:var(--cream);white-space:nowrap}
+.chip.r{transform:rotate(-2deg)}.chip.l{transform:rotate(2deg)}
+/* téléphone */
+.tel{position:absolute;left:50%;transform:translateX(-50%);width:640px;height:1240px;border-radius:84px;background:#05091A;padding:18px;
+  box-shadow:0 60px 120px rgba(0,0,0,.55),0 0 0 3px rgba(230,211,163,.35)}
+.ecran{width:100%;height:100%;border-radius:68px;background:var(--cream);overflow:hidden;position:relative;color:var(--navy)}
+.ilot{position:absolute;left:50%;top:22px;transform:translateX(-50%);width:170px;height:44px;border-radius:30px;background:#05091A;z-index:3}
+.barre{display:flex;justify-content:space-between;padding:28px 46px 0;font:600 24px "Inter"}
+.app-head{padding:56px 40px 18px;display:flex;align-items:center;gap:18px}
+.app-head img{width:64px;height:64px;border-radius:16px}
+.app-head .n{font-family:"Fraunces";font-weight:600;font-size:40px}
+.app-head .s{font:500 22px "Inter";color:#6B7590}
+.sec{margin:14px 32px 0;font:600 22px "Inter";letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep)}
+.carte{margin:16px 32px 0;background:#fff;border-radius:28px;padding:24px 26px;box-shadow:0 8px 24px rgba(15,30,58,.08);border:1px solid #EFE6D2}
+.ligne{display:flex;align-items:center;gap:18px;padding:16px 0;border-bottom:1px solid #F1EADB}
+.ligne:last-child{border-bottom:0}
+.pic{flex:0 0 58px;height:58px;border-radius:16px;display:grid;place-items:center;font-size:30px;background:var(--gold-pale)}
+.ligne .tt{font:600 27px/1.25 "Inter"}
+.ligne .dd{font:500 22px "Inter";color:#6B7590;margin-top:4px}
+.badge{margin-left:auto;font:700 21px "Inter";padding:8px 16px;border-radius:999px;white-space:nowrap}
+.b-r{background:#FBE3DC;color:#A8402A}.b-o{background:#F8EDD3;color:#8A6720}.b-v{background:#E3EFE6;color:#2F6B45}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 32px 0}
+.kpi{background:var(--navy);color:var(--cream);border-radius:24px;padding:22px 24px}
+.kpi .v{font-family:"Fraunces";font-weight:600;font-size:56px}
+.kpi .l{font:500 21px "Inter";color:rgba(250,247,240,.7)}
+.legende{position:absolute;left:90px;right:150px;font:500 30px/1.4 "Inter";color:rgba(250,247,240,.7);text-align:center}
+.fictif{position:absolute;right:150px;left:90px;text-align:center;font:500 24px "Inter";color:rgba(250,247,240,.45)}
+.champ{padding:16px 0;border-bottom:1px solid #F1EADB}
+.champ .k{font:600 20px "Inter";letter-spacing:.12em;text-transform:uppercase;color:#8A93A8}
+.champ .v{font:600 30px "Inter";margin-top:6px}
+.doc{margin:20px 32px 0;height:250px;border-radius:24px;background:repeating-linear-gradient(180deg,#fff 0 34px,#F4EFE4 34px 36px);border:2px dashed var(--gold);position:relative}
+.scan{position:absolute;left:0;right:0;top:120px;height:6px;background:linear-gradient(90deg,transparent,var(--gold),transparent);box-shadow:0 0 30px var(--gold)}
+.ok{margin:18px 32px 0;font:700 25px "Inter";color:#2F6B45}
+.notifs{position:absolute;left:90px;right:150px;top:620px;display:flex;flex-direction:column;gap:28px}
+.fin{position:absolute;left:90px;right:150px;top:520px;text-align:center}
+.fin .logo{margin:0 auto 60px;width:420px}
+.bouton2{display:inline-block;margin-top:56px;padding:30px 54px;border-radius:999px;background:var(--or-feuille);color:var(--navy);font:700 38px "Inter"}
+</style></head><body>
+
+<!-- 1. Accroche -->
+<section class="photo" id="p1"><div class="halo"></div>
+  <div class="zone" style="top:560px">
+    <div class="kick">23:40 · lumière éteinte</div>
+    <div class="t1" style="margin-top:40px">Ta tête a <span class="or">47 onglets</span> <i>ouverts.</i></div>
+    <div class="sous">Et tu ne peux en fermer aucun.</div>
+  </div>
+</section>
+
+<!-- 2. Les onglets -->
+<section class="photo" id="p2"><div class="halo" style="top:500px"></div>
+  <div class="zone" style="top:330px">
+    <div class="t2">Dans ta tête, <i>en ce moment :</i></div>
+    <div class="chips">
+      <span class="chip r">💉 Vaccin d'Inès</span><span class="chip l">🚗 Contrôle technique</span>
+      <span class="chip">🪪 Carte d'identité de Tom</span><span class="chip r">🍽️ Cantine</span>
+      <span class="chip l">🧊 Garantie du frigo</span><span class="chip">🏠 Assurance habitation</span>
+      <span class="chip r">📦 Box internet</span><span class="chip l">🐶 Rappel de Caramel</span>
+      <span class="chip">🧾 Avoir de 80 €</span>
+    </div>
+    <div class="sous" style="margin-top:70px">Et si quelqu'un s'en souvenait <span class="or" style="font-weight:600">à ta place</span>&nbsp;?</div>
+  </div>
+</section>
+
+<!-- 3. Tableau de bord -->
+<section class="photo" id="p3"><div class="halo" style="top:200px"></div>
+  <div class="tel" style="top:150px"><div class="ecran"><div class="ilot"></div>
+    <div class="barre"><span>9:41</span><span>●●● 100&nbsp;%</span></div>
+    <div class="app-head"><img src="../../kazaia-icone.png"><div><div class="n">Famille Martin</div><div class="s">Aperçu du foyer</div></div></div>
+    <div class="kpis"><div class="kpi"><div class="v">3</div><div class="l">À traiter (≤ 7 j)</div></div><div class="kpi"><div class="v">12</div><div class="l">Contrats actifs</div></div></div>
+    <div class="sec" style="margin-top:28px">À traiter cette semaine</div>
+    <div class="carte">
+      <div class="ligne"><div class="pic">🪪</div><div><div class="tt">Carte d'identité de Tom</div><div class="dd">Expire le 12 déc.</div></div><span class="badge b-r">J-7</span></div>
+      <div class="ligne"><div class="pic">💉</div><div><div class="tt">Rappel vaccin d'Inès</div><div class="dd">Dr Leroy · jeudi</div></div><span class="badge b-o">J-3</span></div>
+      <div class="ligne"><div class="pic">🚗</div><div><div class="tt">Contrôle technique</div><div class="dd">Clio · avant le 30/11</div></div><span class="badge b-o">J-5</span></div>
+      <div class="ligne"><div class="pic">🏠</div><div><div class="tt">Assurance habitation</div><div class="dd">Préavis jusqu'au 15/01</div></div><span class="badge b-v">OK</span></div>
+    </div>
+  </div></div>
+  <div class="legende" style="top:1430px">Tout le foyer, au même endroit.</div>
+  <div class="fictif" style="top:1490px">Exemple fictif</div>
+</section>
+
+<!-- 4. Notifications -->
+<section class="photo" id="p4"><div class="halo" style="top:600px"></div>
+  <div class="zone" style="top:300px"><div class="t2">Kazaia te prévient <i>avant</i> que ça coince.</div></div>
+  <div class="notifs">
+    <div class="notif or"><div class="ico"><img src="../../kazaia-icone.png"></div><div style="flex:1"><div class="app"><span>KAZAIA</span><span>il y a 1 min</span></div><div class="msg">La carte d'identité de Tom expire dans 30&nbsp;jours</div><div class="det">Prends rendez-vous en mairie dès maintenant.</div></div></div>
+    <div class="notif"><div class="ico">🧊</div><div style="flex:1"><div class="app"><span>KAZAIA</span><span>hier</span></div><div class="msg">Garantie du frigo&nbsp;: plus que 7&nbsp;jours</div><div class="det">La facture est dans ton espace.</div></div></div>
+    <div class="notif"><div class="ico">🏠</div><div style="flex:1"><div class="app"><span>KAZAIA</span><span>lundi</span></div><div class="msg">Assurance habitation&nbsp;: échéance dans 2&nbsp;mois</div><div class="det">Le préavis est noté, tu as le temps.</div></div></div>
+  </div>
+  <div class="fictif" style="top:1420px">Exemple fictif</div>
+</section>
+
+<!-- 5. Scan -->
+<section class="photo" id="p5"><div class="halo" style="top:200px"></div>
+  <div class="tel" style="top:150px"><div class="ecran"><div class="ilot"></div>
+    <div class="barre"><span>9:41</span><span>●●● 100&nbsp;%</span></div>
+    <div class="app-head"><img src="../../kazaia-icone.png"><div><div class="n">Ajouter un contrat</div><div class="s">Photo du document</div></div></div>
+    <div class="doc"><div class="scan"></div></div>
+    <div class="ok">✓ Informations extraites en quelques secondes</div>
+    <div class="carte">
+      <div class="champ"><div class="k">Type</div><div class="v">Assurance habitation</div></div>
+      <div class="champ"><div class="k">Échéance</div><div class="v">15 février 2027</div></div>
+      <div class="champ"><div class="k">Préavis</div><div class="v">1 mois</div></div>
+      <div class="champ" style="border:0"><div class="k">Rappel</div><div class="v">Activé · 30 et 7 jours avant</div></div>
+    </div>
+  </div></div>
+  <div class="legende" style="top:1430px">Une photo. Kazaia lit, range et te rappelle.</div>
+  <div class="fictif" style="top:1490px">Exemple fictif</div>
+</section>
+
+<!-- 6. Membres -->
+<section class="photo" id="p6"><div class="halo" style="top:200px"></div>
+  <div class="tel" style="top:150px"><div class="ecran"><div class="ilot"></div>
+    <div class="barre"><span>9:41</span><span>●●● 100&nbsp;%</span></div>
+    <div class="app-head"><img src="../../kazaia-icone.png"><div><div class="n">Membres</div><div class="s">Une fiche pour chacun</div></div></div>
+    <div class="carte">
+      <div class="ligne"><div class="pic">👩</div><div><div class="tt">Léa</div><div class="dd">Pièce d'identité · Mutuelle · Emploi</div></div></div>
+      <div class="ligne"><div class="pic">👨</div><div><div class="tt">Julien</div><div class="dd">Permis · Carte vitale · Véhicule</div></div></div>
+      <div class="ligne"><div class="pic">🧒</div><div><div class="tt">Tom, 9 ans</div><div class="dd">École · Sport · Carte d'identité</div></div></div>
+      <div class="ligne"><div class="pic">👧</div><div><div class="tt">Inès, 4 ans</div><div class="dd">Carnet de vaccins · Crèche</div></div></div>
+      <div class="ligne"><div class="pic">🐶</div><div><div class="tt">Caramel</div><div class="dd">Carnet de santé · Vétérinaire</div></div></div>
+    </div>
+  </div></div>
+  <div class="legende" style="top:1430px">Les papiers de chacun, sous la main.</div>
+  <div class="fictif" style="top:1490px">Exemple fictif</div>
+</section>
+
+<!-- 7. Soulagement -->
+<section class="photo creme" id="p7">
+  <div class="zone" style="top:620px">
+    <div class="kick" style="color:var(--gold-deep)">23:41</div>
+    <div class="t1" style="margin-top:40px">Onglets <i>fermés.</i><br>Tu peux dormir.</div>
+    <div class="sous">Kazaia s'en souvient pour toi.</div>
+  </div>
+</section>
+
+<!-- 8. Fin -->
+<section class="photo" id="p8"><div class="halo" style="top:420px"></div>
+  <div class="fin">
+    <img class="logo" src="../../kazaia-logo.png">
+    <div class="t2" style="font-size:88px">Ne rien <i class="or" style="font-weight:600">oublier.</i></div>
+    <div class="sous">Ta charge mentale, elle est à combien sur&nbsp;100&nbsp;?</div>
+    <div class="bouton2">Fais le test · kazaia.fr/verifier</div>
+    <div class="sous" style="font-size:32px;margin-top:50px">Abonne-toi pour un conseil chaque matin.</div>
+  </div>
+</section>
+</body></html>
