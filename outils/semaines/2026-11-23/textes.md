@@ -92,3 +92,91 @@ Préparé par les tâches du lundi (une par contenu). Brouillons Metricool marqu
 > #vacancesdenoel #voyageenfamille #papiersadministratifs #chargementale #organisationfamiliale #viedemaman #kazaia
 
 - Story (dimanche 29/11 · 10:05, Instagram, sans texte) : « À garder » · « Leurs papiers, avant le départ. » · aperçu de la 1re diapositive · « 4 vérifications avant Noël. Chaque dimanche sur le compte. » · logo.
+
+## Tips du matin (mardi 24/11 au lundi 30/11) · 7:30 · reels 10 s
+- Préparé le 23/11/2026 par la tâche « tips du matin ». Gabarit `tip-gabarit.html`, générateur `tips-generateur.py` (lancé depuis outils/). Rendu : `node outils/render-reel.mjs outils/semaines/2026-11-23/tip-<date>-<thème>.html 10 media/tip-<date>-<thème>.mp4 --musique elan --accents 3.6,7.2`, copie muette `-muet.mp4` pour TikTok.
+- Instagram + Facebook : brouillon, son tendance posé par Metricool (notre musique coupée). TikTok : brouillon séparé, publication manuelle (vidéo muette, Céline choisit le son).
+
+### Tip du Mardi 24/11 · 7:30 · Budget
+- Fichier : `media/tip-2026-11-24-budget.mp4` (muet : `media/tip-2026-11-24-budget-muet.mp4`) · son Instagram : Cafe E Cafune · Company Money (audioId 777800535229032)
+- Source : service-public.fr F10485 (vérifié le 01/01/2026, consulté le 23/11/2026) : délai minimum de 14 jours calendaires, à partir du lendemain de la réception du bien, sans motif ; exceptions (sur mesure, périssables, hygiène descellé…).
+
+> Un achat en ligne regretté ? 📦
+>
+> Le tip du matin : note la date de réception du colis. En général, tu as 14 jours à partir du lendemain pour te rétracter, sans te justifier (hors exceptions : sur mesure, produit d'hygiène ouvert…). Source : service-public.fr.
+>
+> Abonne-toi pour un conseil chaque matin. Ici, on soulage ta charge mentale.
+>
+> #budgetfamilial #achatenligne #chargementale #astucemaison #kazaia
+
+### Tip du Mercredi 25/11 · 7:30 · Enfants et école
+- Fichier : `media/tip-2026-11-25-ecole.mp4` (muet : `media/tip-2026-11-25-ecole-muet.mp4`) · son Instagram : Set Me Free · Chela Rivas (audioId 485596294131932)
+- Geste pratique, aucune règle citée.
+
+> Le mot à signer, retrouvé froissé au fond du cartable ? 🎒
+>
+> Le tip du matin : une pochette transparente « À signer » dans le cartable. Chaque soir, tu l'ouvres, tu signes, c'est réglé.
+>
+> Abonne-toi pour un conseil chaque matin. Ici, on soulage ta charge mentale.
+>
+> #ecole #viedemaman #organisationfamiliale #chargementale #kazaia
+
+### Tip du Jeudi 26/11 · 7:30 · Santé
+- Fichier : `media/tip-2026-11-26-sante.mp4` (muet : `media/tip-2026-11-26-sante-muet.mp4`) · son Instagram : Stories · Chela Rivas (audioId 693181922910715)
+- Geste pratique, aucune règle citée, aucun conseil médical.
+
+> Ton ordonnance, tu la retrouves quand il faut ? 💊
+>
+> Le tip du matin : avant de la tendre au comptoir de la pharmacie, prends-la en photo et range-la dans un album « Santé ».
+>
+> Abonne-toi pour un conseil chaque matin. Ici, on soulage ta charge mentale.
+>
+> #sante #organisationfamiliale #chargementale #astucemaison #kazaia
+
+### Tip du Vendredi 27/11 · 7:30 · Maison et contrats
+- Fichier : `media/tip-2026-11-27-maison.mp4` (muet : `media/tip-2026-11-27-maison-muet.mp4`) · son Instagram : Too Bad (Instrumental) · Company Money (audioId 1343702306838512)
+- Geste pratique, aucune règle citée.
+
+> Un dégât des eaux. Et ta preuve ? 🏠
+>
+> Le tip du matin : filme chaque pièce de ton logement, placards ouverts. Garde la vidéo avec ton contrat d'assurance habitation.
+>
+> Abonne-toi pour un conseil chaque matin. Ici, on soulage ta charge mentale.
+>
+> #assurancehabitation #maison #astucemaison #chargementale #kazaia
+
+### Tip du Samedi 28/11 · 7:30 · Organisation
+- Fichier : `media/tip-2026-11-28-organisation.mp4` (muet : `media/tip-2026-11-28-organisation-muet.mp4`) · son Instagram : 1988 · LAVLO (audioId 1041040595042773)
+- Geste pratique, aucune règle citée.
+
+> Trois agendas, zéro vue d'ensemble ? 🗓️
+>
+> Le tip du matin : un seul agenda partagé pour toute la famille. Chaque rendez-vous y entre dès qu'il est fixé.
+>
+> Abonne-toi pour un conseil chaque matin. Ici, on soulage ta charge mentale.
+>
+> #organisationfamiliale #agendafamilial #viedefamille #chargementale #kazaia
+
+### Tip du Dimanche 29/11 · 7:30 · Charge mentale
+- Fichier : `media/tip-2026-11-29-charge-mentale.mp4` (muet : `media/tip-2026-11-29-charge-mentale-muet.mp4`) · son Instagram : Night Running · Mike Block (audioId 1119813952709524)
+- Geste pratique, aucune règle citée.
+
+> « Dis-moi si je peux t'aider. » 💬
+>
+> Le tip du matin : confie une tâche entière, pas juste un coup de main. Y penser, la faire, la suivre : les rendez-vous chez le dentiste, c'est l'autre, du début à la fin.
+>
+> Abonne-toi pour un conseil chaque matin. Ici, on soulage ta charge mentale.
+>
+> #chargementale #partagedestaches #couple #viedefamille #kazaia
+
+### Tip du Lundi 30/11 · 7:30 · Papiers
+- Fichier : `media/tip-2026-11-30-papiers.mp4` (muet : `media/tip-2026-11-30-papiers-muet.mp4`) · son Instagram : Shattered Glasses (prod. by CALIDAD) · Zeefellaz (audioId 465045551713596)
+- Source : service-public.fr F19134 « Durée de conservation des papiers » (vérifié le 18/11/2026, consulté le 23/11/2026) : factures d'électricité et de gaz, 5 ans.
+
+> Tes factures d'énergie, tu les gardes combien de temps ? 💡
+>
+> Le tip du matin : électricité et gaz, 5 ans. Un dossier « Énergie », chaque facture y entre ; au-delà de 5 ans, tu peux trier. Source : service-public.fr.
+>
+> Abonne-toi pour un conseil chaque matin. Ici, on soulage ta charge mentale.
+>
+> #papiersadministratifs #rangement #chargementale #astucemaison #kazaia
