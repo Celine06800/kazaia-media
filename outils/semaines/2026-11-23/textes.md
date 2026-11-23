@@ -14,6 +14,7 @@ Préparé par les tâches du lundi (une par contenu). Brouillons Metricool marqu
   - 13,8 s : « Ton vrai score sur 100 ? Fais le test. » · « Ton score, et la formule qui allège. » · kazaia.fr/verifier + logo.
 - Kazaia (dépôt kazaia, main, lecture seule) : quiz `/verifier` (src/lib/quiz.ts : score de charge mentale + forfait recommandé). Aucun prix, essai ni règle administrative cité : pas de source réglementaire.
 - Son Instagram : son tendance « Set Me Free » (Chela Rivas) posé par Metricool, notre musique coupée sur Instagram ; TikTok et Facebook : musique maison « elan ».
+- 23/11, demande de Céline (autre musique) : nouveau rendu `media/2026-11-23-swipe-v2.mp4` avec la musique maison « lumineux » (`--musique lumineux`, mêmes accents) ; son Instagram remplacé par « Yummylicious (Instrumental) » (PiNKSHGRFNGR).
 - Texte publié :
 
 > C'est toi, ou pas toi ? Swipe dans ta tête 👀
