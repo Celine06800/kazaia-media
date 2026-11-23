@@ -55,3 +55,40 @@ Préparé par les tâches du lundi (une par contenu). Brouillons Metricool marqu
 > Abonne-toi pour un conseil chaque matin. Ici, on soulage ta charge mentale.
 >
 > #controletechnique #scooter #moto #papiersadministratifs #chargementale #kazaia
+
+## Dimanche 29/11 · 10:00 · À garder · carrousel 7 diapositives (Instagram + Facebook) + story bulle « À garder »
+- Préparé le 23/11/2026 par la tâche « dimanche ». Pas de decisions.md cette semaine : sujet choisi selon les temps forts (papiers des enfants avant les vacances de Noël).
+- Sujet : « Les papiers des enfants avant de partir à l'étranger pour Noël » (nouveau : ne recoupe ni « 5 signes », ni « papiers gardés pour rien », ni « 6 papiers en 2 minutes », ni « 4 dates avant le 1er janvier »). Pas de décor de Noël (réservé aux publications du 1er au 31/12).
+- Décisions du bilan du 20/11 appliquées (prioritaires sur la consigne de la tâche) : pas de « Enregistre ce post » ; dernière diapositive = question ouverte en commentaire + test en bio.
+- Fichiers : `media/2026-11-23-papiers-enfants-noel-1.png` à `-7.png` (source `dimanche-papiers-enfants-noel.html`) ; story `media/2026-11-23-story-a-garder-1.png` (source `story-a-garder.html`).
+- Rendu : `node outils/render-slides.mjs outils/semaines/2026-11-23/dimanche-papiers-enfants-noel.html media 2026-11-23-papiers-enfants-noel` · `node outils/render-stories.mjs outils/semaines/2026-11-23/story-a-garder.html media 2026-11-23-story-a-garder story`
+- Mise en page nouvelle : étiquettes de bagage en couverture (19.12 / 04.01), puis un « billet contrôlé » par diapositive (talon bleu nuit 1/4 à 4/4, perforation, tampon doré).
+- Diapositives :
+  1. (sombre) « À garder · avant les vacances » · « Départ le 19 décembre ? Une date limite tombe aujourd'hui. » · « Les enfants partent à l'étranger pendant les fêtes ? 4 papiers à vérifier, dans l'ordre. » · dates des vacances en pied (A15340).
+  2. 1/4 Europe · CEAM par enfant : au moins 20 jours avant le départ (pour le 19/12, c'est le 29/11) ; gratuite, 2 ans au plus, une par personne enfants compris ; certificat provisoire de 3 mois téléchargeable tout de suite. Source F34441.
+  3. 2/4 Frontière · sa pièce d'identité, pas le livret de famille : UE/Schengen CNI ou passeport valide à son nom ; ailleurs passeport (+ visa si exigé) ; le livret de famille ne peut pas être exigé. Source F1922.
+  4. 3/4 Validité · « Regarde la date. Pas la photo. » CNI 10 ans, date d'expiration écrite sur la carte ; passeport : souvent sur rendez-vous, enfant et parent ensemble au guichet. Sources F35005, F14930.
+  5. 4/4 Sans toi · AST s'il voyage à l'étranger sans personne ayant l'autorité parentale : formulaire signé, copie de la pièce d'identité du parent, sa pièce d'identité ; pas de mairie ; 1 an au plus. Source F1359.
+  6. Kazaia · « Une fiche par enfant. Ses dates, à ta place. » Fiche fictive « Léo » : carte d'identité (expiration), CEAM et AST en pense-bête, pastilles J-30 / J-7.
+  7. (sombre) « À toi » · « Le papier oublié la veille d'un départ, c'était lequel ? » · « Raconte-nous en commentaire. On lit tout. » · Ton score · lien en bio · kazaia.fr/verifier.
+- Sources (consultées le 23/11/2026) :
+  - service-public.fr, « Les dates des vacances scolaires de Noël 2026 » (https://www.service-public.gouv.fr/particuliers/actualites/A15340), publié le 06/11/2026 : métropole du samedi 19/12/2026 après la classe au lundi 4/01/2027.
+  - service-public.fr, « Carte européenne d'assurance maladie (CEAM) » (F34441), vérifié le 22/10/2026.
+  - service-public.fr, « Avec quels documents un mineur français peut-il voyager à l'étranger ? » (F1922), vérifié le 16/04/2025.
+  - service-public.fr, « Quelle est la durée de validité d'une carte d'identité ? » (F35005), vérifié le 05/08/2026.
+  - service-public.fr, « Passeport d'un mineur : première demande » (F14930), vérifié le 19/06/2026 (validité du passeport non citée : non vérifiée en texte intégral).
+  - service-public.fr, « Autorisation de sortie du territoire (AST) » (F1359), vérifié le 30/10/2026.
+- Kazaia (dépôt kazaia, main, lecture seule) : `id_expiry` (cartes d'identité et passeports, src/lib/events.ts), pense-bête `custom_event`, e-mails J-30 / J-7 (REMINDER_DELTAS = [30, 7], src/app/api/cron/reminders/route.ts ; « Emails de rappel J-30 / J-7 » dès Essentiel, src/lib/plans.ts).
+- Texte publié :
+
+> Départ le 19 décembre ? Une date limite tombe aujourd'hui 🧳
+>
+> La carte européenne d'assurance maladie se demande au moins 20 jours avant le départ, une par enfant. Ensuite : sa pièce d'identité à lui (le livret de famille ne peut pas être exigé), la date d'expiration, et l'autorisation de sortie s'il part sans toi. Tout est vérifié sur service-public.fr.
+>
+> Et chez toi, le papier oublié la veille d'un départ, c'était lequel ? Raconte en commentaire. Ton score de charge mentale sur 100 : le test est en bio.
+>
+> Abonne-toi pour un conseil chaque matin. Ici, on soulage ta charge mentale.
+>
+> #vacancesdenoel #voyageenfamille #papiersadministratifs #chargementale #organisationfamiliale #viedemaman #kazaia
+
+- Story (dimanche 29/11 · 10:05, Instagram, sans texte) : « À garder » · « Leurs papiers, avant le départ. » · aperçu de la 1re diapositive · « 4 vérifications avant Noël. Chaque dimanche sur le compte. » · logo.

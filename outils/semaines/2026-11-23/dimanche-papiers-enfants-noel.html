@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../base.css">
+<style>
+  body { display: flex; flex-direction: column; gap: 40px; padding: 40px; background: #555; width: max-content; }
+  .slide .grain { position: absolute; inset: 0; }
+  .slide { justify-content: flex-start; padding-top: 130px; }
+
+  /* Couverture : deux étiquettes de bagage, ficelle dorée */
+  .tags { position: absolute; right: 60px; top: 60px; width: 620px; height: 640px; transform: scale(.6); transform-origin: top right; }
+  .tag { position: absolute; width: 330px; height: 500px; border-radius: 34px 34px 30px 30px;
+    background: linear-gradient(180deg, #FFFDF7, #EDE3CC); box-shadow: 0 40px 90px rgba(0,0,0,.5);
+    clip-path: polygon(22% 0, 78% 0, 100% 14%, 100% 100%, 0 100%, 0 14%); padding: 140px 34px 30px; color: var(--ink); }
+  .tag .trou { position: absolute; left: 50%; top: 40px; width: 46px; height: 46px; margin-left: -23px; border-radius: 50%;
+    background: radial-gradient(circle, #13234A 52%, var(--gold) 54%, var(--gold-deep) 70%, transparent 72%); }
+  .tag .k { font: 700 20px "Inter"; letter-spacing: .34em; color: var(--gold-deep); text-align: center; }
+  .tag .d { margin-top: 18px; text-align: center; font-family: "Fraunces"; font-weight: 600; font-size: 118px; line-height: 1; letter-spacing: -.02em; }
+  .tag .m { text-align: center; font-family: "Fraunces"; font-style: italic; font-size: 40px; color: var(--gold-deep); margin-top: 8px; }
+  .tag .l { margin-top: 34px; border-top: 2px dashed rgba(176,141,62,.45); padding-top: 22px; display: flex; justify-content: space-between;
+    font: 600 19px "Inter"; letter-spacing: .18em; color: var(--muted); }
+  .tag.t1 { left: 120px; top: 110px; transform: rotate(-16deg); opacity: .5; filter: blur(.6px); }
+  .tag.t2 { left: 230px; top: 70px; transform: rotate(7deg); }
+  .ficelle { position: absolute; left: 330px; top: -40px; width: 260px; height: 230px; border: 4px solid var(--gold);
+    border-color: var(--gold) transparent transparent var(--gold); border-radius: 60% 40% 0 0; transform: rotate(18deg); opacity: .85; }
+
+  /* Diapositives claires : le billet contrôlé */
+  .billet { display: flex; background: #fff; border-radius: 30px; overflow: hidden; position: relative;
+    box-shadow: 0 26px 64px rgba(15,30,58,.12), 0 0 0 1.5px rgba(176,141,62,.25); }
+  .talon { flex: 0 0 210px; background: var(--navy); color: var(--gold); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 26px 0; position: relative; }
+  .talon .n { font-family: "Fraunces"; font-weight: 600; font-size: 104px; line-height: 1; color: var(--cream); }
+  .talon .n small { font-style: italic; font-weight: 400; font-size: 44px; color: var(--gold); }
+  .talon .s { font: 700 17px "Inter"; letter-spacing: .3em; color: var(--gold-light); }
+  .talon::after { content: ""; position: absolute; right: -9px; top: 14px; bottom: 14px; width: 18px;
+    background: radial-gradient(circle, #fff 5px, transparent 6px) 0 0/18px 24px repeat-y; }
+  .corps { flex: 1; padding: 34px 200px 34px 52px; display: flex; flex-direction: column; justify-content: center; gap: 14px; }
+  .etiq { align-self: flex-start; display: inline-flex; padding: 10px 24px; border-radius: 999px; font: 600 21px "Inter"; letter-spacing: .2em; text-transform: uppercase;
+    background: rgba(176,141,62,.12); color: var(--gold-deep); border: 1.5px solid rgba(176,141,62,.45); }
+  .quand { font-family: "Fraunces"; font-style: italic; font-size: 46px; line-height: 1.1; color: var(--ink); }
+  .tampon { position: absolute; right: 30px; top: 50%; width: 150px; height: 150px; margin-top: -75px; border-radius: 50%;
+    border: 4px solid rgba(176,141,62,.75); display: grid; place-items: center; transform: rotate(-14deg); color: var(--gold-deep);
+    font: 800 20px "Inter"; letter-spacing: .2em; text-align: center; line-height: 1.3; box-shadow: inset 0 0 0 7px #fff, inset 0 0 0 9px rgba(176,141,62,.45); }
+  .doc { margin-top: 56px; font-family: "Fraunces"; font-weight: 600; font-size: 78px; line-height: 1.08; letter-spacing: -.01em; }
+  .doc em { font-style: italic; font-weight: 400; color: var(--gold-deep); }
+  .lignes { margin-top: 44px; display: flex; flex-direction: column; gap: 24px; }
+  .lignes div { display: flex; gap: 22px; align-items: baseline; font: 400 36px/1.42 "Inter"; color: var(--muted); }
+  .lignes div b { color: var(--ink); font-weight: 600; }
+  .lignes div::before { content: ""; flex: 0 0 14px; height: 14px; border-radius: 50%; background: var(--gold); transform: translateY(-4px); }
+  .source { position: absolute; left: 110px; right: 110px; bottom: 140px; padding-top: 22px; border-top: 1.5px solid rgba(176,141,62,.3);
+    font: 400 22px/1.45 "Inter"; color: #8a91a6; }
+  .source b { font-weight: 600; color: var(--muted); }
+  .slide.sombre .source { color: rgba(250,247,240,.45); border-top-color: rgba(201,169,96,.3); }
+  .slide.sombre .source b { color: rgba(250,247,240,.7); }
+
+  /* Kazaia : la fiche d'un enfant (fictive) */
+  .fiche { margin-top: 50px; background: #fff; border-radius: 34px; border: 1.5px solid rgba(176,141,62,.28); box-shadow: 0 24px 60px rgba(15,30,58,.09); overflow: hidden; }
+  .fiche .entete { display: flex; align-items: center; gap: 26px; padding: 30px 38px; background: var(--navy); color: var(--cream); }
+  .fiche .ini { width: 84px; height: 84px; border-radius: 50%; background: var(--or-feuille); color: var(--navy); display: grid; place-items: center; font: 600 40px "Fraunces"; }
+  .fiche .nom { font-family: "Fraunces"; font-weight: 600; font-size: 46px; }
+  .fiche .nom small { display: block; font: 500 22px "Inter"; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin-top: 4px; }
+  .fiche .l { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 22px; padding: 24px 38px; border-top: 1.5px solid rgba(176,141,62,.18); }
+  .fiche .l:first-of-type { border-top: 0; }
+  .fiche .t { font: 600 31px "Inter"; color: var(--ink); }
+  .fiche .t small { display: block; font: 400 24px "Inter"; color: var(--muted); margin-top: 4px; }
+  .fiche .e { font-family: "Fraunces"; font-style: italic; font-size: 32px; color: var(--gold-deep); white-space: nowrap; }
+  .fiche .p { display: flex; gap: 8px; }
+  .fiche .p span { font: 700 20px "Inter"; padding: 9px 14px; border-radius: 999px; background: var(--navy); color: var(--gold-pale); }
+</style></head>
+<body>
+
+<!-- 1 · Accroche (sombre) -->
+<section class="slide sombre" style="justify-content:flex-end; padding-bottom:250px">
+  <div class="tags">
+    <div class="ficelle"></div>
+    <div class="tag t1"><div class="trou"></div><div class="k">RETOUR</div><div class="d">04.01</div><div class="m">rentrée</div></div>
+    <div class="tag t2"><div class="trou"></div><div class="k">DÉPART</div><div class="d">19.12</div><div class="m">vacances de Noël</div>
+      <div class="l"><span>ENFANTS</span><span>PAPIERS ?</span></div></div>
+  </div>
+  <div class="kicker">À garder · avant les vacances</div>
+  <div class="titre" style="margin-top:36px; font-size:84px">Départ le 19&nbsp;décembre&nbsp;?<br><em>Une date limite tombe aujourd'hui.</em></div>
+  <div class="filet" style="margin-top:46px"></div>
+  <div class="petit" style="margin-top:34px; font-size:36px">Les enfants partent à l'étranger pendant les fêtes&nbsp;? 4&nbsp;papiers à vérifier, dans l'ordre.</div>
+  <div class="source" style="bottom:150px"><b>Vacances de Noël en métropole :</b> du samedi 19/12/2026 après la classe au lundi 4/01/2027 · service-public.fr, actualité du 06/11/2026</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 2 · CEAM -->
+<section class="slide">
+  <div class="billet">
+    <div class="talon"><div class="n">1<small>/4</small></div><div class="s">EUROPE</div></div>
+    <div class="corps"><span class="etiq">Santé</span><div class="quand">À faire aujourd'hui</div></div>
+    <div class="tampon">J-20</div>
+  </div>
+  <div class="doc">Une carte européenne d'assurance maladie <em>par&nbsp;enfant.</em></div>
+  <div class="lignes">
+    <div><span>À demander <b>au moins 20 jours avant le départ</b>. Pour le 19&nbsp;décembre, c'est aujourd'hui.</span></div>
+    <div><span>Gratuite, valable <b>2 ans</b> au plus. Une par personne, enfants compris.</span></div>
+    <div><span>Trop tard&nbsp;? Un <b>certificat provisoire</b>, valable 3&nbsp;mois, se télécharge tout de suite.</span></div>
+  </div>
+  <div class="source"><b>Source : service-public.fr</b> · « Carte européenne d'assurance maladie (CEAM) » (F34441) · vérifié le 22/10/2026 · consulté le 23/11/2026</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 3 · Sa pièce d'identité -->
+<section class="slide">
+  <div class="billet">
+    <div class="talon"><div class="n">2<small>/4</small></div><div class="s">FRONTIÈRE</div></div>
+    <div class="corps"><span class="etiq">Identité</span><div class="quand">Dans son sac à lui</div></div>
+    <div class="tampon">À SON<br>NOM</div>
+  </div>
+  <div class="doc">Sa pièce d'identité.<br><em>Pas le livret de&nbsp;famille.</em></div>
+  <div class="lignes">
+    <div><span>Union européenne ou Schengen&nbsp;: <b>carte d'identité ou passeport</b> valide, à son nom.</span></div>
+    <div><span>Ailleurs&nbsp;: <b>passeport</b> valide, et un visa si le pays l'exige.</span></div>
+    <div><span>Le livret de famille ne peut pas être exigé, même si vous ne portez pas le même nom.</span></div>
+  </div>
+  <div class="source"><b>Source : service-public.fr</b> · « Avec quels documents un mineur français peut-il voyager à l'étranger ? » (F1922) · vérifié le 16/04/2025 · consulté le 23/11/2026</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 4 · La date d'expiration -->
+<section class="slide">
+  <div class="billet">
+    <div class="talon"><div class="n">3<small>/4</small></div><div class="s">VALIDITÉ</div></div>
+    <div class="corps"><span class="etiq">Expiration</span><div class="quand">À vérifier ce soir</div></div>
+    <div class="tampon">VALIDE<br>?</div>
+  </div>
+  <div class="doc">Regarde la date.<br><em>Pas la&nbsp;photo.</em></div>
+  <div class="lignes">
+    <div><span>Carte d'identité&nbsp;: valable <b>10 ans</b>. La date d'expiration est celle écrite sur la carte.</span></div>
+    <div><span>Un passeport à faire&nbsp;? De nombreuses mairies ne reçoivent <b>que sur rendez-vous</b>, l'enfant et son parent présents ensemble au guichet.</span></div>
+    <div><span>Plus tôt tu regardes, plus tu as le&nbsp;choix.</span></div>
+  </div>
+  <div class="source"><b>Source : service-public.fr</b> · « Quelle est la durée de validité d'une carte d'identité ? » (F35005, vérifié le 05/08/2026) · « Passeport d'un mineur : première demande » (F14930, vérifié le 19/06/2026) · consultés le 23/11/2026</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 5 · AST -->
+<section class="slide">
+  <div class="billet">
+    <div class="talon"><div class="n">4<small>/4</small></div><div class="s">SANS TOI</div></div>
+    <div class="corps"><span class="etiq">Autorisation</span><div class="quand">Avec mamie&nbsp;?</div></div>
+    <div class="tampon">AST</div>
+  </div>
+  <div class="doc">Il part sans toi&nbsp;?<br><em>Une autorisation de sortie du territoire.</em></div>
+  <div class="lignes">
+    <div><span>Obligatoire s'il voyage à l'étranger <b>sans personne ayant l'autorité parentale</b>.</span></div>
+    <div><span>Dans sa valise&nbsp;: le formulaire signé par un parent, <b>la copie de ta pièce d'identité</b> et sa pièce d'identité à lui.</span></div>
+    <div><span>Pas de mairie. Valable <b>1 an</b> au&nbsp;plus.</span></div>
+  </div>
+  <div class="source"><b>Source : service-public.fr</b> · « Autorisation de sortie du territoire (AST) » (F1359) · vérifié le 30/10/2026 · consulté le 23/11/2026</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 6 · Kazaia -->
+<section class="slide">
+  <div class="kicker">Et la prochaine fois&nbsp;?</div>
+  <div class="titre" style="margin-top:30px; font-size:80px">Une fiche par enfant. <em>Ses dates, à ta place.</em></div>
+  <div class="fiche">
+    <div class="entete"><div class="ini">L</div><div class="nom">Léo<small>Fiche membre · exemple fictif</small></div></div>
+    <div class="l"><div class="t">Carte d'identité<small>à renouveler avant la date</small></div><div class="e">exp. mars 2027</div><div class="p"><span>J-30</span><span>J-7</span></div></div>
+    <div class="l"><div class="t">Carte européenne<small>pense-bête · la renouveler</small></div><div class="e">nov. 2028</div><div class="p"><span>J-30</span><span>J-7</span></div></div>
+    <div class="l"><div class="t">Autorisation de sortie<small>pense-bête · la refaire</small></div><div class="e">déc. 2027</div><div class="p"><span>J-30</span><span>J-7</span></div></div>
+  </div>
+  <div class="petit" style="margin-top:40px; font-size:31px">Kazaia te prévient par e-mail 30&nbsp;jours puis 7&nbsp;jours avant chaque échéance.</div>
+  <div class="grain"></div><div class="pied"><span>Kazaia</span><span class="glisse">Glisse</span></div>
+</section>
+
+<!-- 7 · Appel à l'action (sombre) -->
+<section class="slide sombre" style="align-items:center; text-align:center; justify-content:center; padding-top:110px">
+  <div class="kicker">À toi</div>
+  <div class="titre" style="margin-top:34px; font-size:86px">Le papier oublié<br>la veille d'un départ,<br><em>c'était lequel&nbsp;?</em></div>
+  <div class="petit" style="margin-top:36px; font-size:36px">Raconte-nous en commentaire.<br>On lit tout.</div>
+  <div class="bouton" style="margin-top:56px">Ton score · lien en bio</div>
+  <div class="petit" style="margin-top:26px; font-size:30px">kazaia.fr/verifier · ta charge mentale sur 100</div>
+  <div class="grain"></div><div class="pied"><img src="../../kazaia-logo.png" alt="Kazaia" style="width:170px"><span>Ne rien oublier.</span></div>
+</section>
+
+</body></html>

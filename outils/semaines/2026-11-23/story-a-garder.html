@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../base.css">
+<style>
+  body { display: flex; flex-wrap: wrap; gap: 20px; background: #000; }
+  /* Zone sûre story : texte entre y=250 et y=1500, 90 px de marge */
+  .story .c { position: absolute; left: 90px; right: 90px; top: 290px; display: flex; flex-direction: column; gap: 44px; }
+  .story .c.centre { align-items: center; text-align: center; }
+  .story .t { font-family: "Fraunces"; font-weight: 600; font-size: 96px; line-height: 1.06; letter-spacing: -.015em; }
+  .story .t em { font-style: italic; font-weight: 400; color: var(--gold); }
+  .story .p { font: 400 44px/1.42 "Inter"; color: rgba(250,247,240,.82); }
+  .story .p b { font-weight: 600; color: var(--cream); }
+  .story .num { font-family: "Fraunces"; font-style: italic; font-weight: 400; font-size: 220px; line-height: .9; }
+  .story .logo { position: absolute; left: 50%; transform: translateX(-50%); top: 1580px; width: 280px; }
+  .story .fictif { position: absolute; left: 90px; right: 90px; top: 1500px; text-align: center; font: 500 26px "Inter"; letter-spacing: .06em; color: rgba(250,247,240,.45); }
+  .story .zone { width: 100%; height: 200px; border: 3px dashed rgba(201,169,96,.5); border-radius: 40px; display: grid; place-items: center;
+    font: 500 34px "Inter"; color: rgba(250,247,240,.45); }
+  .story .pile { display: flex; flex-direction: column; gap: 26px; }
+  .story .liste { display: flex; flex-direction: column; gap: 26px; font: 500 40px/1.35 "Inter"; }
+  .story .liste div { display: flex; gap: 24px; align-items: baseline; }
+  .story .liste div::before { content: ""; flex: 0 0 14px; height: 14px; border-radius: 50%; background: var(--or-feuille); transform: translateY(-4px); }
+  .story .formule { display: flex; flex-direction: column; gap: 18px; }
+  .story .formule .haut { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; }
+  .story .formule .nom { font-family: "Fraunces"; font-weight: 600; font-size: 64px; }
+  .story .formule .prix { font-family: "Fraunces"; font-weight: 400; font-size: 60px; white-space: nowrap; }
+  .story .formule .prix small { font: 500 30px "Inter"; color: rgba(250,247,240,.6); }
+  .story .formule .det { font: 400 34px/1.4 "Inter"; color: rgba(250,247,240,.75); }
+  .story .formule .pastille { align-self: flex-start; font-size: 28px; padding: 12px 26px; }
+  .story .carte.vedette { border-color: rgba(230,211,163,.8); background: linear-gradient(135deg, rgba(201,169,96,.20), rgba(201,169,96,.06)); }
+  .story .apercu { width: 640px; border-radius: 24px; box-shadow: 0 30px 80px rgba(0,0,0,.5); border: 1.5px solid rgba(201,169,96,.4); }
+</style></head>
+<body>
+
+<!-- ============ À GARDER · papiers des enfants avant les vacances de Noël ============ -->
+<section class="story reel"><div class="halo" style="left:40px;top:100px"></div>
+  <div class="c centre" style="top:250px; gap:34px">
+    <div class="kicker">À garder</div>
+    <div class="t">Leurs papiers,<br><em>avant le&nbsp;départ.</em></div>
+    <img class="apercu" style="width:600px" src="../../../media/2026-11-23-papiers-enfants-noel-1.png" alt="">
+    <div class="p">4 vérifications avant Noël.<br>Chaque dimanche sur le compte.</div>
+  </div>
+  <img class="logo" src="../../kazaia-logo.png" alt="Kazaia"><div class="vignette"></div><div class="grain"></div></section>
+
+</body></html>
