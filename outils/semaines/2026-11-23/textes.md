@@ -180,3 +180,7 @@ Préparé par les tâches du lundi (une par contenu). Brouillons Metricool marqu
 > Abonne-toi pour un conseil chaque matin. Ici, on soulage ta charge mentale.
 >
 > #papiersadministratifs #rangement #chargementale #astucemaison #kazaia
+
+## 23/11 : musique Pixabay intégrée (demande de Céline)
+- Tips du 24 au 30/11 rendus à nouveau avec un vrai morceau (style « elan ») : `media/tip-<date>-<thème>-son.mp4`. TikTok est ajouté au même post Metricool qu'Instagram et Facebook (fini le post TikTok muet séparé).
+- Reel du mercredi : `media/2026-11-23-swipe-v3.mp4` (style « lumineux ») ; reel du vendredi : `media/2026-11-23-scooter-v2.mp4` (style « lumineux »).
