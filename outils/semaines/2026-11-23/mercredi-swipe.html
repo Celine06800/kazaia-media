@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../base.css">
+<script src="../../base.js"></script>
+<style>
+  .h-k { position: absolute; left: 90px; right: 150px; top: 215px; text-align: center; }
+  .h-t { position: absolute; left: 90px; right: 150px; top: 268px; text-align: center; font-family: "Fraunces"; font-weight: 600; font-size: 86px; line-height: 1.05; letter-spacing: -.015em; }
+  .h-s { position: absolute; left: 90px; right: 150px; top: 470px; text-align: center; font: 500 36px/1.3 "Inter"; color: rgba(250,247,240,.72); }
+  .pile { position: absolute; left: 150px; width: 720px; top: 570px; height: 720px; }
+  .carte { position: absolute; inset: 0; border-radius: 44px; padding: 56px 58px;
+    background: linear-gradient(160deg, #263B66 0%, #18294D 58%, #1E2C47 100%);
+    border: 1.5px solid rgba(230,211,163,.55); box-shadow: 0 40px 90px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.18);
+    backdrop-filter: blur(10px); display: flex; flex-direction: column; opacity: 0; transform-origin: 50% 90%; }
+  .carte .top { display: flex; justify-content: space-between; align-items: center; font: 600 26px "Inter"; letter-spacing: .24em; color: var(--gold); }
+  .carte .top i { font-style: normal; color: rgba(250,247,240,.5); letter-spacing: .1em; }
+  .carte .ico { margin-top: 54px; width: 96px; height: 96px; border-radius: 28px; display: grid; place-items: center;
+    background: rgba(201,169,96,.14); border: 1.5px solid rgba(201,169,96,.5); }
+  .carte .ico svg { width: 52px; height: 52px; stroke: var(--gold-light); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .carte .tx { margin-top: 46px; font-family: "Fraunces"; font-weight: 500; font-size: 58px; line-height: 1.14; letter-spacing: -.01em; color: var(--cream); }
+  .carte .tx em { font-style: italic; font-weight: 400; color: var(--gold-light); }
+  .boutons { position: absolute; left: 150px; width: 720px; top: 1325px; display: flex; justify-content: space-between; }
+  .btn { display: flex; align-items: center; gap: 18px; padding: 20px 34px; border-radius: 999px; font: 600 32px "Inter"; }
+  .btn.non { background: rgba(255,255,255,.06); border: 1.5px solid rgba(255,255,255,.22); color: rgba(250,247,240,.8); }
+  .btn.oui { background: rgba(201,169,96,.16); border: 1.5px solid rgba(201,169,96,.75); color: var(--gold-pale); }
+  .btn b { font-size: 34px; }
+  /* B */
+  .b-k { position: absolute; left: 90px; right: 150px; top: 330px; text-align: center; }
+  .b-t { position: absolute; left: 90px; right: 150px; top: 400px; text-align: center; font-family: "Fraunces"; font-weight: 600; font-size: 100px; line-height: 1.06; }
+  .points { position: absolute; left: 150px; width: 780px; top: 720px; display: flex; justify-content: center; gap: 26px; }
+  .pt { width: 96px; height: 96px; border-radius: 50%; border: 2px solid rgba(201,169,96,.7); background: radial-gradient(circle, rgba(201,169,96,.55), rgba(201,169,96,.15) 70%); box-shadow: 0 0 40px rgba(201,169,96,.25); }
+  .b-s { position: absolute; left: 90px; right: 150px; top: 890px; text-align: center; font-family: "Fraunces"; font-size: 64px; line-height: 1.15; }
+  .b-s2 { position: absolute; left: 90px; right: 150px; top: 1150px; text-align: center; font: 500 40px/1.4 "Inter"; color: rgba(250,247,240,.75); }
+  .e { position: absolute; left: 90px; right: 150px; top: 470px; height: 1000px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 40px; }
+  .e .logo { width: 400px; margin-top: 20px; }
+  .e .petit { font-size: 38px; }
+</style></head>
+<body>
+<div class="reel">
+  <div class="halo" style="left:40px; top:-260px"></div>
+  <div class="rayon" style="top:1250px"></div>
+  <canvas class="poussiere"></canvas>
+
+  <!-- A · 0 à 10,4 s : le paquet de cartes -->
+  <div class="scene" data-in="-1" data-dur="0.01" data-out="10.4" data-anim="fade" data-zoom="1,1.03">
+    <div class="h-k kicker" data-in="-1" data-dur="0.01" data-anim="fade">Le test du swipe</div>
+    <div class="h-t" data-in="-1" data-dur="0.01" data-anim="fade">C'est toi,<br><em class="accent" data-shine="0.6">ou pas toi ?</em></div>
+    <div class="h-s" data-in="0.8" data-anim="up">Compte tes « c'est moi ». Dans ta tête.</div>
+    <div class="pile">
+      <div class="carte" data-t0="0" data-t1="2.4"><div class="top"><span>Carte</span><i>1 / 6</i></div>
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <div class="tx">« C'est où ? »<br>Tous les regards<br><em>se tournent vers toi.</em></div></div>
+      <div class="carte" data-t0="2.4" data-t1="4.0"><div class="top"><span>Carte</span><i>2 / 6</i></div>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 16c0-2 1-3 3-3l3-1 3-5 2 1-1 4 7 2c1 .3 1 1 1 2v1H3z"/><path d="M3 19h18"/></svg></div>
+        <div class="tx">Tu connais la pointure de tout le monde.<br><em>Sauf la tienne.</em></div></div>
+      <div class="carte" data-t0="4.0" data-t1="5.6"><div class="top"><span>Carte</span><i>3 / 6</i></div>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5z"/><path d="M9 11h6M9 15h4"/></svg></div>
+        <div class="tx">Ta note «&nbsp;À&nbsp;faire&nbsp;»<br><em>date de l'été.</em></div></div>
+      <div class="carte" data-t0="5.6" data-t1="7.2"><div class="top"><span>Carte</span><i>4 / 6</i></div>
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+        <div class="tx">Une échéance découverte…<br><em>le jour même.</em></div></div>
+      <div class="carte" data-t0="7.2" data-t1="8.8"><div class="top"><span>Carte</span><i>5 / 6</i></div>
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div>
+        <div class="tx">Tu photographies des papiers<br><em>«&nbsp;pour plus tard&nbsp;».</em></div></div>
+      <div class="carte" data-t0="8.8" data-t1="10.4"><div class="top"><span>Carte</span><i>6 / 6</i></div>
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+        <div class="tx">Les codes des sites administratifs&nbsp;?<br><em>Dans ta tête.</em></div></div>
+    </div>
+    <div class="boutons" data-in="0.4" data-anim="up">
+      <div class="btn non"><b>✕</b> Pas moi</div>
+      <div class="btn oui" data-shine="9.4"><b>✓</b> C'est moi</div>
+    </div>
+  </div>
+
+  <!-- B · 10,4 à 13,8 s : la révélation -->
+  <div class="scene" data-in="10.4" data-dur="0.3" data-out="13.8" data-anim="fade" data-zoom="1,1.03">
+    <div class="b-k kicker" data-in="10.5" data-anim="wipe">Fin du paquet</div>
+    <div class="b-t" data-in="10.6" data-dur="0.7" data-anim="words">Combien de<br><em class="accent" style="white-space:nowrap">« c'est moi » ?</em></div>
+    <div class="points">
+      <div class="pt" data-in="11.2" data-dur="0.3" data-anim="scale"></div>
+      <div class="pt" data-in="11.35" data-dur="0.3" data-anim="scale"></div>
+      <div class="pt" data-in="11.5" data-dur="0.3" data-anim="scale"></div>
+      <div class="pt" data-in="11.65" data-dur="0.3" data-anim="scale"></div>
+      <div class="pt" data-in="11.8" data-dur="0.3" data-anim="scale"></div>
+      <div class="pt" data-in="11.95" data-dur="0.3" data-anim="scale"></div>
+    </div>
+    <div class="b-s" data-in="12.1" data-dur="0.5" data-anim="blur">Chacun, c'est une chose<br>que ta tête <em class="accent">porte seule.</em></div>
+    <div class="b-s2" data-in="12.8" data-anim="up" data-shake="13.1,13.7">Et ce n'étaient que 6 cartes.</div>
+  </div>
+
+  <!-- C · 13,8 à 18 s -->
+  <div class="scene" data-in="13.8" data-dur="0.4" data-anim="fade">
+    <div class="e">
+      <div class="kicker" data-in="13.9" data-anim="wipe">Ton vrai score sur 100 ?</div>
+      <div class="titre" data-in="14.1" data-dur="0.8" data-anim="words">Fais le <em>test.</em></div>
+      <div class="petit" data-in="14.7" data-anim="up">Ton score, et la formule qui allège.</div>
+      <div class="pastille" data-in="15.1" data-anim="scale" data-shine="15.6">Lien en bio · kazaia.fr/verifier</div>
+      <img class="logo" src="../../kazaia-logo.png" alt="Kazaia" data-in="15.4" data-anim="blur">
+    </div>
+  </div>
+
+  <div class="vignette"></div>
+  <div class="grain"></div>
+</div>
+<script>
+  // Paquet de cartes : la carte active au premier plan, la suivante en dessous, sortie en swipe vers le haut.
+  const cl = (x) => Math.max(0, Math.min(1, x));
+  const eo = (x) => 1 - Math.pow(1 - cl(x), 3);
+  const ei = (x) => { x = cl(x); return x * x * x; };
+  window.onRender = function (t) {
+    document.querySelectorAll(".carte").forEach((c, i) => {
+      const t0 = parseFloat(c.dataset.t0), t1 = parseFloat(c.dataset.t1);
+      const entree = t0 === 0 ? 1 : eo((t - (t0 - 0.35)) / 0.35);   // remonte du dessous
+      const sortie = ei((t - (t1 - 0.38)) / 0.38);                   // swipe
+      let op = 0, tf = "";
+      if (t >= t0 - 0.35 && t < t1) {
+        const s = .93 + .07 * entree, y = 38 * (1 - entree);
+        const dx = 760 * sortie * (i % 2 ? -1 : 1), dy = -160 * sortie, r = 14 * sortie * (i % 2 ? -1 : 1);
+        tf = `translate(${dx}px, ${y + dy}px) rotate(${r}deg) scale(${s})`;
+        op = (t0 === 0 ? 1 : .35 + .65 * entree) * (1 - .7 * sortie * sortie);
+        c.style.zIndex = sortie > 0 ? 20 : 10;   // la carte qui part reste au-dessus de la suivante
+      } else if (t < t0 - 0.35 && t >= t0 - 1.9) {   // carte suivante, en attente sous la pile
+        tf = `translate(0, 38px) scale(.93)`; op = .35; c.style.zIndex = 1;
+      }
+      c.style.opacity = op; c.style.transform = tf;
+    });
+  };
+</script>
+</body></html>
