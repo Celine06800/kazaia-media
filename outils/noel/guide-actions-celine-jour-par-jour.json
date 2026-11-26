@@ -1,0 +1,1082 @@
+[
+{
+"id": "2026-12-01-tip",
+"date": "2026-12-01",
+"jour": "Mar. 1/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Le budget cadeaux, tu le fixes quand ? » (thème Budget). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Budget."
+},
+{
+"id": "2026-12-01-d01b",
+"date": "2026-12-01",
+"jour": "Mar. 1/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Créer la bulle « Avent » avec la 1re case",
+"detail": "Sur la story de 9 h : Mettre à la une › Nouveau › nom « Avent ». Couverture : 2026-12-01-couverture-avent.png (calendrier doré). La placer en premier."
+},
+{
+"id": "2026-12-01-d01a",
+"date": "2026-12-01",
+"jour": "Mar. 1/12",
+"heure": "9 h 10",
+"ordre": 550,
+"rubrique": "Profil",
+"action": "Poser la photo de profil de Noël",
+"detail": "Instagram, Facebook et TikTok de Kazaia : la boule à neige (fichier outils/noel/photo-profil-noel-2026.png du dépôt kazaia-media). Un rappel est programmé à 9 h 10."
+},
+{
+"id": "2026-12-01-d01c",
+"date": "2026-12-01",
+"jour": "Mar. 1/12",
+"heure": "18 h",
+"ordre": 1080,
+"rubrique": "Concours",
+"action": "Vérifier le reel du concours et épingler le règlement",
+"detail": "Le reel part à 18 h sur Instagram et Facebook, avec le règlement en premier commentaire. Instagram : appui long sur le commentaire › Épingler. Facebook : ⋯ sur le commentaire › Épingler. Si le commentaire manque, le coller depuis outils/noel/concours/reglement-commentaire.txt."
+},
+{
+"id": "2026-12-01-d01d",
+"date": "2026-12-01",
+"jour": "Mar. 1/12",
+"heure": "après 18 h 05",
+"ordre": 1090,
+"rubrique": "Concours",
+"action": "Créer la bulle « Concours »",
+"detail": "Sur la story « Le concours est ouvert » de 18 h 05 : Mettre à la une › Nouveau › « Concours ». Couverture : 2026-12-01-couverture-concours.png (cadeau doré). Y ajouter aussi le reel du concours partagé en story."
+},
+{
+"id": "2026-12-01-concours",
+"date": "2026-12-01",
+"jour": "Mar. 1/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-02-tip",
+"date": "2026-12-02",
+"jour": "Mer. 2/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Le spectacle de Noël, c'est quel jour ? » (thème École). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème École."
+},
+{
+"id": "2026-12-02-avent",
+"date": "2026-12-02",
+"jour": "Mer. 2/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 2 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-02-reel",
+"date": "2026-12-02",
+"jour": "Mer. 2/12",
+"heure": "après 12 h",
+"ordre": 730,
+"rubrique": "Reels",
+"action": "Partager le reel « Fais le test : la charge mentale des fêtes » en story",
+"detail": "Avion en papier › Ajouter à ta story. Ajouter le sticker Lien vers kazaia.fr/verifier."
+},
+{
+"id": "2026-12-02-concours",
+"date": "2026-12-02",
+"jour": "Mer. 2/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-03-tip",
+"date": "2026-12-03",
+"jour": "Jeu. 3/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Les vaccins des enfants, à jour ? » (thème Santé). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Santé."
+},
+{
+"id": "2026-12-03-avent",
+"date": "2026-12-03",
+"jour": "Jeu. 3/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 3 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-03-concours",
+"date": "2026-12-03",
+"jour": "Jeu. 3/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-04-tip",
+"date": "2026-12-04",
+"jour": "Ven. 4/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Tu pars pour les fêtes ? » (thème Maison). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Maison."
+},
+{
+"id": "2026-12-04-avent",
+"date": "2026-12-04",
+"jour": "Ven. 4/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 4 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-04-reel",
+"date": "2026-12-04",
+"jour": "Ven. 4/12",
+"heure": "après 18 h",
+"ordre": 1095,
+"rubrique": "Reels",
+"action": "Partager le reel « Garde la facture du cadeau (1) » en story",
+"detail": "Avion en papier › Ajouter à ta story."
+},
+{
+"id": "2026-12-04-concours",
+"date": "2026-12-04",
+"jour": "Ven. 4/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-05-tip",
+"date": "2026-12-05",
+"jour": "Sam. 5/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « La liste de cadeaux, dans ta tête ? » (thème Organisation). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Organisation."
+},
+{
+"id": "2026-12-05-avent",
+"date": "2026-12-05",
+"jour": "Sam. 5/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 5 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-05-concours",
+"date": "2026-12-05",
+"jour": "Sam. 5/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-06-tip",
+"date": "2026-12-06",
+"jour": "Dim. 6/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Noël, c'est encore toi ? » (thème Charge mentale). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Charge mentale."
+},
+{
+"id": "2026-12-06-avent",
+"date": "2026-12-06",
+"jour": "Dim. 6/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 6 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-06-agarder",
+"date": "2026-12-06",
+"jour": "Dim. 6/12",
+"heure": "après 10 h",
+"ordre": 610,
+"rubrique": "À garder",
+"action": "Ajouter la story du carrousel à la bulle « À garder »",
+"detail": "Le carrousel et sa story partent seuls à 10 h. Sur la story : Mettre à la une › À garder."
+},
+{
+"id": "2026-12-06-concours",
+"date": "2026-12-06",
+"jour": "Dim. 6/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-07-tip",
+"date": "2026-12-07",
+"jour": "Lun. 7/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « La facture du gros achat, rangée ? » (thème Papiers). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Papiers."
+},
+{
+"id": "2026-12-07-d07",
+"date": "2026-12-07",
+"jour": "Lun. 7/12",
+"heure": "matin",
+"ordre": 480,
+"rubrique": "Validation",
+"action": "Relire les brouillons de la semaine et cliquer « Programmer »",
+"detail": "Dans Metricool, marque Kazaia : les reels et le carrousel de la semaine préparés par la routine du lundi."
+},
+{
+"id": "2026-12-07-avent",
+"date": "2026-12-07",
+"jour": "Lun. 7/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 7 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-07-reel",
+"date": "2026-12-07",
+"jour": "Lun. 7/12",
+"heure": "après 18 h",
+"ordre": 1095,
+"rubrique": "Reels",
+"action": "Partager le reel « La charge invisible des fêtes » en story",
+"detail": "Avion en papier › Ajouter à ta story."
+},
+{
+"id": "2026-12-07-concours",
+"date": "2026-12-07",
+"jour": "Lun. 7/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-08-tip",
+"date": "2026-12-08",
+"jour": "Mar. 8/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Les petits achats de décembre ? » (thème Budget). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Budget."
+},
+{
+"id": "2026-12-08-avent",
+"date": "2026-12-08",
+"jour": "Mar. 8/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 8 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-08-d08",
+"date": "2026-12-08",
+"jour": "Mar. 8/12",
+"heure": "après 18 h",
+"ordre": 1085,
+"rubrique": "Concours",
+"action": "Ajouter la story « J-12 » à la bulle « Concours »",
+"detail": "La story part seule à 18 h."
+},
+{
+"id": "2026-12-08-concours",
+"date": "2026-12-08",
+"jour": "Mar. 8/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-09-tip",
+"date": "2026-12-09",
+"jour": "Mer. 9/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « La liste de fournitures de janvier ? » (thème École). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème École."
+},
+{
+"id": "2026-12-09-avent",
+"date": "2026-12-09",
+"jour": "Mer. 9/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 9 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-09-d09",
+"date": "2026-12-09",
+"jour": "Mer. 9/12",
+"heure": "avant 12 h",
+"ordre": 700,
+"rubrique": "Parrainage",
+"action": "Vérifier le lien de parrainage",
+"detail": "Le reel « Offre un mois à ta famille » sort à 12 h : vérifier dans l'application que le lien de parrainage fonctionne (1 mois offert de chaque côté)."
+},
+{
+"id": "2026-12-09-reel",
+"date": "2026-12-09",
+"jour": "Mer. 9/12",
+"heure": "après 12 h",
+"ordre": 730,
+"rubrique": "Reels",
+"action": "Partager le reel « Offre un mois à ta famille » (parrainage) en story",
+"detail": "Avion en papier › Ajouter à ta story."
+},
+{
+"id": "2026-12-09-concours",
+"date": "2026-12-09",
+"jour": "Mer. 9/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-10-tip",
+"date": "2026-12-10",
+"jour": "Jeu. 10/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Ton ordonnance expire pendant les fêtes ? » (thème Santé). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Santé."
+},
+{
+"id": "2026-12-10-avent",
+"date": "2026-12-10",
+"jour": "Jeu. 10/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 10 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-10-concours",
+"date": "2026-12-10",
+"jour": "Jeu. 10/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-11-tip",
+"date": "2026-12-11",
+"jour": "Ven. 11/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Le détecteur de fumée, testé ? » (thème Maison). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Maison."
+},
+{
+"id": "2026-12-11-avent",
+"date": "2026-12-11",
+"jour": "Ven. 11/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 11 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-11-reel",
+"date": "2026-12-11",
+"jour": "Ven. 11/12",
+"heure": "après 18 h",
+"ordre": 1095,
+"rubrique": "Reels",
+"action": "Partager le reel « Garde la facture du cadeau (2) » en story",
+"detail": "Avion en papier › Ajouter à ta story."
+},
+{
+"id": "2026-12-11-concours",
+"date": "2026-12-11",
+"jour": "Ven. 11/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-12-tip",
+"date": "2026-12-12",
+"jour": "Sam. 12/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Les courses du réveillon, au dernier moment ? » (thème Organisation). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Organisation."
+},
+{
+"id": "2026-12-12-avent",
+"date": "2026-12-12",
+"jour": "Sam. 12/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 12 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-12-concours",
+"date": "2026-12-12",
+"jour": "Sam. 12/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-13-tip",
+"date": "2026-12-13",
+"jour": "Dim. 13/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Tu dis oui à tout en décembre ? » (thème Charge mentale). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Charge mentale."
+},
+{
+"id": "2026-12-13-avent",
+"date": "2026-12-13",
+"jour": "Dim. 13/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 13 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-13-agarder",
+"date": "2026-12-13",
+"jour": "Dim. 13/12",
+"heure": "après 10 h",
+"ordre": 610,
+"rubrique": "À garder",
+"action": "Ajouter la story du carrousel à la bulle « À garder »",
+"detail": "Le carrousel et sa story partent seuls à 10 h. Sur la story : Mettre à la une › À garder."
+},
+{
+"id": "2026-12-13-concours",
+"date": "2026-12-13",
+"jour": "Dim. 13/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-14-tip",
+"date": "2026-12-14",
+"jour": "Lun. 14/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Tes avis d'impôt, tu les retrouves ? » (thème Papiers). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Papiers."
+},
+{
+"id": "2026-12-14-d14a",
+"date": "2026-12-14",
+"jour": "Lun. 14/12",
+"heure": "matin",
+"ordre": 480,
+"rubrique": "Validation",
+"action": "Relire les brouillons de la semaine et cliquer « Programmer »",
+"detail": "Metricool, marque Kazaia."
+},
+{
+"id": "2026-12-14-avent",
+"date": "2026-12-14",
+"jour": "Lun. 14/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 14 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-14-d14b",
+"date": "2026-12-14",
+"jour": "Lun. 14/12",
+"heure": "après 18 h",
+"ordre": 1085,
+"rubrique": "Concours",
+"action": "Ajouter la story « J-6 » à la bulle « Concours »",
+"detail": "La story part seule à 18 h."
+},
+{
+"id": "2026-12-14-reel",
+"date": "2026-12-14",
+"jour": "Lun. 14/12",
+"heure": "après 18 h",
+"ordre": 1095,
+"rubrique": "Reels",
+"action": "Partager le reel « La charge invisible » en story",
+"detail": "Avion en papier › Ajouter à ta story."
+},
+{
+"id": "2026-12-14-concours",
+"date": "2026-12-14",
+"jour": "Lun. 14/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-15-tip",
+"date": "2026-12-15",
+"jour": "Mar. 15/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Un cadeau payé en plusieurs fois ? » (thème Budget). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Budget."
+},
+{
+"id": "2026-12-15-avent",
+"date": "2026-12-15",
+"jour": "Mar. 15/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 15 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-15-concours",
+"date": "2026-12-15",
+"jour": "Mar. 15/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-16-tip",
+"date": "2026-12-16",
+"jour": "Mer. 16/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Le bulletin du trimestre, rangé ? » (thème École). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème École."
+},
+{
+"id": "2026-12-16-avent",
+"date": "2026-12-16",
+"jour": "Mer. 16/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 16 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-16-reel",
+"date": "2026-12-16",
+"jour": "Mer. 16/12",
+"heure": "après 12 h",
+"ordre": 730,
+"rubrique": "Reels",
+"action": "Partager le reel Parrainage en story",
+"detail": "Avion en papier › Ajouter à ta story."
+},
+{
+"id": "2026-12-16-concours",
+"date": "2026-12-16",
+"jour": "Mer. 16/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-17-tip",
+"date": "2026-12-17",
+"jour": "Jeu. 17/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « La trousse à pharmacie des vacances ? » (thème Santé). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Santé."
+},
+{
+"id": "2026-12-17-avent",
+"date": "2026-12-17",
+"jour": "Jeu. 17/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 17 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-17-concours",
+"date": "2026-12-17",
+"jour": "Jeu. 17/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-18-tip",
+"date": "2026-12-18",
+"jour": "Ven. 18/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Un colis livré abîmé ? » (thème Maison). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Maison."
+},
+{
+"id": "2026-12-18-avent",
+"date": "2026-12-18",
+"jour": "Ven. 18/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 18 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-18-reel",
+"date": "2026-12-18",
+"jour": "Ven. 18/12",
+"heure": "après 18 h",
+"ordre": 1095,
+"rubrique": "Reels",
+"action": "Partager le reel « Garde la facture du cadeau (3) » en story",
+"detail": "Avion en papier › Ajouter à ta story."
+},
+{
+"id": "2026-12-18-concours",
+"date": "2026-12-18",
+"jour": "Ven. 18/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-19-tip",
+"date": "2026-12-19",
+"jour": "Sam. 19/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « La valise, la veille au soir ? » (thème Organisation). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Organisation."
+},
+{
+"id": "2026-12-19-avent",
+"date": "2026-12-19",
+"jour": "Sam. 19/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 19 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-19-concours",
+"date": "2026-12-19",
+"jour": "Sam. 19/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-20-tip",
+"date": "2026-12-20",
+"jour": "Dim. 20/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Noël parfait, ou Noël serein ? » (thème Charge mentale). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Charge mentale."
+},
+{
+"id": "2026-12-20-avent",
+"date": "2026-12-20",
+"jour": "Dim. 20/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 20 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-20-agarder",
+"date": "2026-12-20",
+"jour": "Dim. 20/12",
+"heure": "après 10 h",
+"ordre": 610,
+"rubrique": "À garder",
+"action": "Ajouter la story du carrousel à la bulle « À garder »",
+"detail": "Le carrousel et sa story partent seuls à 10 h. Sur la story : Mettre à la une › À garder."
+},
+{
+"id": "2026-12-20-d20",
+"date": "2026-12-20",
+"jour": "Dim. 20/12",
+"heure": "après 18 h",
+"ordre": 1085,
+"rubrique": "Concours",
+"action": "Ajouter la story « Dernier jour » à la bulle « Concours »",
+"detail": "Clôture ce soir à 23 h 59 : plus aucune participation retenue après."
+},
+{
+"id": "2026-12-20-concours",
+"date": "2026-12-20",
+"jour": "Dim. 20/12",
+"heure": "soir",
+"ordre": 1200,
+"rubrique": "Concours",
+"action": "Répondre aux participants du concours et repartager leurs stories",
+"detail": "Répondre ou liker les commentaires du reel. Repartager en story celles où @kazaia_app est identifié. Signaler les faux comptes « Kazaia »."
+},
+{
+"id": "2026-12-21-tip",
+"date": "2026-12-21",
+"jour": "Lun. 21/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Ta carte cadeau, valable jusqu'à quand ? » (thème Papiers). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Papiers."
+},
+{
+"id": "2026-12-21-d21d",
+"date": "2026-12-21",
+"jour": "Lun. 21/12",
+"heure": "matin",
+"ordre": 480,
+"rubrique": "Validation",
+"action": "Relire les brouillons de la semaine et cliquer « Programmer »",
+"detail": "Metricool, marque Kazaia."
+},
+{
+"id": "2026-12-21-d21a",
+"date": "2026-12-21",
+"jour": "Lun. 21/12",
+"heure": "matin",
+"ordre": 490,
+"rubrique": "Concours",
+"action": "Faire le tirage au sort",
+"detail": "Copier les commentaires du reel (Instagram et Facebook), une ligne par commentaire, dans la page « Tirage concours Kazaia ». Exclure les comptes de l'équipe et de la famille. Lancer le tirage ; filmer l'écran si tu veux le montrer en story."
+},
+{
+"id": "2026-12-21-d21b",
+"date": "2026-12-21",
+"jour": "Lun. 21/12",
+"heure": "après le tirage",
+"ordre": 500,
+"rubrique": "Concours",
+"action": "M'envoyer le pseudo du gagnant",
+"detail": "Je finalise et programme le reel « Le gagnant est… », puis je l'ajoute à la bulle « Concours »."
+},
+{
+"id": "2026-12-21-d21c",
+"date": "2026-12-21",
+"jour": "Lun. 21/12",
+"heure": "après le tirage",
+"ordre": 505,
+"rubrique": "Concours",
+"action": "Envoyer le code au gagnant en message privé",
+"detail": "Depuis @kazaia_app uniquement : le code SERENITE2026 (utilisable une seule fois). Ne jamais demander de coordonnées bancaires. Noter la date d'envoi : il a 7 jours pour répondre."
+},
+{
+"id": "2026-12-21-avent",
+"date": "2026-12-21",
+"jour": "Lun. 21/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 21 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-21-reel",
+"date": "2026-12-21",
+"jour": "Lun. 21/12",
+"heure": "après 18 h",
+"ordre": 1095,
+"rubrique": "Reels",
+"action": "Partager le reel « Le gagnant est… » en story",
+"detail": "Une fois le reel du gagnant en ligne : avion en papier › Ajouter à ta story, puis Mettre à la une › Concours."
+},
+{
+"id": "2026-12-22-tip",
+"date": "2026-12-22",
+"jour": "Mar. 22/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Un cadeau en double ? » (thème Budget). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Budget."
+},
+{
+"id": "2026-12-22-avent",
+"date": "2026-12-22",
+"jour": "Mar. 22/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 22 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-23-tip",
+"date": "2026-12-23",
+"jour": "Mer. 23/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Les devoirs de vacances, quand ? » (thème École). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème École."
+},
+{
+"id": "2026-12-23-avent",
+"date": "2026-12-23",
+"jour": "Mer. 23/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la case 23 de l'Avent à la bulle « Avent »",
+"detail": "La story part seule à 9 h. Sur la story : Mettre à la une › Avent (au plus tard avant 9 h demain)."
+},
+{
+"id": "2026-12-23-reel",
+"date": "2026-12-23",
+"jour": "Mer. 23/12",
+"heure": "après 12 h",
+"ordre": 730,
+"rubrique": "Reels",
+"action": "Partager le reel « Fais le test avant les vacances » en story",
+"detail": "Avion en papier › Ajouter à ta story. Ajouter le sticker Lien vers kazaia.fr/verifier."
+},
+{
+"id": "2026-12-24-tip",
+"date": "2026-12-24",
+"jour": "Jeu. 24/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Un souci le soir du réveillon ? » (thème Santé). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Santé."
+},
+{
+"id": "2026-12-24-d24",
+"date": "2026-12-24",
+"jour": "Jeu. 24/12",
+"heure": "après 9 h",
+"ordre": 545,
+"rubrique": "Avent",
+"action": "Ajouter la dernière case à la bulle « Avent »",
+"detail": "Le calendrier est complet : la bulle reste en ligne jusqu'à fin janvier."
+},
+{
+"id": "2026-12-25-tip",
+"date": "2026-12-25",
+"jour": "Ven. 25/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Aujourd'hui, ta tête est en congé. » (thème Joyeux Noël). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Joyeux Noël."
+},
+{
+"id": "2026-12-25-reel",
+"date": "2026-12-25",
+"jour": "Ven. 25/12",
+"heure": "après 18 h",
+"ordre": 1095,
+"rubrique": "Reels",
+"action": "Partager le reel « Joyeux Noël » en story",
+"detail": "Avion en papier › Ajouter à ta story."
+},
+{
+"id": "2026-12-26-tip",
+"date": "2026-12-26",
+"jour": "Sam. 26/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Les boîtes et les notices à la poubelle ? » (thème Organisation). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Organisation."
+},
+{
+"id": "2026-12-27-tip",
+"date": "2026-12-27",
+"jour": "Dim. 27/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Le bilan de l'année, le tien ? » (thème Charge mentale). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Charge mentale."
+},
+{
+"id": "2026-12-27-agarder",
+"date": "2026-12-27",
+"jour": "Dim. 27/12",
+"heure": "après 10 h",
+"ordre": 610,
+"rubrique": "À garder",
+"action": "Ajouter la story du carrousel à la bulle « À garder »",
+"detail": "Le carrousel et sa story partent seuls à 10 h. Sur la story : Mettre à la une › À garder."
+},
+{
+"id": "2026-12-28-tip",
+"date": "2026-12-28",
+"jour": "Lun. 28/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Tes relevés de compte, téléchargés ? » (thème Papiers). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Papiers."
+},
+{
+"id": "2026-12-28-d28b",
+"date": "2026-12-28",
+"jour": "Lun. 28/12",
+"heure": "matin",
+"ordre": 480,
+"rubrique": "Validation",
+"action": "Relire les brouillons de la semaine et cliquer « Programmer »",
+"detail": "Metricool, marque Kazaia."
+},
+{
+"id": "2026-12-28-d28a",
+"date": "2026-12-28",
+"jour": "Lun. 28/12",
+"heure": "matin",
+"ordre": 490,
+"rubrique": "Concours",
+"action": "Gagnant sans réponse ? Nouveau tirage",
+"detail": "Si le gagnant n'a pas répondu en 7 jours : relancer la page de tirage en excluant son pseudo, puis m'envoyer le nouveau pseudo."
+},
+{
+"id": "2026-12-28-reel",
+"date": "2026-12-28",
+"jour": "Lun. 28/12",
+"heure": "après 18 h",
+"ordre": 1095,
+"rubrique": "Reels",
+"action": "Partager le reel « La charge invisible de fin d'année » en story",
+"detail": "Avion en papier › Ajouter à ta story."
+},
+{
+"id": "2026-12-29-tip",
+"date": "2026-12-29",
+"jour": "Mar. 29/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Le budget de janvier, prêt ? » (thème Budget). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Budget."
+},
+{
+"id": "2026-12-30-tip",
+"date": "2026-12-30",
+"jour": "Mer. 30/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « La rentrée de janvier, prête ? » (thème École). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème École."
+},
+{
+"id": "2026-12-30-reel",
+"date": "2026-12-30",
+"jour": "Mer. 30/12",
+"heure": "après 12 h",
+"ordre": 730,
+"rubrique": "Reels",
+"action": "Partager le reel « Fais le test : tes résolutions papiers » en story",
+"detail": "Avion en papier › Ajouter à ta story. Ajouter le sticker Lien vers kazaia.fr/verifier."
+},
+{
+"id": "2026-12-31-tip",
+"date": "2026-12-31",
+"jour": "Jeu. 31/12",
+"heure": "après 7 h 30",
+"ordre": 460,
+"rubrique": "Tips",
+"action": "Partager le tip du jour en story, puis l'ajouter à sa bulle",
+"detail": "Tip « Ta résolution santé, une seule ? » (thème Santé). Depuis le reel : avion en papier › Ajouter à ta story, puis Mettre à la une › la bulle du thème Santé."
+},
+{
+"id": "2027-01-02-j02",
+"date": "2027-01-02",
+"jour": "Sam. 2/01",
+"heure": "matin",
+"ordre": 480,
+"rubrique": "Profil",
+"action": "Remettre la photo de profil habituelle",
+"detail": "Instagram, Facebook et TikTok de Kazaia. La bulle « Concours » reste ; la bulle « Avent » peut être retirée fin janvier."
+}
+]
