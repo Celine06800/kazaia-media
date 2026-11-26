@@ -43,3 +43,11 @@ Morceaux choisis par Céline sur **Pixabay** le 23/11/2026 (licence Pixabay : ut
 | elan | `elan-atlasaudio-positive-promo-3.mp3` | atlasaudio-positive-promo | 613505 | 95.3 s |
 | elan | `elan-caldena-positive-pop-1.mp3` | caldena-positive-pop | 621599 | 7.7 s |
 | elan | `elan-caldena-positive-pop-2.mp3` | caldena-positive-pop | 621599 | 31.4 s |
+
+## Noël (décembre 2026) : outils/sons/noel/
+10 morceaux Pixabay choisis par Céline le 26/11/2026, à utiliser pour TOUS les contenus de décembre (toutes marques) :
+hitslab « We wish you a merry Christmas », alexaa221 « Christmas day (piano) », szaudio « Happy Christmas time »,
+nastelbom « We wish you a merry Christmas », atlasaudio « Happy Christmas », gr0za « Christmas music »,
+alex-morgan « Christmas fireplace music », tunetank « Christmas », sonican « Ready for Christmas (Santa workshop) »,
+sigmamusicart « Jingle bells jazz ». 3 extraits de 14 s par morceau (les passages les plus vivants) : noel-<morceau>-<1..3>.mp3.
+Usage : node outils/render-reel.mjs <page> <durée> <sortie> --musique noel [--graine n]
