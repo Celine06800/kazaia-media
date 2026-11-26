@@ -37,18 +37,39 @@
  .fin .s{font:500 48px/1.4 Inter;color:rgba(250,247,240,.8);margin-top:40px}
  .logo2{position:absolute;left:50%;transform:translateX(-58%);top:1330px;width:330px}
  .nw{white-space:nowrap}
+</style><style>
+ .cadeau{position:absolute;left:90px;right:150px;top:820px;display:flex;justify-content:center;z-index:2;filter:drop-shadow(0 18px 40px rgba(0,0,0,.45))}
+ .cadeau .couvercle{transform-box:view-box;transform-origin:100px 104px}
+ .reel .scene{z-index:3}
+ .logo2{left:90px!important;right:150px;margin:0 auto}
+ .lot{font-size:46px!important;color:#EDE8DE!important}
+ .eclat{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
 </style></head>
 <body>
 <div class="reel">
   <div class="halo" style="left:120px; top:-140px"></div>
   <canvas class="poussiere"></canvas>
   <canvas class="neige" width="1080" height="1920"></canvas>
+  <canvas class="eclat" width="1080" height="1920"></canvas>
 
   <div class="scene" data-in="0" data-dur="0.01" data-anim="fade">
-    <div class="ck kicker" style="top:420px" data-in="0" data-dur="0.01" data-anim="fade">Concours de Noël · Kazaia</div>
-    <div class="ck big" style="top:560px" data-in="0" data-dur="0.01" data-anim="fade">Plus que <em class="or">12 jours</em></div>
-    <div class="lot" style="top:1080px" data-in="0" data-dur="0.01" data-anim="fade">Aime, partage, identifie 2 personnes<br>sous le reel du concours</div>
-    <img class="logo2" style="top:1400px" src="../../kazaia-logo.png" alt="Kazaia" data-in="0" data-dur="0.01" data-anim="fade">
+    <div class="ck kicker" style="top:420px" data-in="0.2" data-anim="wipe">Concours de Noël · Kazaia</div>
+    <div class="ck big" style="top:560px" data-in="0.5" data-dur="0.7" data-anim="up">Plus que <em class="or">12 jours</em></div>
+    <div class="cadeau" data-in="1.4" data-dur="0.8" data-anim="drop"><svg viewBox="0 0 200 210" width="250" height="262">
+  <defs><linearGradient id="rouge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D8413F"/><stop offset="1" stop-color="#8E1C26"/></linearGradient>
+  <linearGradient id="orr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9C7A30"/><stop offset=".45" stop-color="#F1DFA6"/><stop offset="1" stop-color="#B08D3E"/></linearGradient></defs>
+  <ellipse cx="100" cy="204" rx="78" ry="6" fill="rgba(0,0,0,.35)"/>
+  <rect x="30" y="98" width="140" height="104" rx="10" fill="url(#rouge)"/>
+  <rect x="89" y="98" width="22" height="104" fill="url(#orr)"/>
+  <g class="couvercle">
+    <rect x="20" y="72" width="160" height="32" rx="8" fill="url(#rouge)" stroke="#7A1620" stroke-width="1.5"/>
+    <rect x="87" y="72" width="26" height="32" fill="url(#orr)"/>
+    <ellipse cx="74" cy="56" rx="28" ry="15" transform="rotate(-24 74 56)" fill="none" stroke="url(#orr)" stroke-width="10"/>
+    <ellipse cx="126" cy="56" rx="28" ry="15" transform="rotate(24 126 56)" fill="none" stroke="url(#orr)" stroke-width="10"/>
+    <circle cx="100" cy="66" r="11" fill="url(#orr)"/>
+  </g></svg></div>
+    <div class="lot" style="top:1120px" data-in="2.9" data-anim="up">Aime, partage, identifie 2 personnes<br>sous le reel du concours</div>
+    <img class="logo2" style="top:1420px" src="../../kazaia-logo.png" alt="Kazaia" data-in="3.6" data-anim="blur">
   </div><svg class="givre" style="left:-90px;top:120px" width="360" height="360" viewBox="-50 -50 100 100"><g stroke="#eaf3ff" stroke-width="2.2" fill="none" stroke-linecap="round"><g transform="rotate(0)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(60)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(120)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(180)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(240)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(300)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><circle r="6"/></g></svg><svg class="givre" style="right:-110px;top:1350px" width="420" height="420" viewBox="-50 -50 100 100"><g stroke="#eaf3ff" stroke-width="2.2" fill="none" stroke-linecap="round"><g transform="rotate(0)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(60)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(120)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(180)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(240)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(300)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><circle r="6"/></g></svg><svg class="givre" style="right:40px;top:60px" width="170" height="170" viewBox="-50 -50 100 100"><g stroke="#eaf3ff" stroke-width="2.2" fill="none" stroke-linecap="round"><g transform="rotate(0)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(60)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(120)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(180)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(240)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(300)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><circle r="6"/></g></svg>
     <div class="vignette"></div>
   <div class="grain"></div>
@@ -69,6 +90,37 @@
    if(p.z>.92){const sc=(Math.sin(t*6+p.o)+1)/2;x.globalAlpha=sc*.9;x.strokeStyle='#fff';x.lineWidth=1.5;x.beginPath();x.moveTo(xx-14*sc,y);x.lineTo(xx+14*sc,y);x.moveTo(xx,y-14*sc);x.lineTo(xx,y+14*sc);x.stroke();}
   }
   x.globalAlpha=1; giv.forEach((g,i)=>g.style.transform=`rotate(${t*(i%2?-4:5)}deg)`);
+ };
+})();
+</script>
+<script>
+(function(){
+ const cv=document.querySelector('canvas.eclat'),x=cv.getContext('2d');
+ const cou=document.querySelector('.cadeau .couvercle');
+ let s=42;const r=()=>((s=(s*16807)%2147483647)/2147483647);
+ const eclats=[...Array(46)].map(()=>({a:r()*Math.PI*2,v:260+r()*420,R:4+r()*9,c:r()<.7?'#F1DFA6':(r()<.5?'#ffffff':'#E8504A'),o:r()*6}));
+ // petits cadeaux qui tombent de temps en temps avec la neige
+ const chute=[{t0:.2,x:170,c:'#C8323A',k:'#E6C878',s:62,rot:.5},{t0:2.6,x:930,c:'#1F6B4F',k:'#F1DFA6',s:54,rot:-.4},
+              {t0:4.4,x:250,c:'#E6C878',k:'#C8323A',s:48,rot:.7},{t0:5.6,x:860,c:'#C8323A',k:'#F1DFA6',s:58,rot:-.6}];
+ function petit(px,py,S,a,c,k){x.save();x.translate(px,py);x.rotate(a);x.globalAlpha=.92;x.fillStyle=c;x.fillRect(-S/2,-S/2,S,S);
+  x.fillStyle=k;x.fillRect(-S*.09,-S/2,S*.18,S);x.fillRect(-S/2,-S*.09,S,S*.18);
+  x.strokeStyle=k;x.lineWidth=S*.09;x.beginPath();x.ellipse(-S*.16,-S*.62,S*.17,S*.1,-.5,0,7);x.ellipse(S*.16,-S*.62,S*.17,S*.1,.5,0,7);x.stroke();x.restore();}
+ const prev=window.render;
+ window.render=function(t){ if(prev) prev(t); x.clearRect(0,0,1080,1920);
+  for(const g of chute){const u=t-g.t0; if(u<0||u>5) continue; petit(g.x+Math.sin(u*1.3)*40,-80+u*430,g.s,g.rot*Math.sin(u*1.6),g.c,g.k);}
+  // ouverture du couvercle à 2,4 s
+  const u=Math.max(0,t-2.4), ouv=u<=0?0:Math.min(1,u/.35), ret=u>1.1?Math.min(1,(u-1.1)/.5):0;
+  const h=ouv*(1-ret*.75), wob=u>0?Math.sin(u*14)*Math.exp(-u*3)*4:0;
+  if(cou) cou.style.transform=`translateY(${-46*h}px) rotate(${-12*h+wob}deg)`;
+  // gerbe d'étincelles dorées
+  if(u>0&&u<2.2){const cx=510,cy=905;
+   const lum=x.createRadialGradient(cx,cy,0,cx,cy,260);lum.addColorStop(0,`rgba(255,236,180,${.5*Math.exp(-u*1.6)})`);lum.addColorStop(1,'rgba(255,236,180,0)');
+   x.globalAlpha=1;x.fillStyle=lum;x.beginPath();x.arc(cx,cy,260,0,7);x.fill();
+   for(const e of eclats){const d=e.v*u*(1-u*.18),px=cx+Math.cos(e.a)*d,py=cy-Math.abs(Math.sin(e.a))*d*.9+Math.sin(e.a)*d*.1+160*u*u;
+    x.globalAlpha=Math.max(0,1-u/2.2)*(.6+.4*Math.sin(t*12+e.o));x.fillStyle=e.c;x.save();x.translate(px,py);x.rotate(t*3+e.o);
+    x.beginPath();for(let i=0;i<8;i++){const rr=i%2?e.R*.35:e.R;x.lineTo(Math.cos(i*Math.PI/4)*rr,Math.sin(i*Math.PI/4)*rr);}x.fill();x.restore();}
+  }
+  x.globalAlpha=1;
  };
 })();
 </script>
