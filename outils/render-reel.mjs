@@ -41,9 +41,14 @@ ff.stdin.end();
 await new Promise((r, j) => ff.on("close", (c) => (c === 0 ? r() : j(new Error("ffmpeg " + c)))));
 await navigateur.close();
 
+// DÉCEMBRE 2026 (décision de Céline du 26/11/2026) : tous les contenus de décembre prennent un extrait de sons/noel/.
+// Fichier daté AAAA-MM-JJ : décembre si le mois est 12 ; sinon, date du jour (Paris) entre le 30/11/2026 et le 31/12/2026.
+const _dt = (path.basename(sortie) || "").match(/(\d{4})-(\d{2})-(\d{2})/);
+const _auj = new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Paris" });
+const NOEL = _dt ? _dt[2] === "12" : (_auj >= "2026-11-30" && _auj <= "2026-12-31");
 const dossierSons = path.join(path.dirname(new URL(import.meta.url).pathname), "sons");
 if (!son && musique && !synthe) {
-  const style = musique === "nuit" ? "lumineux" : musique;
+  const style = NOEL ? "noel" : (musique === "nuit" ? "lumineux" : musique);
   const d = path.join(dossierSons, style);
   const liste = fs.existsSync(d) ? fs.readdirSync(d).filter((f) => f.endsWith(".mp3")).sort() : [];
   if (liste.length) {
