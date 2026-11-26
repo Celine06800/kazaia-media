@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../base.css">
+<script src="../../base.js"></script>
+<style>
+  .t-k { position: absolute; left: 90px; right: 150px; top: 300px; text-align: center; }
+  .t-f { position: absolute; left: 0; right: 60px; top: 370px; display: flex; justify-content: center; }
+  .t-h { position: absolute; left: 90px; right: 150px; top: 560px; text-align: center; font-size: 104px; }
+  .t-s { position: absolute; left: 100px; right: 160px; top: 1180px; text-align: center; font: 500 44px/1.35 "Inter"; color: rgba(250,247,240,.75); }
+  .g-k { position: absolute; left: 90px; right: 150px; top: 420px; text-align: center; }
+  .g-carte { position: absolute; left: 90px; right: 150px; top: 540px; padding: 70px 64px; border-radius: 44px;
+    background: linear-gradient(180deg, rgba(250,247,240,.08), rgba(250,247,240,.03)); border: 2px solid rgba(201,169,96,.55);
+    font: 500 58px/1.32 "Inter"; color: #faf7f0; text-align: center; box-shadow: 0 40px 120px rgba(0,0,0,.35); }
+  .g-carte .num { display: block; font: 400 italic 120px/1 "Fraunces"; color: #c9a960; margin-bottom: 28px; }
+  .c { position: absolute; left: 90px; right: 150px; top: 470px; height: 1000px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 46px; }
+  .c .titre { font-size: 92px; }
+  .c .sous { font: 500 46px/1.35 "Inter"; color: rgba(250,247,240,.8); }
+  .c .logo { width: 380px; margin-top: 30px; }
+  .t-h, .t-s, .g-carte, .c .titre, .c .sous { text-wrap: balance; }
+  .nw { white-space: nowrap; }
+  .neige { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; z-index:0; }
+  .givre { position:absolute; pointer-events:none; opacity:.22; filter: drop-shadow(0 0 18px rgba(200,225,255,.6)); }
+  .kicker .flo { color:#dbe9ff; margin-left:.35em; }
+  .reel { background: radial-gradient(110% 70% at 50% 25%, #23396a 0%, #12244a 40%, var(--navy-deep) 100%) !important; }
+
+</style><style>
+ .ck{position:absolute;left:90px;right:150px;text-align:center}
+ .big{font-family:Fraunces;font-weight:600;font-size:118px;line-height:1.02;letter-spacing:-.02em}
+ .lot{position:absolute;left:110px;right:170px;top:1060px;text-align:center;font:500 50px/1.35 Inter;color:rgba(250,247,240,.88)}
+ .lot b{color:#E6D3A3;font-weight:600}
+ .etapes{position:absolute;left:110px;right:170px;top:520px;display:flex;flex-direction:column;gap:46px}
+ .et{display:flex;gap:34px;align-items:center;padding:36px 40px;border-radius:36px;background:linear-gradient(180deg,rgba(250,247,240,.09),rgba(250,247,240,.03));border:2px solid rgba(201,169,96,.5)}
+ .et .n{font:italic 400 96px/1 Fraunces;color:#C9A960;width:70px;text-align:center}
+ .et .tx{font:500 50px/1.3 Inter;color:#FAF7F0}
+ .fin{position:absolute;left:90px;right:150px;top:560px;text-align:center}
+ .fin .d{font-family:Fraunces;font-weight:600;font-size:110px;line-height:1.05}
+ .fin .s{font:500 48px/1.4 Inter;color:rgba(250,247,240,.8);margin-top:40px}
+ .logo2{position:absolute;left:50%;transform:translateX(-58%);top:1330px;width:330px}
+ .nw{white-space:nowrap}
+</style></head>
+<body>
+<div class="reel">
+  <div class="halo" style="left:120px; top:-140px"></div>
+  <canvas class="poussiere"></canvas>
+  <canvas class="neige" width="1080" height="1920"></canvas>
+
+  <div class="scene" data-in="0" data-dur="0.01" data-anim="fade">
+    <div class="ck kicker" style="top:420px" data-in="0" data-dur="0.01" data-anim="fade">Concours de Noël · Kazaia</div>
+    <div class="ck big" style="top:560px" data-in="0" data-dur="0.01" data-anim="fade">Plus que <em class="or">6 jours</em></div>
+    <div class="lot" style="top:1080px" data-in="0" data-dur="0.01" data-anim="fade"><b>1 an de Premium</b> à gagner<br>Clôture le 20 décembre à 23 h 59</div>
+    <img class="logo2" style="top:1400px" src="../../kazaia-logo.png" alt="Kazaia" data-in="0" data-dur="0.01" data-anim="fade">
+  </div><svg class="givre" style="left:-90px;top:120px" width="360" height="360" viewBox="-50 -50 100 100"><g stroke="#eaf3ff" stroke-width="2.2" fill="none" stroke-linecap="round"><g transform="rotate(0)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(60)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(120)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(180)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(240)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(300)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><circle r="6"/></g></svg><svg class="givre" style="right:-110px;top:1350px" width="420" height="420" viewBox="-50 -50 100 100"><g stroke="#eaf3ff" stroke-width="2.2" fill="none" stroke-linecap="round"><g transform="rotate(0)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(60)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(120)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(180)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(240)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(300)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><circle r="6"/></g></svg><svg class="givre" style="right:40px;top:60px" width="170" height="170" viewBox="-50 -50 100 100"><g stroke="#eaf3ff" stroke-width="2.2" fill="none" stroke-linecap="round"><g transform="rotate(0)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(60)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(120)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(180)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(240)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><g transform="rotate(300)"><line x1="0" y1="0" x2="0" y2="-46"/><line x1="0" y1="-18" x2="-9" y2="-27"/><line x1="0" y1="-18" x2="9" y2="-27"/><line x1="0" y1="-32" x2="-7" y2="-39"/><line x1="0" y1="-32" x2="7" y2="-39"/></g><circle r="6"/></g></svg>
+    <div class="vignette"></div>
+  <div class="grain"></div>
+</div>
+<script>
+(function(){
+ const cv=document.querySelector('canvas.neige'),x=cv.getContext('2d');let s=1234567;const r=()=>((s=(s*16807)%2147483647)/2147483647);
+ const fl=[...Array(150)].map(()=>({x:r()*1080,y:r()*1920,z:.35+r()*.65,o:r()*6,c:r()<.13}));
+ const giv=[...document.querySelectorAll('.givre')];
+ function flocon(px,py,R,a){x.save();x.translate(px,py);x.rotate(a);x.strokeStyle='#f3f8ff';x.lineWidth=Math.max(1.2,R/7);x.lineCap='round';
+  for(let k=0;k<6;k++){x.rotate(Math.PI/3);x.beginPath();x.moveTo(0,0);x.lineTo(0,-R);x.moveTo(0,-R*.5);x.lineTo(-R*.25,-R*.72);x.moveTo(0,-R*.5);x.lineTo(R*.25,-R*.72);x.stroke();}
+  x.restore();}
+ const prev=window.render;
+ window.render=function(t){ if(prev) prev(t); x.clearRect(0,0,1080,1920);
+  for(const p of fl){const y=(p.y+t*(60+120*p.z))%2000-40, xx=p.x+Math.sin(t*.8+p.o)*30*p.z;
+   x.globalAlpha=.35+.6*p.z;
+   if(p.c){flocon(xx,y,10+16*p.z,t*.6+p.o);} else {const R=2+5*p.z;const gr=x.createRadialGradient(xx,y,0,xx,y,R*2.2);gr.addColorStop(0,'rgba(255,255,255,1)');gr.addColorStop(1,'rgba(255,255,255,0)');x.fillStyle=gr;x.beginPath();x.arc(xx,y,R*2.2,0,7);x.fill();}
+   if(p.z>.92){const sc=(Math.sin(t*6+p.o)+1)/2;x.globalAlpha=sc*.9;x.strokeStyle='#fff';x.lineWidth=1.5;x.beginPath();x.moveTo(xx-14*sc,y);x.lineTo(xx+14*sc,y);x.moveTo(xx,y-14*sc);x.lineTo(xx,y+14*sc);x.stroke();}
+  }
+  x.globalAlpha=1; giv.forEach((g,i)=>g.style.transform=`rotate(${t*(i%2?-4:5)}deg)`);
+ };
+})();
+</script>
+</body></html>
